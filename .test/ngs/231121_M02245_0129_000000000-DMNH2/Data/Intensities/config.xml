@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageAnalysis xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Run Name="Intensities">
+    <Cycles First="1" Last="150" Number="150" />
+    <ImageParameters>
+      <AutoOffsetFlag>0</AutoOffsetFlag>
+      <AutoSizeFlag>0</AutoSizeFlag>
+      <Fwhm>0</Fwhm>
+      <RemappingDistance>0</RemappingDistance>
+      <Threshold>0</Threshold>
+    </ImageParameters>
+    <RunParameters>
+      <AutoCycleFlag>0</AutoCycleFlag>
+      <BasecallFlag>0</BasecallFlag>
+      <Deblocked>0</Deblocked>
+      <DebugFlag>0</DebugFlag>
+      <FirstRunOnlyFlag>0</FirstRunOnlyFlag>
+      <ImagingReads Index="1">
+        <FirstCycle>1</FirstCycle>
+        <LastCycle>16</LastCycle>
+        <RunFolder>231121_M02245_0129_000000000-DMNH2</RunFolder>
+      </ImagingReads>
+      <ImagingReads Index="2">
+        <FirstCycle>17</FirstCycle>
+        <LastCycle>22</LastCycle>
+        <RunFolder>231121_M02245_0129_000000000-DMNH2</RunFolder>
+      </ImagingReads>
+      <ImagingReads Index="3">
+        <FirstCycle>23</FirstCycle>
+        <LastCycle>30</LastCycle>
+        <RunFolder>231121_M02245_0129_000000000-DMNH2</RunFolder>
+      </ImagingReads>
+      <ImagingReads Index="4">
+        <FirstCycle>31</FirstCycle>
+        <LastCycle>150</LastCycle>
+        <RunFolder>231121_M02245_0129_000000000-DMNH2</RunFolder>
+      </ImagingReads>
+      <Instrument>NRCHBS-WDL31229</Instrument>
+      <IterativeMatrixFlag>0</IterativeMatrixFlag>
+      <MakeFlag>0</MakeFlag>
+      <MaxCycle>0</MaxCycle>
+      <MinCycle>0</MinCycle>
+      <Reads Index="1">
+        <FirstCycle>1</FirstCycle>
+        <LastCycle>16</LastCycle>
+        <RunFolder>231121_M02245_0129_000000000-DMNH2</RunFolder>
+      </Reads>
+      <Reads Index="2">
+        <FirstCycle>17</FirstCycle>
+        <LastCycle>22</LastCycle>
+        <RunFolder>231121_M02245_0129_000000000-DMNH2</RunFolder>
+      </Reads>
+      <Reads Index="3">
+        <FirstCycle>23</FirstCycle>
+        <LastCycle>30</LastCycle>
+        <RunFolder>231121_M02245_0129_000000000-DMNH2</RunFolder>
+      </Reads>
+      <Reads Index="4">
+        <FirstCycle>31</FirstCycle>
+        <LastCycle>150</LastCycle>
+        <RunFolder>231121_M02245_0129_000000000-DMNH2</RunFolder>
+      </Reads>
+      <RunFolder>231121_M02245_0129_000000000-DMNH2</RunFolder>
+      <RunFolderDate>231121</RunFolderDate>
+      <RunFolderId>0129</RunFolderId>
+      <RunFlowcellId>000000000-DMNH2</RunFlowcellId>
+      <Barcode>
+        <Cycle Use="true">17</Cycle>
+        <Cycle Use="true">18</Cycle>
+        <Cycle Use="true">19</Cycle>
+        <Cycle Use="true">20</Cycle>
+        <Cycle Use="true">21</Cycle>
+        <Cycle Use="true">22</Cycle>
+        <Cycle Use="true">23</Cycle>
+        <Cycle Use="true">24</Cycle>
+        <Cycle Use="true">25</Cycle>
+        <Cycle Use="true">26</Cycle>
+        <Cycle Use="true">27</Cycle>
+        <Cycle Use="true">28</Cycle>
+        <Cycle Use="true">29</Cycle>
+        <Cycle Use="true">30</Cycle>
+      </Barcode>
+      <QTableVersion>V6</QTableVersion>
+    </RunParameters>
+    <Software Name="RTA" Version="1.18.54.0" />
+    <TileSelection>
+      <Lane Index="1">
+        <Sample>s</Sample>
+        <Tile>1101</Tile>
+        <Tile>1102</Tile>
+      </Lane>
+    </TileSelection>
+    <Time />
+    <User />
+  </Run>
+</ImageAnalysis>

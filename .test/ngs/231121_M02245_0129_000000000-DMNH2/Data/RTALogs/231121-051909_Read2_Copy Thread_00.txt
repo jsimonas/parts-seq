@@ -1,0 +1,172 @@
+11/21/2023,17:19:10.527,0,0,0,Copy thread starting: maximum requests = 10000000,0,0,0
+11/21/2023,17:19:11.533,0,0,0,The copy queue has 4 items.,0,0,0
+11/21/2023,17:19:11.569,0,0,0, *Copy5 file: ext = .xml, size = 8926, time = 26, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\RTAConfiguration.xml * ,27,0,0
+11/21/2023,17:19:11.639,0,0,0, *Copy5 file: ext = .xml, size = 681, time = 64, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\RunInfo.xml * ,65,0,0
+11/21/2023,17:19:11.730,0,0,0, *Copy5 file: ext = .xml, size = 3443, time = 84, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\runParameters.xml * ,85,0,0
+11/21/2023,17:19:11.756,0,0,0, *Copy5 file: ext = .csv, size = 460, time = 21, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\SampleSheet.csv * ,22,0,0
+11/21/2023,17:19:12.756,0,0,0,The copy queue has 4 items.,0,0,0
+11/21/2023,17:19:12.773,0,0,0, *Copy5 file: ext = .txt, size = 111, time = 6, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_2_1101_matrix.txt * ,7,0,0
+11/21/2023,17:19:12.786,0,0,0, *Copy5 file: ext = .txt, size = 111, time = 6, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_2_1102_matrix.txt * ,7,0,0
+11/21/2023,17:19:12.794,0,0,0, *Copy5 file: ext = .txt, size = 111, time = 6, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_2_matrix.txt * ,6,0,0
+11/21/2023,17:19:12.803,0,0,0, *Copy5 file: ext = .txt, size = 111, time = 6, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_2_matrix.txt * ,7,0,0
+11/21/2023,17:24:22.821,0,0,0,The copy queue has 1 items.,0,0,0
+11/21/2023,17:24:26.058,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C16.1\FocusImage_0_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,3167,0,0
+11/21/2023,17:28:17.074,0,0,0,The copy queue has 39 items.,0,0,0
+11/21/2023,17:28:20.343,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,3237,0,0
+11/21/2023,17:28:40.363,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.166342_method_CoarseFocus.tif,20016,0,0
+11/21/2023,17:28:55.981,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.168342_method_CoarseFocus.tif,15616,0,0
+11/21/2023,17:28:56.944,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.170342_method_CoarseFocus.tif,960,0,0
+11/21/2023,17:28:57.911,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.172342_method_CoarseFocus.tif,964,0,0
+11/21/2023,17:28:58.896,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.174342_method_CoarseFocus.tif,983,0,0
+11/21/2023,17:28:59.866,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.176342_method_CoarseFocus.tif,967,0,0
+11/21/2023,17:29:00.842,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.178342_method_CoarseFocus.tif,974,0,0
+11/21/2023,17:29:01.823,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.180342_method_CoarseFocus.tif,979,0,0
+11/21/2023,17:29:02.801,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.182342_method_CoarseFocus.tif,976,0,0
+11/21/2023,17:29:03.770,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.184343_method_CoarseFocus.tif,967,0,0
+11/21/2023,17:29:04.750,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.186343_method_CoarseFocus.tif,977,0,0
+11/21/2023,17:29:05.722,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.188343_method_CoarseFocus.tif,971,0,0
+11/21/2023,17:29:06.700,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.190343_method_CoarseFocus.tif,975,0,0
+11/21/2023,17:29:07.683,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.192343_method_CoarseFocus.tif,981,0,0
+11/21/2023,17:29:08.656,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.194343_method_CoarseFocus.tif,971,0,0
+11/21/2023,17:29:09.642,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.196343_method_CoarseFocus.tif,984,0,0
+11/21/2023,17:29:10.612,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.198343_method_CoarseFocus.tif,968,0,0
+11/21/2023,17:29:11.591,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.200343_method_CoarseFocus.tif,977,0,0
+11/21/2023,17:29:12.577,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.202343_method_CoarseFocus.tif,984,0,0
+11/21/2023,17:29:13.563,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.204343_method_CoarseFocus.tif,984,0,0
+11/21/2023,17:29:14.531,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.206343_method_CoarseFocus.tif,966,0,0
+11/21/2023,17:29:15.520,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.208343_method_CoarseFocus.tif,986,0,0
+11/21/2023,17:29:16.497,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.210343_method_CoarseFocus.tif,975,0,0
+11/21/2023,17:29:17.479,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.212343_method_CoarseFocus.tif,980,0,0
+11/21/2023,17:29:18.458,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.214343_method_CoarseFocus.tif,977,0,0
+11/21/2023,17:29:19.436,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.216343_method_CoarseFocus.tif,976,0,0
+11/21/2023,17:29:20.402,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.218343_method_CoarseFocus.tif,963,0,0
+11/21/2023,17:29:21.326,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.220343_method_CoarseFocus.tif,923,0,0
+11/21/2023,17:29:22.300,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.222343_method_CoarseFocus.tif,972,0,0
+11/21/2023,17:29:23.268,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.224343_method_CoarseFocus.tif,966,0,0
+11/21/2023,17:29:24.256,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.226343_method_CoarseFocus.tif,986,0,0
+11/21/2023,17:29:25.228,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.228343_method_CoarseFocus.tif,970,0,0
+11/21/2023,17:29:26.206,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.230343_method_CoarseFocus.tif,976,0,0
+11/21/2023,17:29:27.174,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.232343_method_CoarseFocus.tif,966,0,0
+11/21/2023,17:29:28.143,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.234343_method_CoarseFocus.tif,967,0,0
+11/21/2023,17:29:29.119,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.236343_method_CoarseFocus.tif,973,0,0
+11/21/2023,17:29:30.105,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.238343_method_CoarseFocus.tif,984,0,0
+11/21/2023,17:29:31.071,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.240343_method_CoarseFocus.tif,965,0,0
+11/21/2023,17:29:31.173,0,0,0, *Copy5 file: ext = .jpg, size = 81288, time = 70, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C17.1\s_1_1101_a.jpg * ,70,0,0
+11/21/2023,17:29:31.258,0,0,0, *Copy5 file: ext = .jpg, size = 63107, time = 66, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C17.1\s_1_1101_c.jpg * ,66,0,0
+11/21/2023,17:29:31.355,0,0,0, *Copy5 file: ext = .jpg, size = 79544, time = 95, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C17.1\s_1_1101_g.jpg * ,95,0,0
+11/21/2023,17:29:31.429,0,0,0, *Copy5 file: ext = .jpg, size = 77152, time = 73, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C17.1\s_1_1101_t.jpg * ,73,0,0
+11/21/2023,17:29:31.504,0,0,0, *Copy5 file: ext = .jpg, size = 81702, time = 73, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C17.1\s_1_1102_a.jpg * ,73,0,0
+11/21/2023,17:29:31.586,0,0,0, *Copy5 file: ext = .jpg, size = 63932, time = 80, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C17.1\s_1_1102_c.jpg * ,81,0,0
+11/21/2023,17:29:31.655,0,0,0, *Copy5 file: ext = .jpg, size = 80235, time = 68, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C17.1\s_1_1102_g.jpg * ,68,0,0
+11/21/2023,17:29:31.740,0,0,0, *Copy5 file: ext = .jpg, size = 77371, time = 83, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C17.1\s_1_1102_t.jpg * ,83,0,0
+11/21/2023,17:29:32.742,0,0,0,The copy queue has 4 items.,0,0,0
+11/21/2023,17:29:33.732,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.242343_method_CoarseFocus.tif,988,0,0
+11/21/2023,17:29:34.705,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.244343_method_CoarseFocus.tif,972,0,0
+11/21/2023,17:29:35.679,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.246343_method_CoarseFocus.tif,971,0,0
+11/21/2023,17:29:35.864,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_1_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,183,0,0
+11/21/2023,17:30:51.869,0,0,0,The copy queue has 2 items.,0,0,0
+11/21/2023,17:30:54.448,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C18.1\FocusImage_0_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,2517,0,0
+11/21/2023,17:30:57.882,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C18.1\FocusImage_1_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,3432,0,0
+11/21/2023,17:30:58.261,0,0,0, *Copy5 file: ext = .jpg, size = 63953, time = 199, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C18.1\s_1_1101_a.jpg * ,200,0,0
+11/21/2023,17:30:58.276,0,0,0, *Copy5 file: ext = .jpg, size = 73163, time = 13, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C18.1\s_1_1101_c.jpg * ,14,0,0
+11/21/2023,17:30:58.362,0,0,0, *Copy5 file: ext = .jpg, size = 82039, time = 84, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C18.1\s_1_1101_g.jpg * ,85,0,0
+11/21/2023,17:30:58.461,0,0,0, *Copy5 file: ext = .jpg, size = 77606, time = 97, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C18.1\s_1_1101_t.jpg * ,98,0,0
+11/21/2023,17:30:58.555,0,0,0, *Copy5 file: ext = .jpg, size = 65585, time = 92, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C18.1\s_1_1102_a.jpg * ,92,0,0
+11/21/2023,17:30:58.677,0,0,0, *Copy5 file: ext = .jpg, size = 72595, time = 120, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C18.1\s_1_1102_c.jpg * ,121,0,0
+11/21/2023,17:30:58.847,0,0,0, *Copy5 file: ext = .jpg, size = 80644, time = 169, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C18.1\s_1_1102_g.jpg * ,170,0,0
+11/21/2023,17:30:58.868,0,0,0, *Copy5 file: ext = .jpg, size = 76143, time = 19, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C18.1\s_1_1102_t.jpg * ,19,0,0
+11/21/2023,17:33:30.877,0,0,0,The copy queue has 3 items.,0,0,0
+11/21/2023,17:33:33.400,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C19.1\FocusImage_0_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,2493,0,0
+11/21/2023,17:33:36.752,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C19.1\FocusImage_0_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,3350,0,0
+11/21/2023,17:33:40.204,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C19.1\FocusImage_1_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,3448,0,0
+11/21/2023,17:33:40.398,0,0,0, *Copy5 file: ext = .jpg, size = 76505, time = 157, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C19.1\s_1_1101_a.jpg * ,157,0,0
+11/21/2023,17:33:40.414,0,0,0, *Copy5 file: ext = .jpg, size = 73114, time = 15, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C19.1\s_1_1101_c.jpg * ,15,0,0
+11/21/2023,17:33:40.494,0,0,0, *Copy5 file: ext = .jpg, size = 67020, time = 78, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C19.1\s_1_1101_g.jpg * ,79,0,0
+11/21/2023,17:33:40.586,0,0,0, *Copy5 file: ext = .jpg, size = 60608, time = 91, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C19.1\s_1_1101_t.jpg * ,91,0,0
+11/21/2023,17:33:40.684,0,0,0, *Copy5 file: ext = .jpg, size = 75252, time = 96, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C19.1\s_1_1102_a.jpg * ,96,0,0
+11/21/2023,17:33:40.889,0,0,0, *Copy5 file: ext = .jpg, size = 72204, time = 203, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C19.1\s_1_1102_c.jpg * ,204,0,0
+11/21/2023,17:33:40.905,0,0,0, *Copy5 file: ext = .jpg, size = 68809, time = 15, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C19.1\s_1_1102_g.jpg * ,15,0,0
+11/21/2023,17:33:40.922,0,0,0, *Copy5 file: ext = .jpg, size = 61080, time = 15, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C19.1\s_1_1102_t.jpg * ,15,0,0
+11/21/2023,17:36:06.930,0,0,0,The copy queue has 2 items.,0,0,0
+11/21/2023,17:36:07.128,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C20.1\FocusImage_0_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,170,0,0
+11/21/2023,17:36:07.302,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C20.1\FocusImage_1_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,171,0,0
+11/21/2023,17:36:08.303,0,0,0,The copy queue has 4 items.,0,0,0
+11/21/2023,17:36:08.348,0,0,0, *Copy5 file: ext = .jpg, size = 76160, time = 17, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C20.1\s_1_1101_a.jpg * ,18,0,0
+11/21/2023,17:36:08.384,0,0,0, *Copy5 file: ext = .jpg, size = 74949, time = 16, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C20.1\s_1_1101_c.jpg * ,17,0,0
+11/21/2023,17:36:08.402,0,0,0, *Copy5 file: ext = .jpg, size = 76940, time = 16, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C20.1\s_1_1101_g.jpg * ,16,0,0
+11/21/2023,17:36:08.420,0,0,0, *Copy5 file: ext = .jpg, size = 75448, time = 17, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C20.1\s_1_1101_t.jpg * ,17,0,0
+11/21/2023,17:36:12.421,0,0,0,The copy queue has 2 items.,0,0,0
+11/21/2023,17:36:12.442,0,0,0, *Copy5 file: ext = .jpg, size = 75733, time = 19, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C20.1\s_1_1102_a.jpg * ,19,0,0
+11/21/2023,17:36:12.460,0,0,0, *Copy5 file: ext = .jpg, size = 74572, time = 17, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C20.1\s_1_1102_c.jpg * ,17,0,0
+11/21/2023,17:36:13.461,0,0,0,The copy queue has 12 items.,0,0,0
+11/21/2023,17:36:13.487,0,0,0, *Copy5 file: ext = .jpg, size = 78676, time = 24, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C20.1\s_1_1102_g.jpg * ,25,0,0
+11/21/2023,17:36:13.506,0,0,0, *Copy5 file: ext = .jpg, size = 75801, time = 18, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C20.1\s_1_1102_t.jpg * ,18,0,0
+11/21/2023,17:36:13.517,0,0,0, *Copy5 file: ext = .txt, size = 111, time = 5, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_2_1101_matrix.txt * ,6,0,0
+11/21/2023,17:36:13.528,0,0,0, *Copy5 file: ext = .txt, size = 111, time = 5, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_2_1102_matrix.txt * ,6,0,0
+11/21/2023,17:36:13.538,0,0,0, *Copy5 file: ext = .txt, size = 111, time = 5, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_2_matrix.txt * ,5,0,0
+11/21/2023,17:36:13.549,0,0,0, *Copy5 file: ext = .txt, size = 111, time = 5, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_2_matrix.txt * ,5,0,0
+11/21/2023,17:36:13.556,0,0,0, *Copy5 file: ext = .txt, size = 6, time = 5, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_2_1101_phasing.txt * ,5,0,0
+11/21/2023,17:36:13.563,0,0,0, *Copy5 file: ext = .txt, size = 6, time = 5, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_2_1102_phasing.txt * ,5,0,0
+11/21/2023,17:36:13.570,0,0,0, *Copy5 file: ext = .txt, size = 6, time = 5, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_2_phasing.txt * ,6,0,0
+11/21/2023,17:36:13.610,0,0,0, *Copy5 file: ext = .xml, size = 203, time = 38, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_18_phasing.xml * ,39,0,0
+11/21/2023,17:36:13.618,0,0,0, *Copy5 file: ext = .txt, size = 6, time = 5, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_2_phasing.txt * ,6,0,0
+11/21/2023,17:36:13.676,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 31, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C17.1\s_1_1101.stats * ,33,0,0
+11/21/2023,17:36:14.677,0,0,0,The copy queue has 1 items.,0,0,0
+11/21/2023,17:36:14.713,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 34, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C17.1\s_1_1102.stats * ,35,0,0
+11/21/2023,17:36:15.714,0,0,0,The copy queue has 1 items.,0,0,0
+11/21/2023,17:36:15.775,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 31, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C18.1\s_1_1101.stats * ,33,0,0
+11/21/2023,17:36:16.775,0,0,0,The copy queue has 2 items.,0,0,0
+11/21/2023,17:36:16.811,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 33, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C18.1\s_1_1102.stats * ,34,0,0
+11/21/2023,17:36:16.869,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 32, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C19.1\s_1_1101.stats * ,33,0,0
+11/21/2023,17:36:17.869,0,0,0,The copy queue has 1 items.,0,0,0
+11/21/2023,17:36:17.905,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 34, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C19.1\s_1_1102.stats * ,35,0,0
+11/21/2023,17:38:42.913,0,0,0,The copy queue has 2 items.,0,0,0
+11/21/2023,17:38:43.109,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C21.1\FocusImage_0_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,168,0,0
+11/21/2023,17:38:43.279,0,0,0,Copy D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C21.1\FocusImage_1_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,168,0,0
+11/21/2023,17:38:44.280,0,0,0,The copy queue has 1 items.,0,0,0
+11/21/2023,17:38:44.324,0,0,0, *Copy5 file: ext = .jpg, size = 75251, time = 16, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C21.1\s_1_1101_a.jpg * ,16,0,0
+11/21/2023,17:38:45.324,0,0,0,The copy queue has 3 items.,0,0,0
+11/21/2023,17:38:45.345,0,0,0, *Copy5 file: ext = .jpg, size = 75710, time = 20, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C21.1\s_1_1101_c.jpg * ,20,0,0
+11/21/2023,17:38:45.364,0,0,0, *Copy5 file: ext = .jpg, size = 67283, time = 18, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C21.1\s_1_1101_g.jpg * ,18,0,0
+11/21/2023,17:38:45.383,0,0,0, *Copy5 file: ext = .jpg, size = 75848, time = 18, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C21.1\s_1_1101_t.jpg * ,18,0,0
+11/21/2023,17:38:47.383,0,0,0,The copy queue has 1 items.,0,0,0
+11/21/2023,17:38:47.443,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 30, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C20.1\s_1_1101.stats * ,32,0,0
+11/21/2023,17:38:48.443,0,0,0,The copy queue has 3 items.,0,0,0
+11/21/2023,17:38:48.467,0,0,0, *Copy5 file: ext = .jpg, size = 74262, time = 23, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C21.1\s_1_1102_a.jpg * ,23,0,0
+11/21/2023,17:38:48.486,0,0,0, *Copy5 file: ext = .jpg, size = 73917, time = 17, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C21.1\s_1_1102_c.jpg * ,17,0,0
+11/21/2023,17:38:48.503,0,0,0, *Copy5 file: ext = .jpg, size = 69160, time = 16, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C21.1\s_1_1102_g.jpg * ,16,0,0
+11/21/2023,17:38:49.503,0,0,0,The copy queue has 1 items.,0,0,0
+11/21/2023,17:38:49.525,0,0,0, *Copy5 file: ext = .jpg, size = 76048, time = 21, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C21.1\s_1_1102_t.jpg * ,21,0,0
+11/21/2023,17:38:50.526,0,0,0,The copy queue has 1 items.,0,0,0
+11/21/2023,17:38:50.562,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 34, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C20.1\s_1_1102.stats * ,35,0,0
+11/21/2023,17:41:19.572,0,0,0,The copy queue has 2 items.,0,0,0
+11/21/2023,17:41:19.626,0,0,0, *Copy5 file: ext = .jpg, size = 74677, time = 17, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C22.1\s_1_1101_a.jpg * ,17,0,0
+11/21/2023,17:41:19.661,0,0,0, *Copy5 file: ext = .jpg, size = 74469, time = 17, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C22.1\s_1_1101_c.jpg * ,17,0,0
+11/21/2023,17:41:20.662,0,0,0,The copy queue has 2 items.,0,0,0
+11/21/2023,17:41:20.683,0,0,0, *Copy5 file: ext = .jpg, size = 76140, time = 19, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C22.1\s_1_1101_g.jpg * ,19,0,0
+11/21/2023,17:41:20.699,0,0,0, *Copy5 file: ext = .jpg, size = 61137, time = 15, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C22.1\s_1_1101_t.jpg * ,16,0,0
+11/21/2023,17:41:22.710,0,0,0,The copy queue has 2 items.,0,0,0
+11/21/2023,17:41:22.776,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 31, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C21.1\s_1_1101.stats * ,33,0,0
+11/21/2023,17:41:22.845,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 33, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C22.1\s_1_1101.stats * ,34,0,0
+11/21/2023,17:41:23.846,0,0,0,The copy queue has 7 items.,0,0,0
+11/21/2023,17:41:23.978,0,0,0, *Copy5 file: ext = .jpg, size = 71643, time = 131, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C22.1\s_1_1102_a.jpg * ,131,0,0
+11/21/2023,17:41:23.997,0,0,0, *Copy5 file: ext = .jpg, size = 69396, time = 18, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C22.1\s_1_1102_c.jpg * ,18,0,0
+11/21/2023,17:41:24.066,0,0,0, *Copy5 file: ext = .bcl, size = 682436, time = 66, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C17.1\s_1_1101.bcl * ,67,0,0
+11/21/2023,17:41:24.787,0,0,0, *Copy5 file: ext = .jpg, size = 76266, time = 27, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C22.1\s_1_1102_g.jpg * ,27,0,0
+11/21/2023,17:41:24.804,0,0,0, *Copy5 file: ext = .jpg, size = 60900, time = 16, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Thumbnail_Images\L001\C22.1\s_1_1102_t.jpg * ,16,0,0
+11/21/2023,17:41:24.884,0,0,0, *Copy5 file: ext = .bcl, size = 682436, time = 78, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C18.1\s_1_1101.bcl * ,79,0,0
+11/21/2023,17:41:24.977,0,0,0, *Copy5 file: ext = .bcl, size = 682436, time = 89, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C19.1\s_1_1101.bcl * ,91,0,0
+11/21/2023,17:41:25.077,0,0,0, *Copy5 file: ext = .bcl, size = 682436, time = 97, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C20.1\s_1_1101.bcl * ,98,0,0
+11/21/2023,17:41:25.173,0,0,0, *Copy5 file: ext = .bcl, size = 682436, time = 93, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C21.1\s_1_1101.bcl * ,94,0,0
+11/21/2023,17:41:25.261,0,0,0, *Copy5 file: ext = .bcl, size = 682436, time = 84, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C22.1\s_1_1101.bcl * ,85,0,0
+11/21/2023,17:41:26.262,0,0,0,The copy queue has 2 items.,0,0,0
+11/21/2023,17:41:26.299,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 35, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C21.1\s_1_1102.stats * ,36,0,0
+11/21/2023,17:41:26.332,0,0,0, *Copy5 file: ext = .stats, size = 112, time = 31, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C22.1\s_1_1102.stats * ,32,0,0
+11/21/2023,17:41:27.333,0,0,0,The copy queue has 3 items.,0,0,0
+11/21/2023,17:41:27.384,0,0,0, *Copy5 file: ext = .bcl, size = 693981, time = 49, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C17.1\s_1_1102.bcl * ,50,0,0
+11/21/2023,17:41:28.128,0,0,0, *Copy5 file: ext = .bcl, size = 693981, time = 97, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C18.1\s_1_1102.bcl * ,98,0,0
+11/21/2023,17:41:28.215,0,0,0, *Copy5 file: ext = .bcl, size = 693981, time = 84, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C19.1\s_1_1102.bcl * ,84,0,0
+11/21/2023,17:41:28.319,0,0,0, *Copy5 file: ext = .bcl, size = 693981, time = 101, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C20.1\s_1_1102.bcl * ,102,0,0
+11/21/2023,17:41:28.399,0,0,0, *Copy5 file: ext = .bcl, size = 693981, time = 77, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C21.1\s_1_1102.bcl * ,78,0,0
+11/21/2023,17:41:28.480,0,0,0, *Copy5 file: ext = .bcl, size = 693981, time = 78, path = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C22.1\s_1_1102.bcl * ,79,0,0
+11/21/2023,17:41:29.482,0,0,0,Completed copy for read 2,0,0,0

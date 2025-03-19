@@ -1,0 +1,259 @@
+11/21/2023,17:19:10.527,0,0,0,Delete thread starting,0,0,0
+11/21/2023,17:24:26.551,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:24:26.552,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C16.1\FocusImage_0_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:28:19.565,0,0,0,Processing 5 items in delete queue,0,0,0
+11/21/2023,17:28:19.567,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C17.1\s_1_1101_a.tif,0,0,0
+11/21/2023,17:28:19.569,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C17.1\s_1_1101_c.tif,0,0,0
+11/21/2023,17:28:19.571,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C17.1\s_1_1101_g.tif,0,0,0
+11/21/2023,17:28:19.572,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C17.1\s_1_1101_t.tif,0,0,0
+11/21/2023,17:28:20.573,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:28:20.574,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:28:23.575,0,0,0,Processing 5 items in delete queue,0,0,0
+11/21/2023,17:28:23.577,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C17.1\s_1_1102_a.tif,0,0,0
+11/21/2023,17:28:23.579,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C17.1\s_1_1102_c.tif,0,0,0
+11/21/2023,17:28:23.581,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C17.1\s_1_1102_g.tif,0,0,0
+11/21/2023,17:28:23.583,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C17.1\s_1_1102_t.tif,0,0,0
+11/21/2023,17:28:40.584,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:28:40.587,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.166342_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:28:46.587,0,0,0,The low frequency delete queue has 2 items,0,0,0
+11/21/2023,17:28:46.587,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:28:56.587,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:28:56.590,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.168342_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:28:57.591,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:28:57.594,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.170342_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:28:58.594,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:28:58.597,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.172342_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:28:59.597,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:28:59.600,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.174342_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:00.600,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:00.603,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.176342_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:01.603,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:01.606,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.178342_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:02.606,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:02.609,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.180342_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:03.609,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:03.612,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.182342_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:04.612,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:04.615,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.184343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:05.615,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:05.618,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.186343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:06.618,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:06.621,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.188343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:07.621,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:07.624,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.190343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:08.624,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:08.627,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.192343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:09.627,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:09.630,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.194343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:10.630,0,0,0,Processing 2 items in delete queue,0,0,0
+11/21/2023,17:29:10.633,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.196343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:10.636,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.198343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:11.636,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:11.639,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.200343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:12.639,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:12.642,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.202343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:13.642,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:13.645,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.204343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:14.645,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:14.648,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.206343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:15.649,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:15.652,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.208343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:16.652,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:16.655,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.210343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:17.655,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:17.658,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.212343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:18.658,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:18.661,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.214343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:18.661,0,0,0,The low frequency delete queue has 2 items,0,0,0
+11/21/2023,17:29:18.661,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:29:19.661,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:19.664,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.216343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:20.664,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:20.666,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.218343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:21.667,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:21.670,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.220343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:22.670,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:22.673,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.222343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:23.673,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:23.676,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.224343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:24.676,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:24.679,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.226343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:25.679,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:25.682,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.228343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:26.682,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:26.685,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.230343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:27.685,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:27.688,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.232343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:28.688,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:28.691,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.234343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:29.691,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:29.694,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.236343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:30.694,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:30.697,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.238343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:31.697,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:31.700,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.240343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:34.701,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:34.704,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.242343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:35.704,0,0,0,Processing 2 items in delete queue,0,0,0
+11/21/2023,17:29:35.707,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.244343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:35.710,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_0_exp_200_Focus T_IM_zpos_-0.246343_method_CoarseFocus.tif,0,0,0
+11/21/2023,17:29:36.710,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:29:36.712,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C17.1\FocusImage_1_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:29:50.713,0,0,0,The low frequency delete queue has 2 items,0,0,0
+11/21/2023,17:29:50.713,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:30:22.714,0,0,0,The low frequency delete queue has 2 items,0,0,0
+11/21/2023,17:30:22.714,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:30:53.716,0,0,0,Processing 5 items in delete queue,0,0,0
+11/21/2023,17:30:53.718,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C18.1\s_1_1101_a.tif,0,0,0
+11/21/2023,17:30:53.720,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C18.1\s_1_1101_c.tif,0,0,0
+11/21/2023,17:30:53.722,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C18.1\s_1_1101_g.tif,0,0,0
+11/21/2023,17:30:53.724,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C18.1\s_1_1101_t.tif,0,0,0
+11/21/2023,17:30:54.724,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:30:54.725,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C18.1\FocusImage_0_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:30:54.725,0,0,0,The low frequency delete queue has 3 items,0,0,0
+11/21/2023,17:30:54.725,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:30:58.725,0,0,0,Processing 6 items in delete queue,0,0,0
+11/21/2023,17:30:58.727,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C18.1\s_1_1102_a.tif,0,0,0
+11/21/2023,17:30:58.729,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C18.1\s_1_1102_c.tif,0,0,0
+11/21/2023,17:30:58.731,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C18.1\s_1_1102_g.tif,0,0,0
+11/21/2023,17:30:58.733,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C18.1\s_1_1102_t.tif,0,0,0
+11/21/2023,17:30:58.734,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C18.1\FocusImage_1_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:31:26.736,0,0,0,The low frequency delete queue has 4 items,0,0,0
+11/21/2023,17:31:26.736,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:31:58.738,0,0,0,The low frequency delete queue has 4 items,0,0,0
+11/21/2023,17:31:58.738,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:32:30.740,0,0,0,The low frequency delete queue has 4 items,0,0,0
+11/21/2023,17:32:30.740,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:33:02.742,0,0,0,The low frequency delete queue has 4 items,0,0,0
+11/21/2023,17:33:02.742,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:33:33.743,0,0,0,Processing 6 items in delete queue,0,0,0
+11/21/2023,17:33:33.745,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C19.1\s_1_1101_a.tif,0,0,0
+11/21/2023,17:33:33.747,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C19.1\s_1_1101_c.tif,0,0,0
+11/21/2023,17:33:33.749,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C19.1\s_1_1101_g.tif,0,0,0
+11/21/2023,17:33:33.751,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C19.1\s_1_1101_t.tif,0,0,0
+11/21/2023,17:33:33.752,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C19.1\FocusImage_0_exp_200_Focus T_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:33:34.752,0,0,0,The low frequency delete queue has 5 items,0,0,0
+11/21/2023,17:33:34.752,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:33:37.753,0,0,0,Processing 6 items in delete queue,0,0,0
+11/21/2023,17:33:37.754,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C19.1\FocusImage_0_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:33:37.756,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C19.1\s_1_1102_a.tif,0,0,0
+11/21/2023,17:33:37.758,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C19.1\s_1_1102_c.tif,0,0,0
+11/21/2023,17:33:37.760,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C19.1\s_1_1102_g.tif,0,0,0
+11/21/2023,17:33:37.762,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C19.1\s_1_1102_t.tif,0,0,0
+11/21/2023,17:33:40.762,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:33:40.763,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C19.1\FocusImage_1_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:34:06.764,0,0,0,The low frequency delete queue has 6 items,0,0,0
+11/21/2023,17:34:06.764,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:34:38.766,0,0,0,The low frequency delete queue has 6 items,0,0,0
+11/21/2023,17:34:38.766,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:35:10.768,0,0,0,The low frequency delete queue has 6 items,0,0,0
+11/21/2023,17:35:10.768,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:35:42.770,0,0,0,The low frequency delete queue has 6 items,0,0,0
+11/21/2023,17:35:42.770,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:36:07.771,0,0,0,Processing 2 items in delete queue,0,0,0
+11/21/2023,17:36:07.772,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C20.1\FocusImage_0_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:36:07.773,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C20.1\FocusImage_1_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:36:08.773,0,0,0,Processing 5 items in delete queue,0,0,0
+11/21/2023,17:36:08.775,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C20.1\s_1_1101_a.tif,0,0,0
+11/21/2023,17:36:08.777,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C20.1\s_1_1101_c.tif,0,0,0
+11/21/2023,17:36:08.779,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C20.1\s_1_1101_g.tif,0,0,0
+11/21/2023,17:36:08.781,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C20.1\s_1_1101_t.tif,0,0,0
+11/21/2023,17:36:12.781,0,0,0,Processing 5 items in delete queue,0,0,0
+11/21/2023,17:36:12.783,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C20.1\s_1_1102_a.tif,0,0,0
+11/21/2023,17:36:12.785,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C20.1\s_1_1102_c.tif,0,0,0
+11/21/2023,17:36:12.787,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C20.1\s_1_1102_g.tif,0,0,0
+11/21/2023,17:36:12.789,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C20.1\s_1_1102_t.tif,0,0,0
+11/21/2023,17:36:13.789,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:36:14.790,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:36:14.790,0,0,0,The low frequency delete queue has 8 items,0,0,0
+11/21/2023,17:36:14.790,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:36:15.790,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:36:16.790,0,0,0,Processing 2 items in delete queue,0,0,0
+11/21/2023,17:36:17.790,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:36:46.791,0,0,0,The low frequency delete queue has 12 items,0,0,0
+11/21/2023,17:36:46.791,0,0,0,First item on LFDQ is Del File Spec cycle=17 ext=cif ,0,0,0
+11/21/2023,17:36:46.792,1,1101,20,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C17.1\s_1_1101.cif,0,19,16
+11/21/2023,17:36:46.792,1,1102,20,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C17.1\s_1_1102.cif,0,19,16
+11/21/2023,17:37:18.794,0,0,0,The low frequency delete queue has 10 items,0,0,0
+11/21/2023,17:37:18.794,0,0,0,First item on LFDQ is Del File Spec cycle=18 ext=cif ,0,0,0
+11/21/2023,17:37:50.796,0,0,0,The low frequency delete queue has 10 items,0,0,0
+11/21/2023,17:37:50.796,0,0,0,First item on LFDQ is Del File Spec cycle=18 ext=cif ,0,0,0
+11/21/2023,17:38:22.798,0,0,0,The low frequency delete queue has 10 items,0,0,0
+11/21/2023,17:38:22.798,0,0,0,First item on LFDQ is Del File Spec cycle=18 ext=cif ,0,0,0
+11/21/2023,17:38:43.799,0,0,0,Processing 2 items in delete queue,0,0,0
+11/21/2023,17:38:43.823,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C21.1\FocusImage_0_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:38:43.831,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\Focus\L001\C21.1\FocusImage_1_exp_450_Focus C_AF_zpos_-0.211927_method_TiltUntiltFocus.tif,0,0,0
+11/21/2023,17:38:44.839,0,0,0,Processing 5 items in delete queue,0,0,0
+11/21/2023,17:38:44.841,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C21.1\s_1_1101_a.tif,0,0,0
+11/21/2023,17:38:44.843,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C21.1\s_1_1101_c.tif,0,0,0
+11/21/2023,17:38:44.844,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C21.1\s_1_1101_g.tif,0,0,0
+11/21/2023,17:38:44.846,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C21.1\s_1_1101_t.tif,0,0,0
+11/21/2023,17:38:46.846,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:38:48.846,0,0,0,Processing 5 items in delete queue,0,0,0
+11/21/2023,17:38:48.848,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C21.1\s_1_1102_a.tif,0,0,0
+11/21/2023,17:38:48.850,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C21.1\s_1_1102_c.tif,0,0,0
+11/21/2023,17:38:48.852,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C21.1\s_1_1102_g.tif,0,0,0
+11/21/2023,17:38:48.853,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C21.1\s_1_1102_t.tif,0,0,0
+11/21/2023,17:38:50.854,0,0,0,Processing 1 items in delete queue,0,0,0
+11/21/2023,17:38:54.855,0,0,0,The low frequency delete queue has 14 items,0,0,0
+11/21/2023,17:38:54.855,0,0,0,First item on LFDQ is Del File Spec cycle=18 ext=cif ,0,0,0
+11/21/2023,17:38:54.855,1,1101,21,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C18.1\s_1_1101.cif,0,20,16
+11/21/2023,17:38:54.856,1,1102,21,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C18.1\s_1_1102.cif,0,20,16
+11/21/2023,17:39:26.858,0,0,0,The low frequency delete queue has 12 items,0,0,0
+11/21/2023,17:39:26.858,0,0,0,First item on LFDQ is Del File Spec cycle=19 ext=cif ,0,0,0
+11/21/2023,17:39:58.859,0,0,0,The low frequency delete queue has 12 items,0,0,0
+11/21/2023,17:39:58.859,0,0,0,First item on LFDQ is Del File Spec cycle=19 ext=cif ,0,0,0
+11/21/2023,17:40:30.861,0,0,0,The low frequency delete queue has 12 items,0,0,0
+11/21/2023,17:40:30.861,0,0,0,First item on LFDQ is Del File Spec cycle=19 ext=cif ,0,0,0
+11/21/2023,17:41:02.863,0,0,0,The low frequency delete queue has 12 items,0,0,0
+11/21/2023,17:41:02.863,0,0,0,First item on LFDQ is Del File Spec cycle=19 ext=cif ,0,0,0
+11/21/2023,17:41:20.864,0,0,0,Processing 5 items in delete queue,0,0,0
+11/21/2023,17:41:20.866,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C22.1\s_1_1101_a.tif,0,0,0
+11/21/2023,17:41:20.869,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C22.1\s_1_1101_c.tif,0,0,0
+11/21/2023,17:41:20.871,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C22.1\s_1_1101_g.tif,0,0,0
+11/21/2023,17:41:20.874,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C22.1\s_1_1101_t.tif,0,0,0
+11/21/2023,17:41:22.874,0,0,0,Processing 2 items in delete queue,0,0,0
+11/21/2023,17:41:23.874,0,0,0,Processing 8 items in delete queue,0,0,0
+11/21/2023,17:41:23.874,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C17.1\s_1_1101.bcl.old,0,0,0
+11/21/2023,17:41:23.875,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C18.1\s_1_1101.bcl.old,0,0,0
+11/21/2023,17:41:23.877,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C22.1\s_1_1102_a.tif,0,0,0
+11/21/2023,17:41:23.879,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C22.1\s_1_1102_c.tif,0,0,0
+11/21/2023,17:41:23.881,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C22.1\s_1_1102_g.tif,0,0,0
+11/21/2023,17:41:23.883,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images\L001\C22.1\s_1_1102_t.tif,0,0,0
+11/21/2023,17:41:23.884,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C19.1\s_1_1101.bcl.old,0,0,0
+11/21/2023,17:41:24.884,0,0,0,Processing 4 items in delete queue,0,0,0
+11/21/2023,17:41:24.884,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C20.1\s_1_1101.bcl.old,0,0,0
+11/21/2023,17:41:24.885,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C21.1\s_1_1101.bcl.old,0,0,0
+11/21/2023,17:41:24.885,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C22.1\s_1_1101.bcl.old,0,0,0
+11/21/2023,17:41:25.885,0,0,0,Processing 6 items in delete queue,0,0,0
+11/21/2023,17:41:26.885,0,0,0,Processing 2 items in delete queue,0,0,0
+11/21/2023,17:41:26.885,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C17.1\s_1_1102.bcl.old,0,0,0
+11/21/2023,17:41:27.885,0,0,0,Processing 5 items in delete queue,0,0,0
+11/21/2023,17:41:27.885,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C18.1\s_1_1102.bcl.old,0,0,0
+11/21/2023,17:41:27.886,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C19.1\s_1_1102.bcl.old,0,0,0
+11/21/2023,17:41:27.886,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C20.1\s_1_1102.bcl.old,0,0,0
+11/21/2023,17:41:27.887,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C21.1\s_1_1102.bcl.old,0,0,0
+11/21/2023,17:41:27.887,0,0,0,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C22.1\s_1_1102.bcl.old,0,0,0
+11/21/2023,17:41:28.887,0,0,0,Processing 6 items in delete queue,0,0,0
+11/21/2023,17:41:29.888,0,0,0,The low frequency delete queue has 30 items,0,0,0
+11/21/2023,17:41:29.888,0,0,0,First item on LFDQ is Del File Spec cycle=19 ext=cif ,0,0,0
+11/21/2023,17:41:29.889,1,1101,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C19.1\s_1_1101.cif,0,22,22
+11/21/2023,17:41:29.889,1,1102,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C19.1\s_1_1102.cif,0,22,22
+11/21/2023,17:41:29.889,1,1101,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C20.1\s_1_1101.cif,0,22,22
+11/21/2023,17:41:29.890,1,1102,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C20.1\s_1_1102.cif,0,22,22
+11/21/2023,17:41:29.890,1,1101,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C18.1\s_1_1101.dif,0,22,22
+11/21/2023,17:41:29.891,1,1102,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C18.1\s_1_1102.dif,0,22,22
+11/21/2023,17:41:29.891,1,1101,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C19.1\s_1_1101.dif,0,22,22
+11/21/2023,17:41:29.892,1,1102,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C19.1\s_1_1102.dif,0,22,22
+11/21/2023,17:41:29.892,1,1101,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C21.1\s_1_1101.cif,0,22,22
+11/21/2023,17:41:29.893,1,1101,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C20.1\s_1_1101.dif,0,22,22
+11/21/2023,17:41:29.893,1,1102,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C21.1\s_1_1102.cif,0,22,22
+11/21/2023,17:41:29.893,1,1102,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C20.1\s_1_1102.dif,0,22,22
+11/21/2023,17:41:29.894,1,1101,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C22.1\s_1_1101.cif,0,22,22
+11/21/2023,17:41:29.894,1,1101,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C21.1\s_1_1101.dif,0,22,22
+11/21/2023,17:41:29.895,1,1101,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C22.1\s_1_1101.dif,0,22,22
+11/21/2023,17:41:29.895,1,1102,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C22.1\s_1_1102.cif,0,22,22
+11/21/2023,17:41:29.895,1,1102,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C21.1\s_1_1102.dif,0,22,22
+11/21/2023,17:41:29.896,1,1102,22,Removing file D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\C22.1\s_1_1102.dif,0,22,22
+11/21/2023,17:41:29.896,0,0,0,Exiting delete thread and dropping 12 items in LFDQ queue,0,0,0
+11/21/2023,17:41:29.896,0,0,0,Completed delete for read 2,0,0,0

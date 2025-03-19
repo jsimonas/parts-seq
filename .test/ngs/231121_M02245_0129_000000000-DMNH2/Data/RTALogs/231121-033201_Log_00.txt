@@ -1,0 +1,32 @@
+11/21/2023,15:32:01.084,0,0,0,Start up of Illumina RTA 1.18.54,0,0,0
+11/21/2023,15:32:01.085,0,0,0,Machine name NRCHBS-WDL31229,0,0,0
+11/21/2023,15:32:01.455,0,0,0,Loading indexes from sampleSheet.,0,0,0
+11/21/2023,15:32:01.529,0,0,0,Creating Lane 1,0,0,0
+11/21/2023,15:32:01.532,0,0,0,Creating Tile 1101,0,0,0
+11/21/2023,15:32:01.558,0,0,0,Compute current state DID NOT find locs file: D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\s_1_1101.locs,0,0,0
+11/21/2023,15:32:01.560,0,0,0,(1,1101) Status extracted 0 base called 0 q scored 0,0,0,0
+11/21/2023,15:32:01.560,0,0,0,Compute current state DID NOT find locs file: D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Processed\L001\s_1_1102.locs,0,0,0
+11/21/2023,15:32:01.561,0,0,0,(1,1102) Status extracted 0 base called 0 q scored 0,0,0,0
+11/21/2023,15:32:01.579,0,0,0,Lane Count = 1,0,0,0
+11/21/2023,15:32:01.580,0,0,0,TilesPerLane = 2,0,0,0
+11/21/2023,15:32:01.580,0,0,0,Max Cycles = 150,0,0,0
+11/21/2023,15:32:01.580,0,0,0,ImageBasePath = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images,0,0,0
+11/21/2023,15:32:01.581,0,0,0,OutputBasePath = E:\output\231121_M02245_0129_000000000-DMNH2,0,0,0
+11/21/2023,15:32:01.581,0,0,0,BaseCallBasePath = D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls,0,0,0
+11/21/2023,15:32:01.582,0,0,0,CopyBasePath = E:\output\231121_M02245_0129_000000000-DMNH2\Images,0,0,0
+11/21/2023,15:32:01.582,0,0,0,Run Name = 231121_M02245_0129_000000000-DMNH2,0,0,0
+11/21/2023,15:32:01.583,0,0,0,DeleteImages = True,0,0,0
+11/21/2023,15:32:01.583,0,0,0,CopyImages = False,0,0,0
+11/21/2023,15:32:01.583,0,0,0,CopyIntensities = False,0,0,0
+11/21/2023,15:32:01.584,0,0,0,Run ID = 0129,0,0,0
+11/21/2023,15:32:01.584,0,0,0,Using quality scoring of type: V6,0,0,0
+11/21/2023,15:32:01.585,0,0,0,Argument 1 D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Images ,0,0,0
+11/21/2023,15:32:01.585,0,0,0,Argument 2 E:\output ,0,0,0
+11/21/2023,15:32:01.585,0,0,0,Argument 3 Read=All,0,0,0
+11/21/2023,15:32:01.586,0,0,0,Argument 4 ControlLane=0,0,0,0
+11/21/2023,15:32:01.586,0,0,0,Argument 5 Threads=2,0,0,0
+11/21/2023,15:32:01.586,0,0,0,Argument 6 CopyIntensityFilesToNetwork=0,0,0,0
+11/21/2023,15:32:01.587,0,0,0,Argument 7 instrumentType=miseq,0,0,0
+11/21/2023,15:32:01.592,0,0,0,Found DefaultQTable C:\Illumina\RTA\miseq_qtable_1.6.3.txt,0,0,0
+11/21/2023,15:32:01.598,0,0,0,Loaded Default QTable = C:\Illumina\RTA\miseq_qtable_1.6.3.txt,0,0,0
+11/21/2023,15:32:04.273,0,0,0,Starting threads = 2,0,0,0

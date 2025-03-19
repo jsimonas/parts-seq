@@ -1,0 +1,323 @@
+11/21/2023,15:32:04.462,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\TileMetricsOut.bin,0,0,0
+11/21/2023,15:32:04.493,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\TileMetricsOut.bin,0,0,0
+11/21/2023,16:47:57.451,0,0,0,Aggregate color matrix:95,0,0,0
+11/21/2023,16:52:39.471,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,16:52:39.513,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,16:52:39.530,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,16:52:39.564,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,16:52:39.579,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\TileMetricsOut.bin,0,0,0
+11/21/2023,16:52:39.613,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\TileMetricsOut.bin,0,0,0
+11/21/2023,16:52:39.614,0,0,0,Triggering Extraction Cycle Completed 1,0,0,0
+11/21/2023,16:52:39.616,0,0,0,Triggering Extraction Cycle Completed 2,0,0,0
+11/21/2023,16:52:39.616,0,0,0,Triggering Extraction Cycle Completed 3,0,0,0
+11/21/2023,16:52:39.616,0,0,0,Triggering Extraction Cycle Completed 4,0,0,0
+11/21/2023,16:52:39.616,0,0,0,Triggering Extraction Cycle Completed 5,0,0,0
+11/21/2023,16:57:39.639,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,16:57:39.681,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,16:57:39.684,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,16:57:39.718,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,16:57:39.720,0,0,0,Triggering Extraction Cycle Completed 6,0,0,0
+11/21/2023,16:57:39.720,0,0,0,Triggering Extraction Cycle Completed 7,0,0,0
+11/21/2023,17:02:39.742,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:02:39.783,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:02:39.800,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,17:02:39.834,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,17:02:39.836,0,0,0,Triggering Extraction Cycle Completed 8,0,0,0
+11/21/2023,17:02:39.836,0,0,0,Triggering Extraction Cycle Completed 9,0,0,0
+11/21/2023,17:07:39.857,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:07:39.900,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:07:39.902,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,17:07:39.936,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,17:07:39.938,0,0,0,Triggering Extraction Cycle Completed 10,0,0,0
+11/21/2023,17:07:39.938,0,0,0,Triggering Extraction Cycle Completed 11,0,0,0
+11/21/2023,17:08:07.968,0,0,0,Aggregate phasing:25,0,0,0
+11/21/2023,17:12:39.987,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:12:40.030,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:12:40.031,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\config.xml,0,0,0
+11/21/2023,17:12:40.071,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\config.xml,0,0,0
+11/21/2023,17:12:40.087,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,17:12:40.121,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,17:12:40.136,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\TileMetricsOut.bin,0,0,0
+11/21/2023,17:12:40.169,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\TileMetricsOut.bin,0,0,0
+11/21/2023,17:12:40.171,0,0,0,Triggering Extraction Cycle Completed 12,0,0,0
+11/21/2023,17:12:40.171,0,0,0,Triggering Extraction Cycle Completed 13,0,0,0
+11/21/2023,17:12:40.171,0,0,0,Triggering Basecall Cycle Completed 1,0,0,0
+11/21/2023,17:12:40.173,0,0,0,Triggering Basecall Cycle Completed 2,0,0,0
+11/21/2023,17:12:40.173,0,0,0,Triggering Basecall Cycle Completed 3,0,0,0
+11/21/2023,17:12:40.173,0,0,0,Triggering Basecall Cycle Completed 4,0,0,0
+11/21/2023,17:12:40.173,0,0,0,Triggering Basecall Cycle Completed 5,0,0,0
+11/21/2023,17:12:40.173,0,0,0,Triggering Basecall Cycle Completed 6,0,0,0
+11/21/2023,17:12:40.173,0,0,0,Triggering Basecall Cycle Completed 7,0,0,0
+11/21/2023,17:12:40.174,0,0,0,Triggering Basecall Cycle Completed 8,0,0,0
+11/21/2023,17:12:40.174,0,0,0,Triggering Basecall Cycle Completed 9,0,0,0
+11/21/2023,17:12:40.174,0,0,0,Triggering Basecall Cycle Completed 10,0,0,0
+11/21/2023,17:12:40.174,0,0,0,Triggering Basecall Cycle Completed 11,0,0,0
+11/21/2023,17:12:40.174,0,0,0,Triggering Basecall Cycle Completed 12,0,0,0
+11/21/2023,17:17:40.196,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:17:40.237,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:17:40.238,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\config.xml,0,0,0
+11/21/2023,17:17:40.261,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\config.xml,0,0,0
+11/21/2023,17:17:40.263,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,17:17:40.296,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,17:17:40.298,0,0,0,Triggering Extraction Cycle Completed 14,0,0,0
+11/21/2023,17:17:40.298,0,0,0,Triggering Extraction Cycle Completed 15,0,0,0
+11/21/2023,17:17:40.298,0,0,0,Triggering Basecall Cycle Completed 13,0,0,0
+11/21/2023,17:17:40.298,0,0,0,Triggering Basecall Cycle Completed 14,0,0,0
+11/21/2023,17:18:28.634,0,0,0,All Threads have finished,0,0,0
+11/21/2023,17:18:28.634,0,0,0,Waiting for copy and delete threads to finish...,0,0,0
+11/21/2023,17:18:46.638,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:18:46.680,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:18:46.681,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\config.xml,0,0,0
+11/21/2023,17:18:46.722,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\config.xml,0,0,0
+11/21/2023,17:18:46.737,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,17:18:46.770,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\ExtractionMetricsOut.bin,0,0,0
+11/21/2023,17:18:46.785,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\TileMetricsOut.bin,0,0,0
+11/21/2023,17:18:46.818,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\TileMetricsOut.bin,0,0,0
+11/21/2023,17:18:46.820,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\QMetricsOut.bin,0,0,0
+11/21/2023,17:18:46.852,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\QMetricsOut.bin,0,0,0
+11/21/2023,17:18:46.855,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\CorrectedIntMetricsOut.bin,0,0,0
+11/21/2023,17:18:46.888,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\InterOp\CorrectedIntMetricsOut.bin,0,0,0
+11/21/2023,17:18:46.890,0,0,0,Completed copy for read 1,0,0,0
+11/21/2023,17:18:46.890,0,0,0,Triggering Extraction Cycle Completed 16,0,0,0
+11/21/2023,17:18:46.890,0,0,0,Triggering Basecall Cycle Completed 15,0,0,0
+11/21/2023,17:18:46.890,0,0,0,Triggering Basecall Cycle Completed 16,0,0,0
+11/21/2023,17:18:46.890,0,0,0,Triggering Quality Scored Cycle Completed 1,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 2,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 3,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 4,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 5,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 6,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 7,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 8,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 9,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 10,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 11,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 12,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 13,0,0,0
+11/21/2023,17:18:46.892,0,0,0,Triggering Quality Scored Cycle Completed 14,0,0,0
+11/21/2023,17:18:46.893,0,0,0,Triggering Quality Scored Cycle Completed 15,0,0,0
+11/21/2023,17:18:46.893,0,0,0,Triggering Quality Scored Cycle Completed 16,0,0,0
+11/21/2023,17:18:46.893,0,0,0,Triggering BCL file copied Cycle Completed 1,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 2,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 3,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 4,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 5,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 6,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 7,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 8,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 9,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 10,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 11,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 12,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 13,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 14,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 15,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Triggering BCL file copied Cycle Completed 16,0,0,0
+11/21/2023,17:18:46.894,0,0,0,Processing completed. Run has finished.,0,0,0
+11/21/2023,17:18:46.897,0,0,0,Moving all base level files,0,0,0
+11/21/2023,17:18:46.898,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\ImageAnalysis_Netcopy_complete.txt,0,0,0
+11/21/2023,17:18:46.904,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\RunInfo.xml,0,0,0
+11/21/2023,17:18:46.926,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\SampleSheet.csv,0,0,0
+11/21/2023,17:18:46.965,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\ImageAnalysis_Netcopy_complete_Read1.txt,0,0,0
+11/21/2023,17:18:46.971,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\RunParameters.xml,0,0,0
+11/21/2023,17:18:46.994,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\ImageAnalysis_Netcopy_complete.txt,0,0,0
+11/21/2023,17:18:46.995,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\RunInfo.xml,0,0,0
+11/21/2023,17:18:47.297,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\RunInfo.xml to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\RunInfo.xml : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\RunInfo.xml' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:47.297,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\SampleSheet.csv,0,0,0
+11/21/2023,17:18:47.299,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\SampleSheet.csv to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\SampleSheet.csv : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\SampleSheet.csv' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:47.299,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\ImageAnalysis_Netcopy_complete_Read1.txt,0,0,0
+11/21/2023,17:18:47.300,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\RunParameters.xml,0,0,0
+11/21/2023,17:18:47.302,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\RunParameters.xml to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\RunParameters.xml : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\RunParameters.xml' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:47.303,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Config\Effective.cfg,0,0,0
+11/21/2023,17:18:47.723,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Config\RTAStart.bat,0,0,0
+11/21/2023,17:18:47.763,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Config\Effective.cfg,0,0,0
+11/21/2023,17:18:47.764,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Config\RTAStart.bat,0,0,0
+11/21/2023,17:18:47.766,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Config\RTAStart.bat to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Config\RTAStart.bat : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Config\RTAStart.bat' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:47.768,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:18:47.790,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\RTAConfiguration.xml,0,0,0
+11/21/2023,17:18:47.814,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\config.xml,0,0,0
+11/21/2023,17:18:47.836,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\SampleSheet.csv,0,0,0
+11/21/2023,17:18:47.875,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_1_1101_matrix.txt,0,0,0
+11/21/2023,17:18:47.881,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_1_matrix.txt,0,0,0
+11/21/2023,17:18:47.888,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_2_1102_matrix.txt,0,0,0
+11/21/2023,17:18:47.894,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_3_1102_matrix.txt,0,0,0
+11/21/2023,17:18:47.900,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_4_1102_matrix.txt,0,0,0
+11/21/2023,17:18:47.906,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_1_1102_matrix.txt,0,0,0
+11/21/2023,17:18:47.912,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_3_1101_matrix.txt,0,0,0
+11/21/2023,17:18:47.918,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_matrix.txt,0,0,0
+11/21/2023,17:18:47.924,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_2_1101_matrix.txt,0,0,0
+11/21/2023,17:18:47.930,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_4_1101_matrix.txt,0,0,0
+11/21/2023,17:18:47.936,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\EmpiricalPhasingCorrection_1_1_1101.txt,0,0,0
+11/21/2023,17:18:47.942,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_02_phasing.xml,0,0,0
+11/21/2023,17:18:47.965,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_1102_phasing.txt,0,0,0
+11/21/2023,17:18:47.974,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_phasing.txt,0,0,0
+11/21/2023,17:18:48.005,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\EmpiricalPhasingCorrection_1_1_1102.txt,0,0,0
+11/21/2023,17:18:48.074,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_phasing.txt,0,0,0
+11/21/2023,17:18:48.082,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_1101_phasing.txt,0,0,0
+11/21/2023,17:18:48.113,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\Offsets\offsets.txt,0,0,0
+11/21/2023,17:18:48.367,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\Offsets\SubTileOffsets.txt,0,0,0
+11/21/2023,17:18:48.516,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Log_00.txt,0,0,0
+11/21/2023,17:18:48.560,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Read1_Delete Thread_00.txt,0,0,0
+11/21/2023,17:18:48.631,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Read1_Processor #2_00.txt,0,0,0
+11/21/2023,17:18:48.832,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\DiagLog.txt,0,0,0
+11/21/2023,17:18:48.839,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Read1_Copy Thread_00.txt,0,0,0
+11/21/2023,17:18:48.937,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Read1_Sync Thread_00.txt,0,0,0
+11/21/2023,17:18:48.974,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Read1_Processor #1_00.txt,0,0,0
+11/21/2023,17:18:49.153,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\config.xml,0,0,0
+11/21/2023,17:18:49.154,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\RTAConfiguration.xml,0,0,0
+11/21/2023,17:18:49.156,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\RTAConfiguration.xml to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\RTAConfiguration.xml : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\RTAConfiguration.xml' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:49.157,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\config.xml,0,0,0
+11/21/2023,17:18:49.158,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\SampleSheet.csv,0,0,0
+11/21/2023,17:18:49.160,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_1_1101_matrix.txt,0,0,0
+11/21/2023,17:18:49.161,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_1_matrix.txt,0,0,0
+11/21/2023,17:18:49.162,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_1_matrix.txt to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_1_matrix.txt : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_1_matrix.txt' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:49.163,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_2_1102_matrix.txt,0,0,0
+11/21/2023,17:18:49.164,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_3_1102_matrix.txt,0,0,0
+11/21/2023,17:18:49.165,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_4_1102_matrix.txt,0,0,0
+11/21/2023,17:18:49.166,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_1_1102_matrix.txt,0,0,0
+11/21/2023,17:18:49.167,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_3_1101_matrix.txt,0,0,0
+11/21/2023,17:18:49.168,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_matrix.txt,0,0,0
+11/21/2023,17:18:49.169,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_matrix.txt to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_matrix.txt : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_matrix.txt' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:49.169,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_2_1101_matrix.txt,0,0,0
+11/21/2023,17:18:49.170,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Matrix\s_1_4_1101_matrix.txt,0,0,0
+11/21/2023,17:18:49.172,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\EmpiricalPhasingCorrection_1_1_1101.txt,0,0,0
+11/21/2023,17:18:49.173,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_02_phasing.xml,0,0,0
+11/21/2023,17:18:49.175,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_02_phasing.xml to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_02_phasing.xml : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_02_phasing.xml' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:49.175,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_1102_phasing.txt,0,0,0
+11/21/2023,17:18:49.177,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_1102_phasing.txt to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_1102_phasing.txt : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_1102_phasing.txt' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:49.177,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_phasing.txt,0,0,0
+11/21/2023,17:18:49.178,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_phasing.txt to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_phasing.txt : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_phasing.txt' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:49.179,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\EmpiricalPhasingCorrection_1_1_1102.txt,0,0,0
+11/21/2023,17:18:49.180,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_phasing.txt,0,0,0
+11/21/2023,17:18:49.181,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_phasing.txt to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_phasing.txt : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_phasing.txt' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:49.181,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_1101_phasing.txt,0,0,0
+11/21/2023,17:18:49.183,0,0,0,Error Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_1101_phasing.txt to D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_1101_phasing.txt : System.IO.IOException: The process cannot access the file 'D:\Illumina\MiSeqAnalysis\231121_M02245_0129_000000000-DMNH2\Data\Intensities\BaseCalls\Phasing\s_1_1_1101_phasing.txt' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName, Boolean overwrite)
+   at Illumina.Common.FileMover.ProcessFiles(FileInfo sourceFile, String targetDirectory) in c:\BuildRepository\RTA\RTA118x\Src\Shared\ILMNcommon\Common\FileMover.cs:line 260,0,0,0
+11/21/2023,17:18:49.184,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\Offsets\offsets.txt,0,0,0
+11/21/2023,17:18:49.185,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\Intensities\Offsets\SubTileOffsets.txt,0,0,0
+11/21/2023,17:18:49.187,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Log_00.txt,0,0,0
+11/21/2023,17:18:49.188,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Read1_Delete Thread_00.txt,0,0,0
+11/21/2023,17:18:49.189,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Read1_Processor #2_00.txt,0,0,0
+11/21/2023,17:18:49.190,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\DiagLog.txt,0,0,0
+11/21/2023,17:18:49.191,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Read1_Copy Thread_00.txt,0,0,0
+11/21/2023,17:18:49.192,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Read1_Sync Thread_00.txt,0,0,0
+11/21/2023,17:18:49.193,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Data\RTALogs\231121-033201_Read1_Processor #1_00.txt,0,0,0
+11/21/2023,17:18:49.295,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle10_Log.00.log,0,0,0
+11/21/2023,17:18:49.397,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle11_Log.00.log,0,0,0
+11/21/2023,17:18:49.515,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle12_Log.00.log,0,0,0
+11/21/2023,17:18:49.716,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle13_Log.00.log,0,0,0
+11/21/2023,17:18:49.822,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle14_Log.00.log,0,0,0
+11/21/2023,17:18:49.928,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle15_Log.00.log,0,0,0
+11/21/2023,17:18:50.035,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle16_Log.00.log,0,0,0
+11/21/2023,17:18:50.249,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle1_Log.00.log,0,0,0
+11/21/2023,17:18:51.984,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle1_Log.01.xml,0,0,0
+11/21/2023,17:18:55.988,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle2_Log.00.xml,0,0,0
+11/21/2023,17:18:56.582,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle3_Log.00.xml,0,0,0
+11/21/2023,17:18:57.764,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle4_Log.00.xml,0,0,0
+11/21/2023,17:18:58.272,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle5_Log.00.xml,0,0,0
+11/21/2023,17:18:58.804,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle6_Log.00.xml,0,0,0
+11/21/2023,17:18:59.223,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle7_Log.00.xml,0,0,0
+11/21/2023,17:18:59.670,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle8_Log.00.xml,0,0,0
+11/21/2023,17:19:00.186,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle9_Log.00.xml,0,0,0
+11/21/2023,17:19:00.711,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle10_Log.00.xml,0,0,0
+11/21/2023,17:19:01.138,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle12_Log.00.xml,0,0,0
+11/21/2023,17:19:01.666,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle14_Log.00.xml,0,0,0
+11/21/2023,17:19:02.095,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle16_Log.00.xml,0,0,0
+11/21/2023,17:19:02.539,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle2_Log.00.log,0,0,0
+11/21/2023,17:19:02.844,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle4_Log.00.log,0,0,0
+11/21/2023,17:19:02.933,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle6_Log.00.log,0,0,0
+11/21/2023,17:19:02.946,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle8_Log.00.log,0,0,0
+11/21/2023,17:19:03.033,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle11_Log.00.xml,0,0,0
+11/21/2023,17:19:03.490,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle15_Log.00.xml,0,0,0
+11/21/2023,17:19:03.917,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle3_Log.00.log,0,0,0
+11/21/2023,17:19:04.173,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle7_Log.00.log,0,0,0
+11/21/2023,17:19:04.274,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle13_Log.00.xml,0,0,0
+11/21/2023,17:19:04.760,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle5_Log.00.log,0,0,0
+11/21/2023,17:19:04.787,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle1_Log.00.xml,0,0,0
+11/21/2023,17:19:08.669,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle9_Log.00.log,0,0,0
+11/21/2023,17:19:08.772,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle10_Log.00.log,0,0,0
+11/21/2023,17:19:08.773,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle11_Log.00.log,0,0,0
+11/21/2023,17:19:08.775,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle12_Log.00.log,0,0,0
+11/21/2023,17:19:08.776,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle13_Log.00.log,0,0,0
+11/21/2023,17:19:08.777,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle14_Log.00.log,0,0,0
+11/21/2023,17:19:08.778,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle15_Log.00.log,0,0,0
+11/21/2023,17:19:08.779,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle16_Log.00.log,0,0,0
+11/21/2023,17:19:08.781,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle1_Log.00.log,0,0,0
+11/21/2023,17:19:08.783,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle1_Log.01.xml,0,0,0
+11/21/2023,17:19:08.788,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle2_Log.00.xml,0,0,0
+11/21/2023,17:19:08.789,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle3_Log.00.xml,0,0,0
+11/21/2023,17:19:08.791,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle4_Log.00.xml,0,0,0
+11/21/2023,17:19:08.793,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle5_Log.00.xml,0,0,0
+11/21/2023,17:19:08.794,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle6_Log.00.xml,0,0,0
+11/21/2023,17:19:08.795,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle7_Log.00.xml,0,0,0
+11/21/2023,17:19:08.797,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle8_Log.00.xml,0,0,0
+11/21/2023,17:19:08.798,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle9_Log.00.xml,0,0,0
+11/21/2023,17:19:08.799,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle10_Log.00.xml,0,0,0
+11/21/2023,17:19:08.801,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle12_Log.00.xml,0,0,0
+11/21/2023,17:19:08.802,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle14_Log.00.xml,0,0,0
+11/21/2023,17:19:08.804,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle16_Log.00.xml,0,0,0
+11/21/2023,17:19:08.825,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle2_Log.00.log,0,0,0
+11/21/2023,17:19:08.826,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle4_Log.00.log,0,0,0
+11/21/2023,17:19:08.827,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle6_Log.00.log,0,0,0
+11/21/2023,17:19:08.828,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle8_Log.00.log,0,0,0
+11/21/2023,17:19:08.829,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle11_Log.00.xml,0,0,0
+11/21/2023,17:19:08.830,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle15_Log.00.xml,0,0,0
+11/21/2023,17:19:08.832,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle3_Log.00.log,0,0,0
+11/21/2023,17:19:08.833,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle7_Log.00.log,0,0,0
+11/21/2023,17:19:08.834,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle13_Log.00.xml,0,0,0
+11/21/2023,17:19:08.835,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle5_Log.00.log,0,0,0
+11/21/2023,17:19:08.836,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle1_Log.00.xml,0,0,0
+11/21/2023,17:19:08.841,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Logs\231121_M02245_0129_000000000-DMNH2_Cycle9_Log.00.log,0,0,0
+11/21/2023,17:19:09.038,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Recipe\MS3522379-300V2.xml,0,0,0
+11/21/2023,17:19:09.083,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Recipe\RunState.xml,0,0,0
+11/21/2023,17:19:09.139,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Recipe\MS3522379-300V2.xml,0,0,0
+11/21/2023,17:19:09.140,0,0,0,Copying D:\Illumina\MiSeqTemp\231121_M02245_0129_000000000-DMNH2\Recipe\RunState.xml,0,0,0
+11/21/2023,17:19:09.180,0,0,0,Cleaning up local files,0,0,0
+11/21/2023,17:19:09.185,0,0,0,Cleaning up empty directories,0,0,0
