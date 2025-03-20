@@ -4,6 +4,8 @@ import argparse
 import pandas as pd
 import numpy as np
 
+# pylint: disable=undefined-variable
+
 # logging
 sys.stderr = open(snakemake.log[0], "w")
 
