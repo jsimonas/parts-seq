@@ -4,12 +4,12 @@ rule demux:
     """
     input:
         run_dir = config["run_dir"],
-        sample_sheet = "results/sample_sheet.csv"
+        sample_sheet = "results/sample_sheet.csv",
     output:
-        directory("results/demultiplexed")
+        directory("results/demultiplexed"),
     threads: config.get("threads", 8)
     log:
-        "logs/demultiplex.log"
+        "logs/demultiplex.log",
     conda:
         "envs/bcl2fastq.yaml"
     shell:

@@ -10,4 +10,4 @@ include: "rules/demux.smk"
 
 rule all:
     input:
-        "results/demultiplexed"
+        "results/demultiplexed",

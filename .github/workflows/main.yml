@@ -20,10 +20,11 @@ jobs:
       - name: Formatting
         uses: github/super-linter@v5
         env:
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_SNAKEMAKE_SNAKEFMT: true
+          VALIDATE_PYTHON_PYLINT: true
 
   Linting:
     runs-on: ubuntu-latest
