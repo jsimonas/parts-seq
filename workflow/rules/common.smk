@@ -16,6 +16,6 @@ rule convert_sheet:
     log:
         "logs/convert_sheet.log",
     conda:
-        "envs/pandas.yaml",
+        "envs/pandas.yaml"
     script:
         "scripts/convert_to_samplesheet.py"
