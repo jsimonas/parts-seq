@@ -11,7 +11,7 @@ rule demux:
     log:
         "logs/demultiplex.log",
     conda:
-        "envs/bcl2fastq.yaml"
+        "../envs/bcl2fastq.yaml"
     shell:
         """
         set -euo pipefail
