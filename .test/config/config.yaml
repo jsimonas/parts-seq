@@ -1,6 +1,6 @@
 # input
-run_dir: ".test/ngs/231121_M02245_0129_000000000-DMNH2"
-sample_sheet: ".test/ngs/231121_M02245_0129_000000000-DMNH2/231121_extended_sample_sheet.xlsx"
+run_dir: "ngs/231121_M02245_0129_000000000-DMNH2"
+sample_sheet: "ngs/231121_M02245_0129_000000000-DMNH2/231121_extended_sample_sheet.xlsx"
 
 # other params
 threads: 4
