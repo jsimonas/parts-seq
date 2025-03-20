@@ -1,0 +1,6 @@
+channels:
+  - conda-forge
+  - bioconda
+  - dranew
+dependencies:
+  - bcl2fastq = 2.19.0
