@@ -17,4 +17,4 @@ rule convert_sheet:
     conda:
         "../envs/pandas.yaml"
     script:
-        "scripts/convert_to_samplesheet.py"
+        "../scripts/convert_to_samplesheet.py"
