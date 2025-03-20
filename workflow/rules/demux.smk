@@ -3,15 +3,15 @@ rule demux:
     runs bcl2fastq to demultiplex using the converted sample sheet.
     """
     input:
-        run_dir = config["run_dir"],
-        sample_sheet = "results/sample_sheet.csv",
+        run_dir=config["run_dir"],
+        sample_sheet="results/sample_sheet.csv",
     output:
         directory("results/demultiplexed"),
     threads: config.get("threads", 8)
     log:
         "logs/demultiplex.log",
     conda:
-        "envs/bcl2fastq.yaml"
+        "envs/bcl2fastq.yaml",
     shell:
         """
         set -euo pipefail
