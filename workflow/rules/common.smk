@@ -6,13 +6,12 @@ from snakemake.utils import validate
 
 rule convert_sheet:
     """
-    converts extended_sample_sheet_template.xlsx -> results/sample_sheet.csv
-    using the new script that directly references snakemake variables.
+    converts extended_sample_sheet_template.xlsx to standard sample_sheet.csv
     """
     input:
-        config["sample_sheet"],
+        inp=config["sample_sheet"],
     output:
-        "results/sample_sheet.csv",
+        out="results/sample_sheet.csv",
     log:
         "logs/convert_sheet.log",
     conda:

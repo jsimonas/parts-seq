@@ -7,11 +7,11 @@ import numpy as np
 # logging
 sys.stderr = open(snakemake.log[0], "w")
 
-def convert_to_samplesheet(in_file, out_file):
+def convert_to_samplesheet(inp, out):
     
     # read extended sample sheet
     ex_sheet = pd.read_excel(
-        io = in_file
+        io = inp
     )
     # validate if mandatory variables are not missing
     if not ex_sheet.loc[:, ['project_id', 'sample_id', 'index_seq']].isnull().any().any():
@@ -44,7 +44,7 @@ def convert_to_samplesheet(in_file, out_file):
         # combine and write sample sheet
         sheet = header_df.append(sheet_df).fillna('')
         sheet.to_csv(
-            out_file,
+            out,
             header = None,
             index = None
         )
@@ -53,7 +53,7 @@ def convert_to_samplesheet(in_file, out_file):
 
 
 convert_to_samplesheet(
-    in_file = snakemake.input[0],
-    out_file = snakemake.output[0]
+    inp = snakemake.input[0],
+    out = snakemake.output[0]
 )
 
