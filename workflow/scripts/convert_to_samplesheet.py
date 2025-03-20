@@ -44,7 +44,7 @@ def convert_to_samplesheet(inp, out):
         sheet_df = pd.DataFrame(ex_sheet_dict)
         
         # combine and write sample sheet
-        sheet = header_df.append(sheet_df).fillna('')
+        sheet = header_df.concat([header_df, sheet_df], ignore_index=True).fillna('')
         sheet.to_csv(
             out,
             header = None,
