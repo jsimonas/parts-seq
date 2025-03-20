@@ -1,7 +1,7 @@
-# run directory
-run_dir:".test/ngs/231121_M02245_0129_000000000-DMNH2"
-sample_sheet:".test/ngs/231121_M02245_0129_000000000-DMNH2/231121_extended_sample_sheet.xlsx"
+# input
+run_dir: ".test/ngs/231121_M02245_0129_000000000-DMNH2"
+sample_sheet: ".test/ngs/231121_M02245_0129_000000000-DMNH2/231121_extended_sample_sheet.xlsx"
 
-# parameters for computational resources
+# other params
 threads: 4
 memory: 36G
