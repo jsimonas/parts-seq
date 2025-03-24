@@ -1,33 +1,41 @@
-checkpoint demultiplex:
+rule convert_sheet:
     """
-    checkpoint that:
-      1) converts extended_sample_sheet.xlsx to sample_sheet.csv
-      2) runs bcl2fastq
+    converts extended_sample_sheet_template.xlsx to standard sample_sheet.csv
     """
     input:
-        lambda wildcards: config["sample_sheet"]
+        inp=config["sample_sheet"],
     output:
-        directory("results/demultiplexed")
+        out="results/sample_sheet.csv",
     log:
-        "logs/demultiplex.log"
+        "logs/convert_sheet.log",
+    conda:
+        "../envs/pandas.yaml"
+    script:
+        "../scripts/convert_to_samplesheet.py"
+
+
+rule demux:
+    """
+    runs bcl2fastq to demultiplex using the converted sample sheet.
+    """
+    input:
+        run_dir=config["run_dir"],
+        sample_sheet="results/sample_sheet.csv",
+    output:
+        directory("results/demultiplexed"),
+    threads: config.get("threads", 8)
+    log:
+        "logs/demultiplex.log",
     conda:
         "../envs/bcl2fastq.yaml"
-    threads: config.get("threads", 8)
     shell:
         """
         set -euo pipefail
 
-        # 1) convert extended sample sheet
-        python ../scripts/convert_to_samplesheet.py \
-            --file {input} \
-            --out results/sample_sheet.csv \
-            2> logs/convert_sheet.log
-
-        # 2) demultiplex
         bcl2fastq \
-            --runfolder-dir {config[run_dir]} \
+            --runfolder-dir {input.run_dir} \
             --output-dir {output} \
-            --sample-sheet results/sample_sheet.csv \
+            --sample-sheet {input.sample_sheet} \
             --mask-short-adapter-reads 0 \
             --minimum-trimmed-read-length 0 \
             --use-bases-mask 'y*,I*,y*,y*' \
@@ -36,22 +44,6 @@ checkpoint demultiplex:
             --processing-threads {threads} \
             &> {log}
         """
-    run:
-        import os, re
-        sample_name_set = set()
-        demux_dir = "results/demultiplexed"
-        for entry in os.listdir(demux_dir):
-            subdir = os.path.join(demux_dir, entry)
-            if os.path.isdir(subdir):
-                if entry in {"Reports", "Stats", "Undetermined"}:
-                    continue
-                for f in os.listdir(subdir):
-                    if f.endswith(".fastq.gz"):
-                        m = re.match(r"(.*?)_R[123]_001\.fastq\.gz", f)
-                        if m:
-                            sample_name_set.add(m.group(1))
-        samples = sorted(sample_name_set)
-        params["samples"] = samples
 
 
 rule merge_fastq:
