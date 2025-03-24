@@ -1,4 +1,5 @@
 import os
+import re
 import glob
 import pandas as pd
 from snakemake.utils import validate
@@ -17,10 +18,11 @@ def get_sample_ids(xlsx_path):
 
 def get_fastqs_for_sample(wildcards):
     """
-    detects the demultiplexed FASTQ files for a given sample in results/demultiplexed
+    detects the demultiplexed FASTQ files for a given sample in results/demultiplexed and
+    returns a dictionary
     """
     pattern = os.path.join(
-        "results", "demultiplexed", "**", f"{wildcards.sample}_R*_001.fastq.gz"
+        "results", "demultiplexed", "**", f"{wildcards.sample}*_R*_001.fastq.gz"
     )
     matches = sorted(glob.glob(pattern, recursive=True))
 
