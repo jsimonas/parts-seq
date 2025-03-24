@@ -5,15 +5,21 @@ import pandas as pd
 from snakemake.utils import validate
 
 
-def get_sample_ids(xlsx_path):
-    """
-    obtains sample ids from extended sample sheet
-    """
-    df = pd.read_excel(xlsx_path, engine="openpyxl")
-    df.columns = [col.strip().lower() for col in df.columns]
-    samples = df["sample_id"].unique().tolist()
+#def get_sample_ids(xlsx_path):
+#    """
+#    obtains sample ids from extended sample sheet
+#    """
+#    df = pd.read_excel(xlsx_path, engine="openpyxl")
+#    df.columns = [col.strip().lower() for col in df.columns]
+#    samples = df["sample_id"].unique().tolist()
+#
+#    return samples
 
-    return samples
+
+def get_sample_ids(wildcards):
+    ckpt = checkpoints.parse_demux.get()
+
+    return ckpt.params["samples"]
 
 
 def get_fastqs_for_sample(wildcards):
