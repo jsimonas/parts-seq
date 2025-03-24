@@ -9,7 +9,7 @@ include: "rules/checkpoints.smk"
 include: "rules/demux.smk"
 
 
-#sample_ids = sorted(get_sample_ids(config["sample_sheet"]))
+# sample_ids = sorted(get_sample_ids(config["sample_sheet"]))
 
 
 rule all:
