@@ -11,7 +11,7 @@ def get_sample_ids(xlsx_path):
     df = pd.read_excel(xlsx_path, engine="openpyxl")
     df.columns = [col.strip().lower() for col in df.columns]
     samples = df["sample_id"].unique().tolist()
-    
+
     return samples
 
 
