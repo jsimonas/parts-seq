@@ -51,13 +51,15 @@ rule merge_fastq:
     merge R1 and R2 into something and copies R3, depending on sequencer
     """
     input:
-        fastqs=unpack(get_fastqs_for_sample),
+        r1 = lambda w: get_fastqs_for_sample(w)["r1"],
+        r2 = lambda w: get_fastqs_for_sample(w)["r2"],
+        r3 = lambda w: get_fastqs_for_sample(w)["r3"],
     output:
-        bc="results/merged/{sample}_bc_001.fastq.gz",
-        cdna="results/merged/{sample}_cdna_001.fastq.gz",
+        bc = "results/merged/{sample}_bc_001.fastq.gz",
+        cdna = "results/merged/{sample}_cdna_001.fastq.gz",
     params:
-        sequencer=config["sequencer"],
-    threads: config.get("threads", 4)
+        sequencer = config["sequencer"],
+    threads: config.get("threads", 4),
     log:
         "logs/merge_fastq_{sample}.log",
     conda:
@@ -66,9 +68,9 @@ rule merge_fastq:
         """
         set -euo pipefail
         
-        R1={input.fastqs.r1}
-        R2={input.fastqs.r2}
-        R3={input.fastqs.r3}
+        R1={input.r1}
+        R2={input.r2}
+        R3={input.r3}
 
         if [ "{params.sequencer}" = "miseq" ]; then
             seqkit concat $R2 $R1 --out-file {output.bc} --line-width 0 --threads {threads}
