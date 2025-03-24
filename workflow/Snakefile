@@ -11,5 +11,9 @@ include: "rules/demux.smk"
 rule all:
     input:
         "results/demultiplexed",
-        expand("results/merged/{sample}_bc_001.fastq.gz", sample=get_samples_from_demux),
-        expand("results/merged/{sample}_cdna_001.fastq.gz", sample=get_samples_from_demux)
+        expand(
+            "results/merged/{sample}_bc_001.fastq.gz", sample=get_samples_from_demux
+        ),
+        expand(
+            "results/merged/{sample}_cdna_001.fastq.gz", sample=get_samples_from_demux
+        ),
