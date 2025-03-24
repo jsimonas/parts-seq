@@ -14,6 +14,7 @@ def get_sample_ids(xlsx_path):
     
     return samples
 
+
 def get_fastqs_for_sample(wildcards):
     """
     detects the demultiplexed FASTQ files for a given sample in results/demultiplexed.

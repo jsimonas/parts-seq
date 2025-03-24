@@ -51,15 +51,15 @@ rule merge_fastq:
     merge R1 and R2 into something and copies R3, depending on sequencer
     """
     input:
-        get_fastqs_for_sample
+        fastqs = lambda wildcards: get_fastqs_for_sample(wildcards),
     output:
-        bc="{sample}_bc_001.fastq.gz",
-        cdna="{sample}_cdna_001.fastq.gz"
+        bc="results/merged/{sample}_bc_001.fastq.gz",
+        cdna="results/merged/{sample}_cdna_001.fastq.gz",
     params:
-        sequencer = config["sequencer"]
+        sequencer = config["sequencer"],
     threads: config.get("threads", 4)
     log:
-        "logs/merge_fastq.log",
+        "logs/merge_fastq_{sample}.log",
     conda:
         "../envs/seqkit.yaml"
     shell:
