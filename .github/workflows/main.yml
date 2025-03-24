@@ -28,14 +28,18 @@ jobs:
   Linting:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Lint workflow
-        uses: snakemake/snakemake-github-action@v1.22.0
+      - name: Checkout with submodules
+        uses: actions/checkout@v3
+      - name: Set up Miniconda for Linting
+        uses: conda-incubator/setup-miniconda@v2
         with:
-          directory: .test
-          snakefile: workflow/Snakefile
-          args: "--configfile .test/config/config.yaml --lint"
+          auto-update-conda: true
+          python-version: 3.9
+          environment-file: .github/environment.yml
+          activate-environment: snakemake-env
+      - name: Lint workflow
+        run: snakemake --configfile .test/config/config.yaml --lint
+        working-directory: .test
 
   Testing:
     runs-on: ubuntu-latest
@@ -48,17 +52,16 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-
+      - name: Set up Miniconda for Testing
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          python-version: 3.9
+          environment-file: .github/environment.yml
+          activate-environment: snakemake-env
       - name: Test workflow
-        uses: snakemake/snakemake-github-action@v1.22.0
-        with:
-          directory: .test
-          snakefile: workflow/Snakefile
-          args: "--configfile .test/config/config.yaml --use-conda --show-failed-logs --cores 3 --conda-cleanup-pkgs cache --all-temp"
-
+        run: snakemake --configfile .test/config/config.yaml --use-conda --show-failed-logs --cores 3 --conda-cleanup-pkgs cache --all-temp
+        working-directory: .test
       - name: Test report
-        uses: snakemake/snakemake-github-action@v1.22.0
-        with:
-          directory: .test
-          snakefile: workflow/Snakefile
-          args: "--configfile .test/config/config.yaml --report report.zip"
+        run: snakemake --configfile .test/config/config.yaml --report report.zip
+        working-directory: .test
