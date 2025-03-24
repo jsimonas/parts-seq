@@ -18,8 +18,11 @@ from snakemake.utils import validate
 
 def get_sample_ids(wildcards):
     ckpt = checkpoints.parse_demux.get()
+    sample_file = ckpt.output.sample_ids
+    with open(sample_file) as f:
+        samples = f.read().strip().splitlines()
 
-    return ckpt.params["samples"]
+    return samples
 
 
 def get_fastqs_for_sample(wildcards):
