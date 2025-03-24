@@ -2,8 +2,8 @@ import os
 import re
 import glob
 import pandas as pd
-from snakemake.utils import validate
 from types import SimpleNamespace
+from snakemake.utils import validate
 
 
 # def get_sample_ids(xlsx_path):
