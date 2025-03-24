@@ -51,7 +51,7 @@ rule merge_fastq:
     merge R1 and R2 into something and copies R3, depending on sequencer
     """
     input:
-        fastqs=get_fastq_dict,
+        fastqs=get_fastqs_for_sample,
     output:
         bc="results/merged/{sample}_bc_001.fastq.gz",
         cdna="results/merged/{sample}_cdna_001.fastq.gz",
