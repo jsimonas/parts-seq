@@ -22,7 +22,7 @@ def get_fastqs_for_sample(wildcards):
     returns a dictionary
     """
     pattern = os.path.join(
-        "results", "demultiplexed", "**", f"{wildcards.sample}*_R*_001.fastq.gz"
+        "results", "demultiplexed", "**", f"{wildcards.sample}_*_R*_001.fastq.gz"
     )
     matches = sorted(glob.glob(pattern, recursive=True))
 
