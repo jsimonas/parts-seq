@@ -35,7 +35,7 @@ jobs:
         with:
           auto-update-conda: true
           python-version: 3.9
-          environment-file: .test/config/environment.yml
+          environment-file: .test/config/environment.yaml
           activate-environment: snakemake-env
       - name: Lint workflow
         run: snakemake --configfile .test/config/config.yaml --lint
@@ -57,7 +57,7 @@ jobs:
         with:
           auto-update-conda: true
           python-version: 3.9
-          environment-file: .test/config/environment.yml
+          environment-file: .test/config/environment.yaml
           activate-environment: snakemake-env
       - name: Test workflow
         run: snakemake --configfile .test/config/config.yaml --use-conda --show-failed-logs --cores 3 --conda-cleanup-pkgs cache --all-temp
