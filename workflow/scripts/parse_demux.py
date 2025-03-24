@@ -19,6 +19,3 @@ samples = sorted(sample_name_set)
 with open(output_file, "w") as outF:
     for s in samples:
         outF.write(s + "\n")
-
-        
-snakemake.params.samples = samples
