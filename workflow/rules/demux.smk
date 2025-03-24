@@ -51,7 +51,7 @@ rule merge_fastq:
     merge R1 and R2 into something and copies R3, depending on sequencer
     """
     input:
-        fastqs=lambda wildcards: get_fastqs_for_sample(wildcards),
+        fastqs=get_fastq_dict,
     output:
         bc="results/merged/{sample}_bc_001.fastq.gz",
         cdna="results/merged/{sample}_cdna_001.fastq.gz",
@@ -66,9 +66,9 @@ rule merge_fastq:
         """
         set -euo pipefail
         
-        R1={input[0]}
-        R2={input[1]}
-        R3={input[2]}
+        R1={input.fastqs.r1}
+        R2={input.fastqs.r2}
+        R3={input.fastqs.r3}
 
         if [ "{params.sequencer}" = "miseq" ]; then
             seqkit concat $R2 $R1 --out-file {output.bc} --line-width 0 --threads {threads}

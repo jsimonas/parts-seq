@@ -38,3 +38,12 @@ def get_fastqs_for_sample(wildcards):
         )
 
     return [R1, R2, R3]
+
+
+def get_fastq_dict(wildcards):
+    """
+    returns a dictionary with keys 'r1', 'r2', and 'r3'
+    mapping to the corresponding FASTQ files for a given sample.
+    """
+    fastqs = get_fastqs_for_sample(wildcards)
+    return {"r1": fastqs[0], "r2": fastqs[1], "r3": fastqs[2]}
