@@ -59,7 +59,7 @@ rule merge_fastq:
         cdna="results/merged/{sample}_cdna_001.fastq.gz",
     params:
         sequencer=config["sequencer"],
-    threads: config.get("threads", 4),
+    threads: config.get("threads", 4)
     log:
         "logs/merge_fastq_{sample}.log",
     conda:
