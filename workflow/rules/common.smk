@@ -4,6 +4,16 @@ import pandas as pd
 from snakemake.utils import validate
 
 
+def get_sample_ids(xlsx_path):
+    """
+    obtains sample ids from extended sample sheet
+    """
+    df = pd.read_excel(xlsx_path, engine="openpyxl")
+    df.columns = [col.strip().lower() for col in df.columns]
+    samples = df["sample_id"].unique().tolist()
+    
+    return samples
+
 def get_fastqs_for_sample(wildcards):
     """
     detects the demultiplexed FASTQ files for a given sample in results/demultiplexed.
@@ -27,24 +37,3 @@ def get_fastqs_for_sample(wildcards):
         )
 
     return [R1, R2, R3]
-
-
-def get_ids_from_sample_sheet(csv_path):
-    lines = []
-    with open(csv_path, "r") as f:
-        data_section_found = False
-        for line in f:
-            if line.strip() == "[Data]":
-                data_section_found = True
-                continue
-            if data_section_found and line.strip():
-                lines.append(line.strip().split(","))
-
-    df = pd.DataFrame(lines[1:], columns=lines[0])
-    samples = df["Sample_ID"].unique().tolist()
-    return samples
-
-
-def get_samples_from_demux(_wildcards):
-    ckpt = checkpoints.demux.get()
-    return ckpt.params["samples"]

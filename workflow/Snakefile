@@ -7,13 +7,14 @@ configfile: "config/config.yaml"
 include: "rules/common.smk"
 include: "rules/demux.smk"
 
+sample_ids = sorted(get_ids_from_extended_sample_sheet(config["sample_sheet"]))
 
 rule all:
     input:
         "results/demultiplexed",
         expand(
-            "results/merged/{sample}_bc_001.fastq.gz", sample=get_samples_from_demux
+            "results/merged/{sample}_bc_001.fastq.gz", sample=sample_ids
         ),
         expand(
-            "results/merged/{sample}_cdna_001.fastq.gz", sample=get_samples_from_demux
+            "results/merged/{sample}_cdna_001.fastq.gz", sample=sample_ids
         ),
