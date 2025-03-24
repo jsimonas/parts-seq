@@ -19,7 +19,9 @@ def get_fastqs_for_sample(wildcards):
     """
     detects the demultiplexed FASTQ files for a given sample in results/demultiplexed
     """
-    pattern = os.path.join("results", "demultiplexed", "**", f"{wildcards.sample}_R*_001.fastq.gz")
+    pattern = os.path.join(
+        "results", "demultiplexed", "**", f"{wildcards.sample}_R*_001.fastq.gz"
+    )
     matches = sorted(glob.glob(pattern, recursive=True))
 
     if len(matches) < 3:
@@ -36,4 +38,3 @@ def get_fastqs_for_sample(wildcards):
         )
 
     return {"r1": R1, "r2": R2, "r3": R3}
-
