@@ -6,6 +6,8 @@ checkpoint parse_demux:
         demux_dir = "results/demultiplexed",
     output:
         sample_ids = "results/sample_ids.txt",
+    log:
+        "logs/demultiplex.log",
     run:
         import os, re
         sample_names = set()

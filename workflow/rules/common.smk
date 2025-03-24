@@ -5,7 +5,7 @@ import pandas as pd
 from snakemake.utils import validate
 
 
-#def get_sample_ids(xlsx_path):
+# def get_sample_ids(xlsx_path):
 #    """
 #    obtains sample ids from extended sample sheet
 #    """
