@@ -66,9 +66,9 @@ rule merge_fastq:
         """
         set -euo pipefail
         
-        R1={input.fastqs[0].r1}
-        R2={input.fastqs[0].r2}
-        R3={input.fastqs[0].r3}
+        R1={input.fastqs.r1}
+        R2={input.fastqs.r2}
+        R3={input.fastqs.r3}
 
         if [ "{params.sequencer}" = "miseq" ]; then
             seqkit concat $R2 $R1 --out-file {output.bc} --line-width 0 --threads {threads}
