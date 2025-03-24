@@ -15,6 +15,11 @@ from snakemake.utils import validate
 #
 #    return samples
 
+def debug_merge_input(wildcards):
+    val = get_fastqs_for_sample(wildcards)
+    print("[DEBUG] final input to merge_fastq is:", val, type(val))
+    return val
+
 
 def get_sample_ids(wildcards):
     ckpt = checkpoints.parse_demux.get()
