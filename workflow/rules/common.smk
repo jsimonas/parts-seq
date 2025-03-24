@@ -47,8 +47,5 @@ def get_fastqs_for_sample(wildcards):
         raise FileNotFoundError(
             f"Could not identify R1, R2, R3 among these matches: {matches}"
         )
-    
-    dict_out = {"r1": R1, "r2": R2, "r3": R3}
-    print("[DEBUG] get_fastqs_for_sample returning:", dict_out)
-    return dict_out
-#    return {"r1": R1, "r2": R2, "r3": R3}
+
+    return {"r1": R1, "r2": R2, "r3": R3}
