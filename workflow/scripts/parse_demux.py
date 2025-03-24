@@ -2,6 +2,8 @@
 import os
 import re
 
+# pylint: disable=undefined-variable
+
 demux_dir = snakemake.input.demux_dir
 output_file = snakemake.output.sample_ids
 
