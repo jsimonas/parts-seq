@@ -8,7 +8,7 @@ from snakemake.utils import validate
 rule dirs:
     output:
         trim_dir=directory(config["out_dir"] + "/trimmed"),
-        logs_dir=directory(config["out_dir"] + "/logs")
+        logs_dir=directory(config["out_dir"] + "/logs"),
     shell:
         """
         mkdir -p {output.trim_dir} {output.logs_dir}

@@ -36,8 +36,7 @@ jobs:
           directory: .test
           snakefile: workflow/Snakefile
           args: "--configfile .test/config/config.yaml --lint"
-          stagein: "pip install openpyxl"
-
+          
   Testing:
     runs-on: ubuntu-latest
     needs:
@@ -56,7 +55,6 @@ jobs:
           directory: .test
           snakefile: workflow/Snakefile
           args: "--configfile .test/config/config.yaml --use-conda --show-failed-logs --cores 3 --conda-cleanup-pkgs cache --all-temp"
-          stagein: "pip install openpyxl"
 
       - name: Test report
         uses: snakemake/snakemake-github-action@v1.22.0
