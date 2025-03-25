@@ -3,11 +3,11 @@ rule trim_reads:
     trim polyA tails from cDNA (R2) reads and filter barcodes (R1) based on the omitted R2 reads
     """
     input:
-        R1=config["out_dir"]+"/merged/{sample}_bc_001.fastq.gz",
-        R2=config["out_dir"]+"/merged/{sample}_cdna_001.fastq.gz",
+        R1=config["out_dir"] + "/merged/{sample}_bc_001.fastq.gz",
+        R2=config["out_dir"] + "/merged/{sample}_cdna_001.fastq.gz",
     output:
-        R1_trimmed=config["out_dir"]+"/trimmed/{sample}_bc_trimmed.fastq.gz",
-        R2_trimmed=config["out_dir"]+"/trimmed/{sample}_cdna_trimmed.fastq.gz",
+        R1_trimmed=config["out_dir"] + "/trimmed/{sample}_bc_trimmed.fastq.gz",
+        R2_trimmed=config["out_dir"] + "/trimmed/{sample}_cdna_trimmed.fastq.gz",
     threads: config.get("threads", 4)
     params:
         trim_5p=config.get("trim_5p", 0)
