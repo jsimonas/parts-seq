@@ -12,7 +12,7 @@ include: "rules/trim.smk"
 
 rule all:
     input:
-        config["out_dir"]+"/demultiplexed",
+        config["out_dir"] + "/demultiplexed",
         expand(
             "{param}/merged/{sample}_bc_001.fastq.gz",
             sample=get_sample_ids,
