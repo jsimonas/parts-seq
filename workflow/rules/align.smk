@@ -3,17 +3,23 @@ import os
 
 rule starsolo:
     input:
-        cdna_read=os.path.join(config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"),
+        cdna_read=os.path.join(
+            config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"
+        ),
         bc_read=os.path.join(config["out_dir"], "trimmed/{sample}_bc_trimmed.fastq.gz"),
         bc_1="../assets/barcodes/bc1_list.txt",
         bc_2="../assets/barcodes/bc2_list.txt",
         index=config["index"],
     output:
-        bam=os.path.join(config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"),
-        solo_dir=directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"))
+        bam=os.path.join(
+            config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"
+        ),
+        solo_dir=directory(
+            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")
+        ),
     threads: config.get("threads", 4)
     log:
-        "logs/starsolo_{sample}.log"
+        "logs/starsolo_{sample}.log",
     conda:
         "../envs/starsolo.yaml"
     shell:
@@ -48,4 +54,3 @@ rule starsolo:
             --soloBarcodeReadLength 1 \
             --soloCBmatchWLtype EditDist_2 &> {log}
         """
-

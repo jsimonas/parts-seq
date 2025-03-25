@@ -6,6 +6,7 @@ sequencer: "miseq" # or nextseq
 
 # processing
 trim_5p: 0
+index: ".test/resources/index"
 
 # other params
 threads: 4
