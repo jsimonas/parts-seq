@@ -11,6 +11,8 @@ include: "rules/common.smk"
 include: "rules/demux.smk"
 include: "rules/checkpoints.smk"
 include: "rules/trim.smk"
+include: "rules/align.smk"
+include: "rules/qc.smk"
 
 
 rule all:
@@ -35,6 +37,18 @@ rule all:
             "{param}/trimmed/{sample}_cdna_trimmed.fastq.gz",
             sample=get_sample_ids,
             param=config["out_dir"],
+        ),
+        expand(
+            os.path.join(config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"),
+            sample=get_sample_ids,
+        ),
+        expand(
+            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"),
+            sample=get_sample_ids,
+        ),
+        expand(
+            os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
+            sample=get_sample_ids,
         ),
         expand(
             "{param}/qc/fastqc/{sample}_{read_type}.html",
