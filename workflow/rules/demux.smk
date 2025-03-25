@@ -1,3 +1,6 @@
+import os
+
+
 rule convert_sheet:
     """
     converts extended_sample_sheet_template.xlsx to standard sample_sheet.csv
