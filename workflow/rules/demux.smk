@@ -54,9 +54,9 @@ rule merge_fastq:
     merge R1 and R2 into something and copies R3, depending on sequencer
     """
     input:
-        r1=lambda w: sorted(get_fastqs_for_sample(w)["r1"]),
-        r2=lambda w: sorted(get_fastqs_for_sample(w)["r2"]),
-        r3=lambda w: sorted(get_fastqs_for_sample(w)["r3"]),
+        r1=lambda w: get_fastqs_for_sample(w)["r1"][0],
+        r2=lambda w: get_fastqs_for_sample(w)["r2"][0],
+        r3=lambda w: get_fastqs_for_sample(w)["r3"][0],
     output:
         bc=os.path.join(config["out_dir"], "merged/{sample}_bc_001.fastq.gz"),
         cdna=os.path.join(config["out_dir"], "merged/{sample}_cdna_001.fastq.gz"),
