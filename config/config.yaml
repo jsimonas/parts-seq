@@ -1,7 +1,11 @@
 # input
 run_dir: ".test/ngs/231121_M02245_0129_000000000-DMNH2"
+out_dir: "results/"
 sample_sheet: ".test/ngs/231121_M02245_0129_000000000-DMNH2/231121_extended_sample_sheet.xlsx"
-sequencer: "miseq"   
+sequencer: "miseq" # or nextseq
+
+# processing
+trim_5p: 0
 
 # other params
 threads: 4

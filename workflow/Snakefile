@@ -7,13 +7,13 @@ configfile: "config/config.yaml"
 include: "rules/common.smk"
 include: "rules/demux.smk"
 include: "rules/checkpoints.smk"
-
-
-# sample_ids = sorted(get_sample_ids(config["sample_sheet"]))
+include: "rules/trim.smk"
 
 
 rule all:
     input:
         "results/demultiplexed",
-        expand("results/merged/{sample}_bc_001.fastq.gz", sample=get_sample_ids),
-        expand("results/merged/{sample}_cdna_001.fastq.gz", sample=get_sample_ids),
+        expand(config["out_dir"]+"/merged/{sample}_bc_001.fastq.gz", sample=get_sample_ids),
+        expand(config["out_dir"]+"/merged/{sample}_cdna_001.fastq.gz", sample=get_sample_ids),
+        expand(config["out_dir"]+"/trimmed/{sample}_bc_trimmed.fastq.gz", sample=get_sample_ids),
+        expand(config["out_dir"]+"/trimmed/{sample}_cdna_trimmed.fastq.gz", sample=get_sample_ids),

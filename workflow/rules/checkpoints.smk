@@ -1,8 +1,8 @@
 checkpoint parse_demux:
     input:
-        demux_dir="results/demultiplexed",
+        demux_dir=config["out_dir"]+"/demultiplexed",
     output:
-        sample_ids="results/sample_ids.txt",
+        sample_ids=config["out_dir"]+"/sample_ids.txt",
     log:
         "logs/parse_demux.log",
     conda:
