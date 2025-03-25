@@ -7,8 +7,12 @@ from snakemake.utils import validate
 
 rule dirs:
     output:
-        trim_dir=directory(config["out_dir"] + "/trimmed"),
-        logs_dir=directory(config["out_dir"] + "/logs"),
+        trim_dir=directory(config["out_dir"] + "trimmed"),
+        logs_dir=directory(config["out_dir"] + "logs"),
+    log:
+        "logs/parse_demux.log",
+    conda:
+        "../envs/pandas.yaml"
     shell:
         """
         mkdir -p {output.trim_dir} {output.logs_dir}
