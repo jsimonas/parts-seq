@@ -10,7 +10,7 @@ rule trim_reads:
         R2_trimmed=config["out_dir"] + "/trimmed/{sample}_cdna_trimmed.fastq.gz",
     threads: config.get("threads", 4)
     params:
-        trim_5p=config.get("trim_5p", 0)
+        trim_5p=config.get("trim_5p", 0),
     log:
         "logs/trim_fastq_{sample}.log",
     conda:
