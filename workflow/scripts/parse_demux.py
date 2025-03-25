@@ -11,7 +11,7 @@ sample_name_set = set()
 for root, dirs, files in os.walk(demux_dir):
     for f in files:
         m = re.match(r"^(.+?)_S\d+_R[123]_001\.fastq\.gz$", f)
-        if m:
+        if m and m.group(1) != "Undetermined":
             sample_name_set.add(m.group(1))
 
 samples = sorted(sample_name_set)
