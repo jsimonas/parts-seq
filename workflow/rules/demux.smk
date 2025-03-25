@@ -51,9 +51,9 @@ rule merge_fastq:
     merge R1 and R2 into something and copies R3, depending on sequencer
     """
     input:
-        r1=lambda w: get_fastqs_for_sample(w)["r1"],
-        r2=lambda w: get_fastqs_for_sample(w)["r2"],
-        r3=lambda w: get_fastqs_for_sample(w)["r3"],
+        r1=lambda w: sorted(get_fastqs_for_sample(w)["r1"]),
+        r2=lambda w: sorted(get_fastqs_for_sample(w)["r2"]),
+        r3=lambda w: sorted(get_fastqs_for_sample(w)["r3"]),
     output:
         bc=config["out_dir"] + "merged/{sample}_bc_001.fastq.gz",
         cdna=config["out_dir"] + "merged/{sample}_cdna_001.fastq.gz",
@@ -71,6 +71,10 @@ rule merge_fastq:
         R1={input.r1}
         R2={input.r2}
         R3={input.r3}
+        
+        echo "R1 files: $R1"
+        echo "R2 files: $R2"
+        echo "R3 files: $R3"
 
         if [ "{params.sequencer}" = "miseq" ]; then
             seqkit concat $R2 $R1 --out-file {output.bc} --line-width 0 --threads {threads}
