@@ -3,7 +3,7 @@ import os
 
 checkpoint parse_demux:
     input:
-        demux_dir=os.path.join(config["out_dir"], "demultiplexed"),
+        demux_dir=directory(os.path.join(config["out_dir"], "demultiplexed")),
     output:
         sample_ids=os.path.join(config["out_dir"], "sample_ids.txt"),
     log:
