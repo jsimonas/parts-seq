@@ -5,20 +5,6 @@ import pandas as pd
 from snakemake.utils import validate
 
 
-rule dirs:
-    output:
-        trim_dir=directory(config["out_dir"] + "trimmed"),
-        logs_dir=directory(config["out_dir"] + "logs"),
-    log:
-        "logs/parse_demux.log",
-    conda:
-        "../envs/pandas.yaml"
-    shell:
-        """
-        mkdir -p {output.trim_dir} {output.logs_dir}
-        """
-
-
 def get_sample_ids(wildcards):
     ckpt = checkpoints.parse_demux.get()
     sample_file = ckpt.output.sample_ids
