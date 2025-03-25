@@ -9,8 +9,12 @@ rule trim_reads:
         R1=os.path.join(config["out_dir"], "merged/{sample}_bc_001.fastq.gz"),
         R2=os.path.join(config["out_dir"], "merged/{sample}_cdna_001.fastq.gz"),
     output:
-        R1_trimmed=os.path.join(config["out_dir"], "trimmed/{sample}_bc_trimmed.fastq.gz"),
-        R2_trimmed=os.path.join(config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"),
+        R1_trimmed=os.path.join(
+            config["out_dir"],"trimmed/{sample}_bc_trimmed.fastq.gz"
+        ),
+        R2_trimmed=os.path.join(
+            config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"
+        ),
     threads: config.get("threads", 4)
     params:
         trim_5p=config.get("trim_5p", 0),
