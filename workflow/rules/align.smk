@@ -14,9 +14,7 @@ rule starsolo:
         bam=os.path.join(
             config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"
         ),
-        solo_dir=directory(
-            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")
-        ),
+        solo_dir=directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")),
     threads: config.get("threads", 4)
     log:
         "logs/starsolo_{sample}.log",
