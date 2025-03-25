@@ -5,7 +5,7 @@ rule convert_sheet:
     input:
         inp=config["sample_sheet"],
     output:
-        out=config["out_dir"] + "sample_sheet.csv",
+        out=os.path.join(config["out_dir"], "sample_sheet.csv"),
     log:
         "logs/convert_sheet.log",
     conda:
@@ -20,7 +20,7 @@ rule demux:
     """
     input:
         run_dir=config["run_dir"],
-        sample_sheet=config["out_dir"] + "sample_sheet.csv",
+        sample_sheet=os.path.join(config["out_dir"], "sample_sheet.csv"),
     output:
         directory(config["out_dir"] + "demultiplexed"),
     threads: config.get("threads", 8)
@@ -55,8 +55,8 @@ rule merge_fastq:
         r2=lambda w: sorted(get_fastqs_for_sample(w)["r2"]),
         r3=lambda w: sorted(get_fastqs_for_sample(w)["r3"]),
     output:
-        bc=config["out_dir"] + "merged/{sample}_bc_001.fastq.gz",
-        cdna=config["out_dir"] + "merged/{sample}_cdna_001.fastq.gz",
+        bc=os.path.join(config["out_dir"], "merged/{sample}_bc_001.fastq.gz"),
+        cdna=os.path.join(config["out_dir"], "merged/{sample}_cdna_001.fastq.gz"),
     params:
         sequencer=config["sequencer"],
     threads: config.get("threads", 4)
