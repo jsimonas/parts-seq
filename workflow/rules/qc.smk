@@ -48,9 +48,7 @@ rule multiqc:
             read_type=["bc_merged", "cdna_merged", "bc_trimmed", "cdna_trimmed"],
         ),
         samtools_stats = expand(
-            os.path.join(
-                config["out_dir"], "mapped/stats/{sample}.stats"
-            ),
+            os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,
         ),
         config_file="config/multiqc_config.yaml",

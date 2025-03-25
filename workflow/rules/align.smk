@@ -56,11 +56,13 @@ rule starsolo:
 
 rule samtools_stats:
     input:
-        bam = os.path.join(config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"),
+        bam=os.path.join(
+            config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"
+        ),
     output:
-        stats = os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
+        stats=os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
     params:
-        extra = "",
+        extra="",
     log:
         "logs/samtools_stats_{sample}.log",
     wrapper:
