@@ -5,6 +5,16 @@ import pandas as pd
 from snakemake.utils import validate
 
 
+rule dirs:
+    output:
+        trim_dir=directory(config["out_dir"] + "/trimmed"),
+        logs_dir=directory(config["out_dir"] + "/logs")
+    shell:
+        """
+        mkdir -p {output.trim_dir} {output.logs_dir}
+        """
+
+
 def get_sample_ids(wildcards):
     ckpt = checkpoints.parse_demux.get()
     sample_file = ckpt.output.sample_ids
@@ -38,12 +48,3 @@ def get_fastqs_for_sample(wildcards):
         )
 
     return {"r1": R1, "r2": R2, "r3": R3}
-
-rule dirs:
-    output:
-        trim_dir=directory(config["out_dir"] + "/trimmed"),
-        logs_dir=directory(config["out_dir"] + "/logs")
-    shell:
-        """
-        mkdir -p {output.trim_dir} {output.logs_dir}
-        """
