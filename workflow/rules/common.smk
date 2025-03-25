@@ -38,3 +38,12 @@ def get_fastqs_for_sample(wildcards):
         )
 
     return {"r1": R1, "r2": R2, "r3": R3}
+
+rule dirs:
+    output:
+        trim_dir=directory(config["out_dir"] + "/trimmed"),
+        logs_dir=directory(config["out_dir"] + "/logs")
+    shell:
+        """
+        mkdir -p {output.trim_dir} {output.logs_dir}
+        """
