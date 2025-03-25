@@ -10,7 +10,7 @@ rule trim_reads:
         R2=os.path.join(config["out_dir"], "merged/{sample}_cdna_001.fastq.gz"),
     output:
         R1_trimmed=os.path.join(
-            config["out_dir"],"trimmed/{sample}_bc_trimmed.fastq.gz"
+            config["out_dir"], "trimmed/{sample}_bc_trimmed.fastq.gz"
         ),
         R2_trimmed=os.path.join(
             config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"
