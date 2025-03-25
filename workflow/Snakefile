@@ -13,7 +13,23 @@ include: "rules/trim.smk"
 rule all:
     input:
         config["out_dir"]+"/demultiplexed",
-        expand("{param}/merged/{sample}_bc_001.fastq.gz", sample=get_sample_ids, param=config["out_dir"]),
-        expand("{param}/merged/{sample}_cdna_001.fastq.gz", sample=get_sample_ids, param=config["out_dir"]),
-        expand("{param}/trimmed/{sample}_bc_trimmed.fastq.gz", sample=get_sample_ids, param=config["out_dir"]),
-        expand("{param}/trimmed/{sample}_cdna_trimmed.fastq.gz", sample=get_sample_ids, param=config["out_dir"]),
+        expand(
+            "{param}/merged/{sample}_bc_001.fastq.gz",
+            sample=get_sample_ids,
+            param=config["out_dir"]
+        ),
+        expand(
+            "{param}/merged/{sample}_cdna_001.fastq.gz",
+            sample=get_sample_ids,
+            param=config["out_dir"]
+        ),
+        expand(
+            "{param}/trimmed/{sample}_bc_trimmed.fastq.gz",
+            sample=get_sample_ids,
+            param=config["out_dir"]
+        ),
+        expand(
+            "{param}/trimmed/{sample}_cdna_trimmed.fastq.gz",
+            sample=get_sample_ids,
+            param=config["out_dir"]
+        ),
