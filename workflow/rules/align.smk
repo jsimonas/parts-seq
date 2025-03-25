@@ -52,3 +52,16 @@ rule starsolo:
             --soloBarcodeReadLength 1 \
             --soloCBmatchWLtype EditDist_2 &> {log}
         """
+
+
+rule samtools_stats:
+    input:
+        bam = os.path.join(config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"),
+    output:
+        stats = os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
+    params:
+        extra = "",
+    log:
+        "logs/samtools_stats_{sample}.log",
+    wrapper:
+        "v3.13.3/bio/samtools/stats"
