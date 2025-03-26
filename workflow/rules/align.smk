@@ -3,21 +3,19 @@ import os
 
 rule starsolo:
     input:
-        cdna_read=os.path.join(
-            config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"
-        ),
-        bc_read=os.path.join(config["out_dir"], "trimmed/{sample}_bc_trimmed.fastq.gz"),
-        bc_1="../assets/barcodes/bc1_list.txt",
-        bc_2="../assets/barcodes/bc2_list.txt",
-        index=config["star_index"],
+        cdna_read = os.path.join(config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"),
+        bc_read = os.path.join(config["out_dir"], "trimmed/{sample}_bc_trimmed.fastq.gz"),
+        bc_1 = "../assets/barcodes/bc1_list.txt",
+        bc_2 = "../assets/barcodes/bc2_list.txt",
+        index = config["star_index"]
     output:
-        bam=os.path.join(
-            config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"
-        ),
-        solo_dir=directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")),
+        bam = os.path.join(config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"),
+        solo_dir = directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"))
+    params:
+        out_prefix = os.path.join(config["out_dir"], "mapped/{sample}_")
     threads: config.get("threads", 4)
     log:
-        "logs/starsolo_{sample}.log",
+        "logs/starsolo_{sample}.log"
     conda:
         "../envs/starsolo.yaml"
     shell:
@@ -29,7 +27,7 @@ rule starsolo:
             --readFilesIn {input.cdna_read} {input.bc_read} \
             --soloCBwhitelist {input.bc_1} {input.bc_2} \
             --runThreadN {threads} \
-            --outFileNamePrefix {config["out_dir"]}/mapped/{wildcards.sample}_ \
+            --outFileNamePrefix {params.out_prefix} \
             --readFilesCommand zcat \
             --runDirPerm All_RWX \
             --outReadsUnmapped Fastx \
