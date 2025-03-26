@@ -33,7 +33,10 @@ rule multiqc:
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,
         ),
-        mapped=directory(os.path.join(config["out_dir"], "mapped")),
+        solo=expand(
+            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"),
+            sample=get_sample_ids,
+        ),
         config_file="config/multiqc_config.yaml",
     output:
         os.path.join(config["out_dir"], "qc/multiqc.html"),
