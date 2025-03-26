@@ -1,6 +1,6 @@
 rule fastqc:
     input:
-        os.path.join(config["out_dir"], "{stage}/{sample}_{read_type}.fastq.gz")
+        os.path.join(config["out_dir"], "{stage}/{sample}_{read_type}.fastq.gz"),
     output:
         html=os.path.join(
             config["out_dir"], "qc/fastqc/{sample}/{stage}_{read_type}.html"
