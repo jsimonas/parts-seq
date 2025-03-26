@@ -23,7 +23,7 @@ rule starsolo:
     log:
         "logs/starsolo_{sample}.log",
     conda:
-        "../envs/starsolo.yaml"
+        "../envs/star.yaml"
     shell:
         """
         set -euo pipefail

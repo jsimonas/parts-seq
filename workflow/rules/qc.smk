@@ -3,12 +3,12 @@ rule fastqc:
         merged=expand(
             os.path.join(config["out_dir"], "merged/{sample}_{read_type}.fastq.gz"),
             sample=get_sample_ids,
-            read_type=["bc_merged", "cdna_merged"]
+            read_type=["bc_merged", "cdna_merged"],
         ),
         trimmed=expand(
             os.path.join(config["out_dir"], "trimmed/{sample}_{read_type}.fastq.gz"),
             sample=get_sample_ids,
-            read_type=["bc_trimmed", "cdna_trimmed"]
+            read_type=["bc_trimmed", "cdna_trimmed"],
         ),
     output:
         html=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{read_type}.html"),
@@ -25,20 +25,22 @@ rule fastqc:
 rule multiqc:
     input:
         fastqc=expand(
-            os.path.join(config["out_dir"], "qc/fastqc/{sample}_{read_type}_fastqc.zip"),
+            os.path.join(
+                config["out_dir"], "qc/fastqc/{sample}_{read_type}_fastqc.zip"
+            ),
             sample=get_sample_ids,
-            read_type=["bc_merged", "cdna_merged", "bc_trimmed", "cdna_trimmed"]
+            read_type=["bc_merged", "cdna_merged", "bc_trimmed", "cdna_trimmed"],
         ),
         stats=expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
-            sample=get_sample_ids
+            sample=get_sample_ids,
         ),
         config_file="config/multiqc_config.yaml",
     output:
-        os.path.join(config["out_dir"], "qc/multiqc.html")
+        os.path.join(config["out_dir"], "qc/multiqc.html"),
     params:
-        extra="--verbose"
+        extra="--verbose",
     log:
-        "logs/multiqc.log"
+        "logs/multiqc.log",
     wrapper:
         "v3.10.0/bio/multiqc"
