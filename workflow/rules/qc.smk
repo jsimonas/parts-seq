@@ -25,7 +25,7 @@ rule multiqc:
             ),
             sample=get_sample_ids,
             type=["bc", "cdna"],
-            sufix=["merged", "trimmed"],
+            suffix=["merged", "trimmed"],
         ),
         stats=expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
