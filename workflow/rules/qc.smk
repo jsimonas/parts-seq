@@ -9,7 +9,7 @@ rule fastqc:
         html=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}.html"),
         zip=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"),
     log:
-        "logs/fastqc_{sample}_{read_type}.log",
+        "logs/fastqc_{sample}_{type}_{suffix}.log",
     threads: config.get("threads", 4)
     resources:
         mem_mb=8000,
