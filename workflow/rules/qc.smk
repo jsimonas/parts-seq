@@ -21,10 +21,11 @@ rule multiqc:
     input:
         fastqc=expand(
             os.path.join(
-                config["out_dir"], "qc/fastqc/{sample}_{read_type}_fastqc.zip"
+                config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"
             ),
             sample=get_sample_ids,
-            read_type=["bc_merged", "cdna_merged", "bc_trimmed", "cdna_trimmed"],
+            type=["bc", "cdna"],
+            sufix=["merged", "trimmed"],
         ),
         stats=expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
