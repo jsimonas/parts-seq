@@ -58,13 +58,13 @@ rule all:
             sample=get_sample_ids,
             stage=["merged", "trimmed"],
             read_type=["bc_001", "cdna_001", "bc_trimmed", "cdna_trimmed"],
-            param=config["out_dir"]
+            param=config["out_dir"],
         ),
         expand(
             "{param}/qc/fastqc/{sample}/{stage}_{read_type}_fastqc.zip",
             sample=get_sample_ids,
             stage=["merged", "trimmed"],
             read_type=["bc_001", "cdna_001", "bc_trimmed", "cdna_trimmed"],
-            param=config["out_dir"]
+            param=config["out_dir"],
         ),
         os.path.join(config["out_dir"], "qc/multiqc.html"),
