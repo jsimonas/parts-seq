@@ -1,12 +1,11 @@
 rule fastqc:
     input:
-        fastqc=expand(
+        fastq=expand(
             os.path.join(config["out_dir"], "{stage}/{sample}_{read_type}.fastq.gz"),
             sample=get_sample_ids,
             read_type=["bc_merged", "cdna_merged", "bc_trimmed", "cdna_trimmed"],
             stage=["merged", "trimmed"]
-        ),
-        os.path.join(config["out_dir"], "{stage}/{sample}_{read_type}.fastq.gz"),
+        )
     output:
         html=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{read_type}.html"),
         zip=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{read_type}_fastqc.zip"),
