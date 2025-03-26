@@ -1,9 +1,13 @@
 rule fastqc:
     input:
-        os.path.join(config["out_dir"], "{stage}/{sample}_{read_type}.fastq.gz"),
+        lambda wc: os.path.join(
+            config["out_dir"],
+            "merged" if wc.suffix == "merged" else "trimmed",
+            "{sample}_{type}_{suffix}.fastq.gz"
+        ),
     output:
-        html=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{read_type}.html"),
-        zip=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{read_type}_fastqc.zip"),
+        html=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}.html"),
+        zip=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"),
     log:
         "logs/fastqc_{sample}_{read_type}.log",
     threads: config.get("threads", 4)
