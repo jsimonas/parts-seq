@@ -3,19 +3,25 @@ import os
 
 rule starsolo:
     input:
-        cdna_read = os.path.join(config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"),
-        bc_read = os.path.join(config["out_dir"], "trimmed/{sample}_bc_trimmed.fastq.gz"),
-        bc_1 = "../assets/barcodes/bc1_list.txt",
-        bc_2 = "../assets/barcodes/bc2_list.txt",
-        index = config["star_index"]
+        cdna_read=os.path.join(
+            config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"
+        ),
+        bc_read=os.path.join(
+            config["out_dir"], "trimmed/{sample}_bc_trimmed.fastq.gz"
+        ),
+        bc_1="../assets/barcodes/bc1_list.txt",
+        bc_2="../assets/barcodes/bc2_list.txt",
+        index=config["star_index"],
     output:
-        bam = os.path.join(config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"),
-        solo_dir = directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"))
+        bam=os.path.join(
+            config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"
+        ),
+        solo_dir=directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")),
     params:
-        out_prefix = os.path.join(config["out_dir"], "mapped/{sample}_")
+        out_prefix=lambda wildcards, output: output.bam.replace("Aligned.sortedByCoord.out.bam", ""),
     threads: config.get("threads", 4)
     log:
-        "logs/starsolo_{sample}.log"
+        "logs/starsolo_{sample}.log",
     conda:
         "../envs/starsolo.yaml"
     shell:
