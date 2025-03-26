@@ -21,10 +21,11 @@ rule multiqc:
     input:
         fastqc_zips=expand(
             os.path.join(
-                config["out_dir"], "qc/fastqc/{sample}_{read_type}_fastqc.zip"
+                config["out_dir"], "qc/fastqc/{sample}/{stage}_{read_type}_fastqc.zip"
             ),
             sample=get_sample_ids,
-            read_type=["bc_merged", "cdna_merged", "bc_trimmed", "cdna_trimmed"],
+            stage=["merged", "trimmed"],
+            read_type=["bc_001", "cdna_001", "bc_trimmed", "cdna_trimmed"]
         ),
         samtools_stats=expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
