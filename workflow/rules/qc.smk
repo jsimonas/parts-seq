@@ -24,12 +24,12 @@ rule multiqc:
             sample=get_sample_ids,
             stage=["merged", "trimmed"],
             read_type=["bc_001", "cdna_001", "bc_trimmed", "cdna_trimmed"],
-        ) +
+        ),
         expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,
-        ) +
-        ["config/multiqc_config.yaml"],
+        ),
+        config="config/multiqc_config.yaml",
     output:
         os.path.join(config["out_dir"], "qc/multiqc.html"),
     params:
