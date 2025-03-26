@@ -1,6 +1,6 @@
 rule fastqc:
     input:
-        os.path.join(config["out_dir"], "{stage}/{sample}_{read_type}.fastq.gz")
+        os.path.join(config["out_dir"], "{stage}/{sample}_{read_type}.fastq.gz"),
     output:
         html=os.path.join(
             config["out_dir"], "qc/fastqc/{sample}/{stage}_{read_type}.html"
@@ -19,18 +19,17 @@ rule fastqc:
 
 rule multiqc:
     input:
-        fastqc_zips=expand(
-            os.path.join(
-                config["out_dir"], "qc/fastqc/{sample}_{read_type}_fastqc.zip"
-            ),
+        expand(
+            os.path.join(config["out_dir"], "qc/fastqc/{sample}/{stage}_{read_type}_fastqc.zip"),
             sample=get_sample_ids,
-            read_type=["bc_merged", "cdna_merged", "bc_trimmed", "cdna_trimmed"],
-        ),
-        samtools_stats=expand(
+            stage=["merged", "trimmed"],
+            read_type=["bc_001", "cdna_001", "bc_trimmed", "cdna_trimmed"],
+        ) +
+        expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,
-        ),
-        config_file="config/multiqc_config.yaml",
+        ) +
+        ["config/multiqc_config.yaml"],
     output:
         os.path.join(config["out_dir"], "qc/multiqc.html"),
     params:
