@@ -1,12 +1,12 @@
 rule fastqc:
     input:
-        os.path.join(config["out_dir"], "{stage}/{sample}_{read_type}.fastq.gz"),
+        os.path.join(config["out_dir"], "{stage}/{sample}_{read_type}.fastq.gz")
     output:
         html=os.path.join(
-            config["out_dir"], "qc/fastqc/{sample}_{stage}_{read_type}.html"
+            config["out_dir"], "qc/fastqc/{sample}/{stage}_{read_type}.html"
         ),
         zip=os.path.join(
-            config["out_dir"], "qc/fastqc/{sample}_{stage}_{read_type}_fastqc.zip"
+            config["out_dir"], "qc/fastqc/{sample}/{stage}_{read_type}_fastqc.zip"
         ),
     log:
         "logs/fastqc_{sample}_{stage}_{read_type}.log",
