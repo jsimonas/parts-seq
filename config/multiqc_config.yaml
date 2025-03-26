@@ -16,12 +16,12 @@ top_modules:
 
 custom_data:
     starsolo_summary:
-        parent_id: 'starsolo'
+        parent_id: 'mapped'
         parent_name: 'STARsolo' 
         file_format: 'csv'
         plot_type: 'table'
     starsolo_umi:
-        parent_id: 'starsolo'
+        parent_id: 'mapped'
         parent_name: 'STARsolo' 
         file_format: 'tsv'
         plot_type: 'linegraph'
@@ -33,7 +33,7 @@ custom_data:
             yLog: True
             xLog: True
     starsolo_barcode:
-        parent_id: 'starsolo'
+        parent_id: 'mapped'
         parent_name: 'STARsolo' 
         file_format: 'tsv'
         plot_type: 'bargraph'
@@ -42,7 +42,7 @@ custom_data:
             title: 'Barcode Stats'
             xlab: '# Reads'
     starsolo_feature:
-        parent_id: 'starsolo'
+        parent_id: 'mapped'
         parent_name: 'STARsolo' 
         file_format: 'tsv'
         plot_type: 'bargraph'
