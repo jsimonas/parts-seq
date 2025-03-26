@@ -3,10 +3,10 @@ rule fastqc:
         os.path.join(config["out_dir"], "{stage}/{sample}_{read_type}.fastq.gz"),
     output:
         html=os.path.join(
-            config["out_dir"], "qc/fastqc/{sample}/{stage}/{read_type}.html"
+            config["out_dir"], "qc/fastqc/{sample}_{stage}_{read_type}.html"
         ),
         zip=os.path.join(
-            config["out_dir"], "qc/fastqc/{sample}/{stage}/{read_type}_fastqc.zip"
+            config["out_dir"], "qc/fastqc/{sample}_{stage}_{read_type}_fastqc.zip"
         ),
     log:
         "logs/fastqc_{sample}_{stage}_{read_type}.log",
@@ -19,19 +19,18 @@ rule fastqc:
 
 rule multiqc:
     input:
-        fastqc=expand(
+        fastqc_zips=expand(
             os.path.join(
-                config["out_dir"], "qc/fastqc/{sample}/{stage}/{read_type}_fastqc.zip"
+                config["out_dir"], "qc/fastqc/{sample}_{read_type}_fastqc.zip"
             ),
             sample=get_sample_ids,
-            stage=["merged", "trimmed"],
-            read_type=["bc_001", "cdna_001"]
+            read_type=["bc_merged", "cdna_merged", "bc_trimmed", "cdna_trimmed"],
         ),
-        stats=expand(
+        samtools_stats=expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
-            sample=get_sample_ids
+            sample=get_sample_ids,
         ),
-        config="config/multiqc_config.yaml",
+        config_file="config/multiqc_config.yaml",
     output:
         os.path.join(config["out_dir"], "qc/multiqc.html"),
     params:
