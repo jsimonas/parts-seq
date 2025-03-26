@@ -19,23 +19,24 @@ rule fastqc:
 
 rule multiqc:
     input:
-        fastqc_zips=expand(
+        fastqc=expand(
             os.path.join(
-                config["out_dir"], "qc/fastqc/{sample}_{read_type}_fastqc.zip"
+                config["out_dir"], "qc/fastqc/{sample}_{stage}_{read_type}_fastqc.zip"
             ),
             sample=get_sample_ids,
-            read_type=["bc_merged", "cdna_merged", "bc_trimmed", "cdna_trimmed"],
+            stage=["merged", "trimmed"],
+            read_type=["bc_merged", "cdna_merged", "bc_trimmed", "cdna_trimmed"]
         ),
-        samtools_stats=expand(
+        stats=expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
-            sample=get_sample_ids,
+            sample=get_sample_ids
         ),
-        config_file="config/multiqc_config.yaml",
+        config_file="config/multiqc_config.yaml"
     output:
-        os.path.join(config["out_dir"], "qc/multiqc.html"),
+        os.path.join(config["out_dir"], "qc/multiqc.html")
     params:
-        extra="--verbose",
+        extra="--verbose"
     log:
-        "logs/multiqc.log",
+        "logs/multiqc.log"
     wrapper:
         "v3.10.0/bio/multiqc"

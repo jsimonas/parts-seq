@@ -58,8 +58,8 @@ rule merge_fastq:
         r2=lambda w: get_fastqs_for_sample(w)["r2"],
         r3=lambda w: get_fastqs_for_sample(w)["r3"],
     output:
-        bc=os.path.join(config["out_dir"], "merged/{sample}_bc_001.fastq.gz"),
-        cdna=os.path.join(config["out_dir"], "merged/{sample}_cdna_001.fastq.gz"),
+        bc=os.path.join(config["out_dir"], "merged/{sample}_bc_merged.fastq.gz"),
+        cdna=os.path.join(config["out_dir"], "merged/{sample}_cdna_merged.fastq.gz"),
     params:
         sequencer=config["sequencer"],
     threads: config.get("threads", 4)
