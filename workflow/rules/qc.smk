@@ -3,11 +3,13 @@ rule fastqc:
         lambda wc: os.path.join(
             config["out_dir"],
             "merged" if wc.suffix == "merged" else "trimmed",
-            "{sample}_{type}_{suffix}.fastq.gz"
+            "{sample}_{type}_{suffix}.fastq.gz",
         ),
     output:
         html=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}.html"),
-        zip=os.path.join(config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"),
+        zip=os.path.join(
+            config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"
+        ),
     log:
         "logs/fastqc_{sample}_{type}_{suffix}.log",
     threads: config.get("threads", 4)
@@ -31,6 +33,7 @@ rule multiqc:
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,
         ),
+        mapped=directory(os.path.join(config["out_dir"], "mapped")),
         config_file="config/multiqc_config.yaml",
     output:
         os.path.join(config["out_dir"], "qc/multiqc.html"),
