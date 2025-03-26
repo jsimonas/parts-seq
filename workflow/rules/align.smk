@@ -7,8 +7,8 @@ rule starsolo:
             config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"
         ),
         bc_read=os.path.join(config["out_dir"], "trimmed/{sample}_bc_trimmed.fastq.gz"),
-        bc_1="../assets/barcodes/bc1_list.txt",
-        bc_2="../assets/barcodes/bc2_list.txt",
+        bc_1="assets/barcodes/bc1_list.txt",
+        bc_2="assets/barcodes/bc2_list.txt",
         index=config["star_index"],
     output:
         bam=os.path.join(
