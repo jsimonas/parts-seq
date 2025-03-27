@@ -63,6 +63,7 @@ rule multiqc:
             {input.demux} \
             {input.fastqc} \
             {input.stats} \
+            {input.star_logs} \
             {input.star} \
             {input.starsolo} \
             -c {input.config_file} \
