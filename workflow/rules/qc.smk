@@ -34,6 +34,12 @@ rule multiqc:
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,
         ),
+        solo=expand(
+            os.path.join(
+                config["out_dir"], "mapped/{sample}_Solo.out"
+            ),
+            sample=get_sample_ids,
+        ),
         solo_summary=expand(
             os.path.join(
                 config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Summary.csv"
