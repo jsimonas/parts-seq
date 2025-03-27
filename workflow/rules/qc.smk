@@ -33,7 +33,7 @@ rule multiqc:
             sample=get_sample_ids,
         ),
         starsolo=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/GeneFull"),
+            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Summary.csv"),
             sample=get_sample_ids,
         ),
         config_file="config/multiqc_config.yaml",
