@@ -44,7 +44,7 @@ rule multiqc:
         ),
         config_file="config/multiqc_config.yaml",
     output:
-        html=os.path.join(config["out_dir"], "qc/multiqc.html"),
+        html=os.path.join(config["out_dir"], "qc/multiqc_report.html"),
     params:
         extra="--verbose"
     log:
