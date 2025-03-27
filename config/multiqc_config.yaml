@@ -51,7 +51,7 @@ custom_data:
       title: 'Feature Stats'
       xlab: '# Reads'
 
-fn_clean_exts:
+fn_clean_sample_names:
   - type: 'remove'
     pattern: '_Summary.csv'
   - type: 'remove'
