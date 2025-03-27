@@ -35,11 +35,15 @@ rule multiqc:
             sample=get_sample_ids,
         ),
         solo_summary=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}/Solo.out/GeneFull/Summary.csv"),
+            os.path.join(
+                config["out_dir"], "mapped/{sample}/Solo.out/GeneFull/Summary.csv"
+            ),
             sample=get_sample_ids,
         ),
         solo_umi=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}/Solo.out/GeneFull/UMIperCellSorted.txt"),
+            os.path.join(
+                config["out_dir"], "mapped/{sample}/Solo.out/GeneFull/UMIperCellSorted.txt"
+            ),
             sample=get_sample_ids,
         ),
         solo_barcode_stats=expand(
