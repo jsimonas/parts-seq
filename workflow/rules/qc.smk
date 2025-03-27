@@ -43,7 +43,7 @@ rule multiqc:
                 config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{file}"
             ),
             sample=get_sample_ids,
-            file=["Summary.csv", "UMIperCellSorted.txt", "Features.stats"]
+            file=["Summary.csv", "UMIperCellSorted.txt", "Features.stats"],
         ),
         config_file="config/multiqc_config.yaml",
     output:
@@ -53,4 +53,4 @@ rule multiqc:
     log:
         "logs/multiqc.log",
     wrapper:
-        "v3.10.0/bio/multiqc"
+        "v5.9.0/bio/multiqc"

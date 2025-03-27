@@ -10,6 +10,8 @@ top_modules:
   - 'star'
   - 'starsolo'
 
+file_size_limit: 100000000
+
 # --------------------------------
 # custom data
 # --------------------------------
