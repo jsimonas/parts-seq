@@ -1,7 +1,7 @@
 report_section_order:
     software_versions:
         order: -1000
-    solo-in-drops-summary:
+    parts-seq-summary:
         order: -1001
 
 export_plots: true
@@ -18,18 +18,17 @@ custom_data:
   starsolo_summary:
     id: 'starsolo_summary'
     parent_id: 'custom_content'
-    parent_name: 'STARsolo' 
+    parent_name: 'STARsolo Summary'
     file_format: 'csv'
     plot_type: 'table'
 
   starsolo_umi:
     id: 'starsolo_umi'
     parent_id: 'custom_content'
-    parent_name: 'STARsolo' 
+    parent_name: 'STARsolo UMI Rank'
     file_format: 'tsv'
     plot_type: 'linegraph'
     pconfig:
-      id: 'starsolo_umi'
       title: 'Barcode rank plot'
       ylab: 'UMI counts'
       xlab: 'Cell Barcodes'
@@ -39,22 +38,20 @@ custom_data:
   starsolo_barcode:
     id: 'starsolo_barcode'
     parent_id: 'custom_content'
-    parent_name: 'STARsolo' 
+    parent_name: 'STARsolo Barcode Stats'
     file_format: 'tsv'
     plot_type: 'bargraph'
     pconfig:
-      id: 'starsolo_barcode'
       title: 'Barcode Stats'
       xlab: '# Reads'
 
   starsolo_feature:
     id: 'starsolo_feature'
     parent_id: 'custom_content'
-    parent_name: 'STARsolo' 
+    parent_name: 'STARsolo Feature Stats'
     file_format: 'tsv'
     plot_type: 'bargraph'
     pconfig:
-      id: 'starsolo_feature'
       title: 'Feature Stats'
       xlab: '# Reads'
 
