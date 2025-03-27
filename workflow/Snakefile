@@ -39,6 +39,11 @@ rule all:
             param=config["out_dir"],
         ),
         expand(
+            "{param}/trimmed/{sample}_cutadapt_report.txt",
+            sample=get_sample_ids,
+            param=config["out_dir"],
+        ),
+        expand(
             "{param}/mapped/{sample}_Aligned.sortedByCoord.out.bam",
             sample=get_sample_ids,
             param=config["out_dir"],

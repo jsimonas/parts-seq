@@ -21,6 +21,7 @@ rule fastqc:
 
 rule multiqc:
     input:
+        demux=os.path.join(config["out_dir"], "demultiplexed/Stats"),
         fastqc=expand(
             os.path.join(
                 config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"
@@ -33,8 +34,20 @@ rule multiqc:
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,
         ),
-        solo=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"),
+        solo_summary=expand(
+            os.path.join(config["out_dir"], "mapped/{sample}/Solo.out/GeneFull/Summary.csv"),
+            sample=get_sample_ids,
+        ),
+        solo_umi=expand(
+            os.path.join(config["out_dir"], "mapped/{sample}/Solo.out/GeneFull/UMIperCellSorted.txt"),
+            sample=get_sample_ids,
+        ),
+        solo_barcode_stats=expand(
+            os.path.join(config["out_dir"], "mapped/{sample}/Solo.out/Barcodes.stats"),
+            sample=get_sample_ids,
+        ),
+        solo_feature_stats=expand(
+            os.path.join(config["out_dir"], "mapped/{sample}/Solo.out/Features.stats"),
             sample=get_sample_ids,
         ),
         config_file="config/multiqc_config.yaml",

@@ -15,41 +15,48 @@ top_modules:
 # --------------------------------
 
 custom_data:
-    starsolo_summary:
-        parent_id: 'starsolo'
-        parent_name: 'STARsolo' 
-        file_format: 'csv'
-        plot_type: 'table'
-    starsolo_umi:
-        parent_id: 'starsolo'
-        parent_name: 'STARsolo' 
-        file_format: 'tsv'
-        plot_type: 'linegraph'
-        pconfig:
-            id: 'starsolo_umi'
-            title: 'Barcode rank plot'
-            ylab: 'UMI counts'
-            xlab: 'Cell Barcodes'
-            yLog: True
-            xLog: True
-    starsolo_barcode:
-        parent_id: 'starsolo'
-        parent_name: 'STARsolo' 
-        file_format: 'tsv'
-        plot_type: 'bargraph'
-        pconfig:
-            id: 'starsolo_barcode'
-            title: 'Barcode Stats'
-            xlab: '# Reads'
-    starsolo_feature:
-        parent_id: 'starsolo'
-        parent_name: 'STARsolo' 
-        file_format: 'tsv'
-        plot_type: 'bargraph'
-        pconfig:
-            id: 'starsolo_feature'
-            title: 'Feature Stats'
-            xlab: '# Reads'
+  starsolo_summary:
+    id: 'starsolo_summary'
+    parent_id: 'starsolo'
+    parent_name: 'STARsolo' 
+    file_format: 'csv'
+    plot_type: 'table'
+
+  starsolo_umi:
+    id: 'starsolo_umi'
+    parent_id: 'starsolo'
+    parent_name: 'STARsolo' 
+    file_format: 'tsv'
+    plot_type: 'linegraph'
+    pconfig:
+      id: 'starsolo_umi'
+      title: 'Barcode rank plot'
+      ylab: 'UMI counts'
+      xlab: 'Cell Barcodes'
+      yLog: True
+      xLog: True
+
+  starsolo_barcode:
+    id: 'starsolo_barcode'
+    parent_id: 'starsolo'
+    parent_name: 'STARsolo' 
+    file_format: 'tsv'
+    plot_type: 'bargraph'
+    pconfig:
+      id: 'starsolo_barcode'
+      title: 'Barcode Stats'
+      xlab: '# Reads'
+
+  starsolo_feature:
+    id: 'starsolo_feature'
+    parent_id: 'starsolo'
+    parent_name: 'STARsolo' 
+    file_format: 'tsv'
+    plot_type: 'bargraph'
+    pconfig:
+      id: 'starsolo_feature'
+      title: 'Feature Stats'
+      xlab: '# Reads'
 
 sp:
     starsolo_summary:
@@ -70,3 +77,6 @@ extra_fn_clean_exts:
       pattern: '_Barcodes.stats'
     - type: 'replace'
       pattern: '_Features.stats'
+    - type: 'regex'
+      pattern: '(_trimmed)'
+      replacement: '\1'
