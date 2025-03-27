@@ -28,8 +28,8 @@ custom_data:
       title: 'Barcode rank plot'
       ylab: 'UMI counts'
       xlab: 'Cell Barcodes'
-      yLog: true
-      xLog: true
+      ylog: true
+      xlog: true
 
   starsolo_barcode:
     id: 'starsolo_barcode'
@@ -52,24 +52,16 @@ custom_data:
       xlab: '# Reads'
 
 fn_clean_sample_names:
-  - type: 'remove'
-    pattern: '_Summary.csv'
-  - type: 'remove'
-    pattern: '_UMIperCellSorted.txt'
-  - type: 'remove'
-    pattern: '_Barcodes.stats'
-  - type: 'remove'
-    pattern: '_Features.stats'
   - type: 'regex_keep'
-    pattern: '(_trimmed)'
-    replacement: '\1'
+    pattern: '_Solo.out'
+    replacement: ''
 
 sp:
   starsolo_summary:
-    fn: '*_Summary.csv'
+    fn: '*_Solo.out/GeneFull/*_Summary.csv'
   starsolo_umi:
-    fn: '*_UMIperCellSorted.txt'
+    fn: '*_Solo.out/GeneFull/*_UMIperCellSorted.txt'
   starsolo_barcode:
-    fn: '*_Barcodes.stats'
+    fn: '*_Solo.out/*_Barcodes.stats'
   starsolo_feature:
-    fn: '*_Features.stats'
+    fn: '*_Solo.out/GeneFull/*_Features.stats'
