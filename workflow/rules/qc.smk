@@ -35,7 +35,7 @@ rule multiqc:
             sample=get_sample_ids,
         ),
         star_logs=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}_Log.out"),
+            os.path.join(config["out_dir"], "mapped/{sample}_Log.final.out"),
             sample=get_sample_ids,
         ),
         star=expand(

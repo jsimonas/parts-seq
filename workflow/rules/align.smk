@@ -32,7 +32,7 @@ rule starsolo:
         solo_barcode_stats=os.path.join(
             config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Barcodes.stats"
         ),
-        star_logs=os.path.join(config["out_dir"], "mapped/{sample}_Log.out"),
+        star_logs=os.path.join(config["out_dir"], "mapped/{sample}_Log.final.out"),
     params:
         out_prefix=lambda wildcards, output: output.bam.replace(
             "Aligned.sortedByCoord.out.bam", ""
