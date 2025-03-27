@@ -16,16 +16,16 @@ rule starsolo:
         ),
         solo_dir=directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")),
         solo_summary=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Summary.csv"
+            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_Summary.csv"
         ),
         solo_umi=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/UMIperCellSorted.txt"
+            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_UMIperCellSorted.txt"
         ),
         solo_feature_stats=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Features.stats"
+            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_Features.stats"
         ),
         solo_barcode_stats=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/Barcodes.stats"
+            config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Barcodes.stats"
         ),
     params:
         out_prefix=lambda wildcards, output: output.bam.replace(
