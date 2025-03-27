@@ -22,10 +22,12 @@ rule starsolo:
             config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_Summary.csv"
         ),
         solo_umi=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_UMIperCellSorted.txt"
+            config["out_dir"],
+            "mapped/{sample}_Solo.out/GeneFull/{sample}_UMIperCellSorted.txt",
         ),
         solo_feature_stats=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_Features.stats"
+            config["out_dir"],
+            "mapped/{sample}_Solo.out/GeneFull/{sample}_Features.stats",
         ),
         solo_barcode_stats=os.path.join(
             config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Barcodes.stats"
