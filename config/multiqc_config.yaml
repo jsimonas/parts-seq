@@ -66,10 +66,10 @@ fn_clean_exts:
 
 sp:
   starsolo_summary:
-    fn: 'Summary.csv'
+    fn: '*_Summary.csv'
   starsolo_umi:
-    fn: 'UMIperCellSorted.txt'
+    fn: '*_UMIperCellSorted.txt'
   starsolo_barcode:
-    fn: 'Barcodes.stats'
+    fn: '*_Barcodes.stats'
   starsolo_feature:
-    fn: 'Features.stats'
+    fn: '*_Features.stats'

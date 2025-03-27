@@ -16,16 +16,16 @@ rule starsolo:
         ),
         solo_dir=directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")),
         solo_summary=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Summary.csv"
+            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_Summary.csv"
         ),
         solo_umi=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/UMIperCellSorted.txt"
+            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_UMIperCellSorted.txt"
         ),
         solo_feature_stats=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Features.stats"
+            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_Features.stats"
         ),
         solo_barcode_stats=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/Barcodes.stats"
+            config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Barcodes.stats"
         ),
     params:
         out_prefix=lambda wildcards, output: output.bam.replace(
@@ -67,6 +67,11 @@ rule starsolo:
             --soloUMIposition 0_16_0_23 \
             --soloBarcodeReadLength 1 \
             --soloCBmatchWLtype EditDist_2 &> {log}
+            
+        mv {output.solo_dir}/GeneFull/Summary.csv {output.solo_summary}
+        mv {output.solo_dir}/GeneFull/UMIperCellSorted.txt {output.solo_umi}
+        mv {output.solo_dir}/GeneFull/Features.stats {output.solo_feature_stats}
+        mv {output.solo_dir}/Barcodes.stats {output.solo_barcode_stats}
         """
 
 
