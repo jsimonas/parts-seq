@@ -64,6 +64,10 @@ rule all:
             sample=get_sample_ids,
             param=config["out_dir"],
         ),
+        expand(,
+            "{param}/mapped/{sample}_Solo.out/GeneFull"),
+            sample=get_sample_ids,
+        ),
         expand(
             "{param}/mapped/stats/{sample}.stats",
             sample=get_sample_ids,

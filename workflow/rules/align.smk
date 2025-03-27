@@ -15,6 +15,9 @@ rule starsolo:
             config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"
         ),
         solo_dir=directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")),
+        feat_dir=directory(
+            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/GeneFull")
+        ),
         solo_summary=os.path.join(
             config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_Summary.csv"
         ),
