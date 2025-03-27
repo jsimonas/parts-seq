@@ -54,19 +54,10 @@ rule all:
             param=config["out_dir"],
         ),
         expand(
-            "{param}/mapped/{sample}_Solo.out/GeneFull/Summary.csv",
+            "{param}/mapped/{sample}_Solo.out/GeneFull/{file}",
             sample=get_sample_ids,
             param=config["out_dir"],
-        ),
-        expand(
-            "{param}/mapped/{sample}_Solo.out/GeneFull/UMIperCellSorted.txt",
-            sample=get_sample_ids,
-            param=config["out_dir"],
-        ),
-        expand(
-            "{param}/mapped/{sample}_Solo.out/GeneFull/Features.stats",
-            sample=get_sample_ids,
-            param=config["out_dir"],
+            file=["Summary.csv", "UMIperCellSorted.txt", "Features.stats"],
         ),
         expand(
             "{param}/mapped/{sample}_Solo.out/Barcodes.stats",

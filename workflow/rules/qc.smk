@@ -32,9 +32,14 @@ rule multiqc:
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,
         ),
-        starsolo=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Summary.csv"),
+        star=expand(
+            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"),
             sample=get_sample_ids,
+        ),
+        starsolo=expand(
+            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{file}"),
+            sample=get_sample_ids,
+            file=["Summary.csv", "UMIperCellSorted.txt", "Features.stats"]
         ),
         config_file="config/multiqc_config.yaml",
     output:
