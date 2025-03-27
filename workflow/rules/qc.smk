@@ -40,7 +40,7 @@ rule multiqc:
         ),
         starsolo=expand(
             os.path.join(
-                config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{file}"
+                config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{sample}_{file}"
             ),
             sample=get_sample_ids,
             file=["Summary.csv", "UMIperCellSorted.txt", "Features.stats"],
