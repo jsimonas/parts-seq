@@ -47,9 +47,21 @@ rule multiqc:
         config_file="config/multiqc_config.yaml",
     output:
         os.path.join(config["out_dir"], "qc/multiqc.html"),
-    params:
-        extra="--verbose",
     log:
         "logs/multiqc.log",
-    wrapper:
-        "v5.9.0/bio/multiqc"
+    conda:
+        "../envs/multiqc.yaml",
+    shell:
+        """
+        set -euo pipefail
+
+        multiqc \
+            {input.demux} \
+            {input.fastqc} \
+            {input.stats} \
+            {input.star} \
+            {input.starsolo} \
+            -c {input.config_file} \
+            --outdir $(dirname {output.html}) \
+            {params.extra} &> {log}
+        """
