@@ -42,7 +42,8 @@ rule multiqc:
         ),
         solo_umi=expand(
             os.path.join(
-                config["out_dir"], "mapped/{sample}/Solo.out/GeneFull/UMIperCellSorted.txt"
+                config["out_dir"],
+                "mapped/{sample}/Solo.out/GeneFull/UMIperCellSorted.txt"
             ),
             sample=get_sample_ids,
         ),
