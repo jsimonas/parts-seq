@@ -14,19 +14,19 @@ rule starsolo:
         bam=os.path.join(
             config["out_dir"], "mapped/{sample}_Aligned.sortedByCoord.out.bam"
         ),
+        solo_dir=directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")),
         solo_summary=os.path.join(
-            config["out_dir"], "mapped/{sample}/Solo.out/GeneFull/Summary.csv"
+            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Summary.csv"
         ),
         solo_umi=os.path.join(
-            config["out_dir"], "mapped/{sample}/Solo.out/GeneFull/UMIperCellSorted.txt"
+            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/UMIperCellSorted.txt"
         ),
         solo_barcode_stats=os.path.join(
-            config["out_dir"], "mapped/{sample}/Solo.out/Barcodes.stats"
+            config["out_dir"], "mapped/{sample}_Solo.out/Barcodes.stats"
         ),
         solo_feature_stats=os.path.join(
-            config["out_dir"], "mapped/{sample}/Solo.out/Features.stats"
+            config["out_dir"], "mapped/{sample}_Solo.out/Features.stats"
         ),
-        solo_dir=directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")),
     params:
         out_prefix=lambda wildcards, output: output.bam.replace(
             "Aligned.sortedByCoord.out.bam", ""

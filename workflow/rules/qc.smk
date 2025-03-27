@@ -36,23 +36,23 @@ rule multiqc:
         ),
         solo_summary=expand(
             os.path.join(
-                config["out_dir"], "mapped/{sample}/Solo.out/GeneFull/Summary.csv"
+                config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Summary.csv"
             ),
             sample=get_sample_ids,
         ),
         solo_umi=expand(
             os.path.join(
                 config["out_dir"],
-                "mapped/{sample}/Solo.out/GeneFull/UMIperCellSorted.txt",
+                "mapped/{sample}_Solo.out/GeneFull/UMIperCellSorted.txt",
             ),
             sample=get_sample_ids,
         ),
         solo_barcode_stats=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}/Solo.out/Barcodes.stats"),
+            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/Barcodes.stats"),
             sample=get_sample_ids,
         ),
         solo_feature_stats=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}/Solo.out/Features.stats"),
+            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/Features.stats"),
             sample=get_sample_ids,
         ),
         config_file="config/multiqc_config.yaml",
