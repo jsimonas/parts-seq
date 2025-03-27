@@ -23,7 +23,9 @@ rule multiqc:
     input:
         demux=os.path.join(config["out_dir"], "demultiplexed/Stats"),
         fastqc=expand(
-            os.path.join(config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"),
+            os.path.join(
+                config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"
+            ),
             sample=get_sample_ids,
             type=["bc", "cdna"],
             suffix=["merged", "trimmed"],
@@ -37,7 +39,9 @@ rule multiqc:
             sample=get_sample_ids,
         ),
         starsolo=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{file}"),
+            os.path.join(
+                config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/{file}"
+            ),
             sample=get_sample_ids,
             file=["Summary.csv", "UMIperCellSorted.txt", "Features.stats"]
         ),
