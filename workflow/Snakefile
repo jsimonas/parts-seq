@@ -18,7 +18,6 @@ include: "rules/qc.smk"
 rule all:
     input:
         os.path.join(config["out_dir"], "demultiplexed"),
-        os.path.join(config["out_dir"], "mapped"),
         expand(
             "{param}/merged/{sample}_bc_merged.fastq.gz",
             sample=get_sample_ids,

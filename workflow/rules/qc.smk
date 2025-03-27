@@ -22,7 +22,6 @@ rule fastqc:
 rule multiqc:
     input:
         demux=os.path.join(config["out_dir"], "demultiplexed/Stats"),
-        star=os.path.join(config["out_dir"], "mapped"),
         fastqc=expand(
             os.path.join(
                 config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"
@@ -35,11 +34,11 @@ rule multiqc:
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,
         ),
-        starsolo=expand(
+        star=expand(
             os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"),
             sample=get_sample_ids,
         ),
-        starfeat=expand(
+        starsolo=expand(
             os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/"),
             sample=get_sample_ids,
         ),
