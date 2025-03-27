@@ -25,8 +25,8 @@ rule demux:
         run_dir=config["run_dir"],
         sample_sheet=os.path.join(config["out_dir"], "sample_sheet.csv"),
     output:
-        directory(os.path.join(config["out_dir"], "demultiplexed")),
-        directory(os.path.join(config["out_dir"], "demultiplexed/Stats")),
+        out_dir=directory(os.path.join(config["out_dir"], "demultiplexed")),
+        sta_dir=directory(os.path.join(config["out_dir"], "demultiplexed/Stats")),
     threads: config.get("threads", 8)
     log:
         "logs/demultiplex.log",
@@ -38,7 +38,7 @@ rule demux:
 
         bcl2fastq \
             --runfolder-dir {input.run_dir} \
-            --output-dir {output} \
+            --output-dir {output.out_dir} \
             --sample-sheet {input.sample_sheet} \
             --mask-short-adapter-reads 0 \
             --minimum-trimmed-read-length 0 \
