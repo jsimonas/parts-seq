@@ -16,14 +16,12 @@ top_modules:
 
 custom_data:
   starsolo_summary:
-    id: 'starsolo_summary'
     parent_id: 'custom_content'
     parent_name: 'STARsolo Summary'
     file_format: 'csv'
     plot_type: 'table'
 
   starsolo_umi:
-    id: 'starsolo_umi'
     parent_id: 'custom_content'
     parent_name: 'STARsolo UMI Rank'
     file_format: 'tsv'
@@ -36,7 +34,6 @@ custom_data:
       xLog: True
 
   starsolo_barcode:
-    id: 'starsolo_barcode'
     parent_id: 'custom_content'
     parent_name: 'STARsolo Barcode Stats'
     file_format: 'tsv'
@@ -46,7 +43,6 @@ custom_data:
       xlab: '# Reads'
 
   starsolo_feature:
-    id: 'starsolo_feature'
     parent_id: 'custom_content'
     parent_name: 'STARsolo Feature Stats'
     file_format: 'tsv'
