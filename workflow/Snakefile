@@ -70,7 +70,7 @@ rule all:
             param=config["out_dir"],
         ),
         expand(
-            "{param}/mapped/{sample}_Log.out"),
+            "{param}/mapped/{sample}_Log.out",
             sample=get_sample_ids,
             param=config["out_dir"],
         ),
