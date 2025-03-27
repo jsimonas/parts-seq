@@ -26,6 +26,7 @@ rule demux:
         sample_sheet=os.path.join(config["out_dir"], "sample_sheet.csv"),
     output:
         directory(os.path.join(config["out_dir"], "demultiplexed")),
+        directory(os.path.join(config["out_dir"], "demultiplexed/Stats")),
     threads: config.get("threads", 8)
     log:
         "logs/demultiplex.log",
