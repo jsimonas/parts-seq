@@ -64,12 +64,12 @@ rule all:
             param=config["out_dir"],
         ),
         expand(
-            "{param}/mapped/{sample}_Solo.out/Barcodes.stats",
+            "{param}/mapped/{sample}_Solo.out/GeneFull/Features.stats",
             sample=get_sample_ids,
             param=config["out_dir"],
         ),
         expand(
-            "{param}/mapped/{sample}_Solo.out/Features.stats",
+            "{param}/mapped/{sample}_Solo.out/Barcodes.stats",
             sample=get_sample_ids,
             param=config["out_dir"],
         ),

@@ -21,11 +21,11 @@ rule starsolo:
         solo_umi=os.path.join(
             config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/UMIperCellSorted.txt"
         ),
+        solo_feature_stats=os.path.join(
+            config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Features.stats"
+        ),
         solo_barcode_stats=os.path.join(
             config["out_dir"], "mapped/{sample}_Solo.out/Barcodes.stats"
-        ),
-        solo_feature_stats=os.path.join(
-            config["out_dir"], "mapped/{sample}_Solo.out/Features.stats"
         ),
     params:
         out_prefix=lambda wildcards, output: output.bam.replace(

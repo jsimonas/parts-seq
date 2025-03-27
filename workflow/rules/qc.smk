@@ -47,12 +47,14 @@ rule multiqc:
             ),
             sample=get_sample_ids,
         ),
-        solo_barcode_stats=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/Barcodes.stats"),
+        solo_feature_stats=expand(
+            os.path.join(
+                config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/Features.stats"
+            ),
             sample=get_sample_ids,
         ),
-        solo_feature_stats=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/Features.stats"),
+        solo_barcode_stats=expand(
+            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/Barcodes.stats"),
             sample=get_sample_ids,
         ),
         config_file="config/multiqc_config.yaml",
