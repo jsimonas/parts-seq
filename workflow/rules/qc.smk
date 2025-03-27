@@ -45,6 +45,8 @@ rule multiqc:
         config_file="config/multiqc_config.yaml",
     output:
         html=os.path.join(config["out_dir"], "qc/multiqc.html"),
+    params:
+        extra="--verbose"
     log:
         "logs/multiqc.log",
     conda:
