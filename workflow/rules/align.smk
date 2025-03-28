@@ -58,15 +58,23 @@ rule starsolo:
             --soloCBmatchWLtype EditDist_2 &> {log}
         """
 
-        
+
 rule format_starsolo:
     input:
-        solo_dir=os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")
+        solo_dir=os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"),
     output:
-        summary=os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Summary.csv"),
-        umi=os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/{sample}_UMIperCellSorted.txt"),
-        barcodes=os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Barcodes.stats"),
-        features=os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Features.stats"),
+        summary=os.path.join(
+            config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Summary.csv"
+        ),
+        umi=os.path.join(
+            config["out_dir"], "mapped/{sample}_Solo.out/{sample}_UMIperCellSorted.txt"
+        ),
+        barcodes=os.path.join(
+            config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Barcodes.stats"
+        ),
+        features=os.path.join(
+            config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Features.stats"
+        ),
     log:
         "logs/format_starsolo_{sample}.log",
     conda:
@@ -74,7 +82,7 @@ rule format_starsolo:
     params:
         sample="{sample}",
     script:
-        "scripts/starsolo_to_multiqc.py"
+        "../scripts/starsolo_to_multiqc.py"
 
 
 rule samtools_stats:
