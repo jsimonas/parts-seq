@@ -20,12 +20,14 @@ def modify_summary(content):
     df = pd.DataFrame([new_values], columns=new_header)
     return df.to_csv(index=False)
 
+
 def modify_umi(content):
     lines = content.strip().splitlines()
     numbered_lines = [f"{i+1}\t{line}" for i, line in enumerate(lines)]
     return "\n".join(numbered_lines) + "\n"
 
-def modify_barcodes(content):
+
+def modify_stats(content):
     lines = content.strip().splitlines()
     processed = []
     for line in lines:
@@ -34,21 +36,14 @@ def modify_barcodes(content):
         processed.append(line)
     return "\n".join(processed) + "\n"
 
-def modify_features(content):
-    lines = content.strip().splitlines()
-    processed = []
-    for line in lines:
-        line = re.sub(r'^\s+', '', line)
-        line = re.sub(r'\s+', '\t', line)
-        processed.append(line)
-    return "\n".join(processed) + "\n"
 
 file_map = {
     "Summary.csv": (modify_summary, output_files.summary),
     "UMIperCellSorted.txt": (modify_umi, output_files.umi),
-    "Barcodes.stats": (modify_barcodes, output_files.barcodes),
-    "Features.stats": (modify_features, output_files.features),
+    "Barcodes.stats": (modify_stats, output_files.barcodes),
+    "Features.stats": (modify_stats, output_files.features),
 }
+
 
 for suffix, (modifier, outpath) in file_map.items():
     pattern = os.path.join(demux_dir, f"**/*{suffix}")
