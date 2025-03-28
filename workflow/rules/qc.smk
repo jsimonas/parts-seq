@@ -60,7 +60,7 @@ rule multiqc:
             sample=get_sample_ids,
         ),
         mirtrace=expand(
-            os.path.join(config["out_dir"],"/mirtrace/{sample}"),
+            os.path.join(config["out_dir"], "mirtrace/{sample}"),
             sample=get_sample_ids,
         ),
         stats=expand(
