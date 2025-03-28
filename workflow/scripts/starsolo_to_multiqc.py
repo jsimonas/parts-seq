@@ -51,8 +51,8 @@ file_map = {
 }
 
 for suffix, (modifier, outpath) in file_map.items():
-    pattern = os.path.join(demux_dir, f"*{suffix}")
-    matches = glob.glob(pattern)
+    pattern = os.path.join(demux_dir, f"**/*{suffix}")
+    matches = glob.glob(pattern, recursive=True)
     if not matches:
         raise FileNotFoundError(f"No file matching {pattern}")
     if len(matches) > 1:
