@@ -12,6 +12,7 @@ top_modules:
 
 custom_data:
   starsolo_summary:
+    section_name: 'Summary'
     parent_id: 'starsolo_summary'
     parent_name: 'STARsolo'
     file_format: 'csv'
