@@ -17,7 +17,7 @@ rule starsolo:
         solo_dir=directory(os.path.join(config["out_dir"], "mapped/{sample}_Solo.out")),
         star_logs=os.path.join(config["out_dir"], "mapped/{sample}_Log.final.out"),
     params:
-        out_prefix=lambda wildcards, output: output.bam.replace(
+        out_prefix=lambda wc, output: output.bam.replace(
             "Aligned.sortedByCoord.out.bam", ""
         ),
         features=config["star"]["features"],
