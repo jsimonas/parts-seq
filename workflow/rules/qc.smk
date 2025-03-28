@@ -29,7 +29,7 @@ rule mirtrace:
         report_dir=directory(os.path.join(config["out_dir"], "mirtrace/{sample}")),
     params:
         species=config["mirtrace"]["species"],
-        outbase = lambda wc, output: output.report_dir,
+        outbase=lambda wc, output: output.report_dir,
     log:
         "logs/mirtrace_{sample}.log",
     conda:
