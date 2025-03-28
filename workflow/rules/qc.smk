@@ -37,10 +37,10 @@ rule mirtrace:
     threads: config.get("threads", 4)
     shell:
         """
-        mirtrace --quiet \
-                 --species {params.species} \
-                 --output {params.outbase} \
-                 {input.trimmed_fastq}
+        mirtrace \
+            --species {params.species} \
+            --output-dir {params.outbase} \
+            {input.trimmed_fastq}
         """
 
 
