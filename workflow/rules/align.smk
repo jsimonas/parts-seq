@@ -20,7 +20,7 @@ rule starsolo:
         out_prefix=lambda wildcards, output: output.bam.replace(
             "Aligned.sortedByCoord.out.bam", ""
         ),
-        features=config["star_features"],
+        features=config["star"]["features"],
     threads: config.get("threads", 4)
     log:
         "logs/starsolo_{sample}.log",
@@ -51,7 +51,7 @@ rule starsolo:
             --outFilterMatchNmin 15 \
             --soloType CB_UMI_Complex \
             --soloMultiMappers PropUnique \
-            --soloFeatures {params.star_features} \
+            --soloFeatures {params.features} \
             --soloUMIdedup Exact \
             --soloCBposition 0_0_0_7 0_8_0_15 \
             --soloUMIposition 0_16_0_23 \

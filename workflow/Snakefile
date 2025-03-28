@@ -88,4 +88,9 @@ rule all:
             suffix=["merged", "trimmed"],
             param=config["out_dir"],
         ),
+        expand(
+            "{param}/mirtrace/{sample}",
+            sample=get_sample_ids,
+            param=config["out_dir"],
+        ),
         os.path.join(config["out_dir"], "qc/multiqc_report.html"),

@@ -19,6 +19,30 @@ rule fastqc:
         "v3.10.0/bio/fastqc"
 
 
+rule mirtrace:
+    input:
+        trimmed_fastq=os.path.join(
+            config["out_dir"], "/trimmed/{sample}_cdna_trimmed.fastq.gz"
+        ),
+    output:
+        report_dir=directory(os.path.join(config["out_dir"],"/mirtrace/{sample}")),
+    params:
+        species = config["mirtrace"]["species"],
+        outbase = os.path.join(config["out_dir"],"mirtrace/{sample}"),
+    log:
+        "logs/mirtrace_{sample}.log",
+    conda:
+        "../envs/mirtrace.yaml"
+    threads: config.get("threads", 4)
+    shell:
+        """
+        mirtrace --quiet \
+                 --species {params.species} \
+                 --output {params.outbase} \
+                 {input.trimmed_fastq}
+        """
+
+
 rule multiqc:
     input:
         demux=os.path.join(config["out_dir"], "demultiplexed/Stats"),
@@ -33,6 +57,9 @@ rule multiqc:
         cutadapt=expand(
             os.path.join(config["out_dir"], "trimmed/{sample}_cutadapt_report.txt"),
             sample=get_sample_ids,
+        ),
+        mirtrace=expand(
+            os.path.join(config["out_dir"],"/mirtrace/{sample}"),
         ),
         stats=expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
@@ -63,6 +90,7 @@ rule multiqc:
             {input.demux} \
             {input.fastqc} \
             {input.cutadapt} \
+            {input.mirtrace} \
             {input.stats} \
             {input.star_logs} \
             {input.star} \
