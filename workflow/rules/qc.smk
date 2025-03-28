@@ -66,7 +66,6 @@ rule multiqc:
             {input.stats} \
             {input.star_logs} \
             {input.star} \
-            {input.starsolo} \
             -c {input.config_file} \
             --outdir $(dirname {output.html}) \
             {params.extra} &> {log}
