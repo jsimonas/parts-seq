@@ -19,7 +19,7 @@ custom_data:
 
   starsolo_umi:
     id: 'starsolo_umi'
-    name: 'UMI Metrics'
+    section_name: 'UMI Metrics'
     parent_id: 'custom_content'
     parent_name: 'STARsolo'
     file_format: 'tsv'
@@ -33,7 +33,7 @@ custom_data:
 
   starsolo_barcode:
     id: 'starsolo_barcode'
-    title: 'Barcode Stats'
+    section_name: 'Barcode Stats'
     parent_id: 'custom_content'
     parent_name: 'STARsolo'
     file_format: 'tsv'
@@ -44,7 +44,7 @@ custom_data:
 
   starsolo_feature:
     id: 'starsolo_feature'
-    name: 'Feature Stats'
+    section_name: 'Feature Stats'
     parent_id: 'custom_content'
     parent_name: 'STARsolo'
     file_format: 'tsv'
