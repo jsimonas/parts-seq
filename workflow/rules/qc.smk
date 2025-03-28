@@ -46,10 +46,6 @@ rule multiqc:
             os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"),
             sample=get_sample_ids,
         ),
-        starsolo=expand(
-            os.path.join(config["out_dir"], "mapped/{sample}_Solo.out/GeneFull/"),
-            sample=get_sample_ids,
-        ),
         config_file="config/multiqc_config.yaml",
     output:
         html=os.path.join(config["out_dir"], "qc/multiqc_report.html"),
