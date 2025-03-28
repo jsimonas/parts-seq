@@ -33,7 +33,7 @@ custom_data:
 
   starsolo_barcode:
     id: 'starsolo_barcode'
-    name: 'Barcode Stats'
+    title: 'Barcode Stats'
     parent_id: 'custom_content'
     parent_name: 'STARsolo'
     file_format: 'tsv'
