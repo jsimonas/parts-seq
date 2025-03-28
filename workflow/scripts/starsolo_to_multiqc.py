@@ -8,7 +8,7 @@ from io import StringIO
 # pylint: disable=undefined-variable
 
 sample = snakemake.params.sample
-demux_dir = snakemake.input.demux_dir
+demux_dir = snakemake.input.solo_dir
 output_files = snakemake.output
 
 def modify_summary(content):

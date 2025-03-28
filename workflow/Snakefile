@@ -61,7 +61,7 @@ rule all:
                 "Summary.csv",
                 "UMIperCellSorted.txt",
                 "Features.stats",
-                "Barcodes.stats"
+                "Barcodes.stats",
             ],
         ),
         expand(
