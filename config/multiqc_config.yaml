@@ -13,7 +13,7 @@ top_modules:
 custom_data:
   starsolo_summary:
     section_name: 'Summary'
-    parent_id: 'starsolo_summary'
+    parent_id: 'custom_content'
     parent_name: 'STARsolo'
     file_format: 'csv'
     plot_type: 'table'
