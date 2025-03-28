@@ -18,7 +18,7 @@ rule trim_reads:
         report=os.path.join(config["out_dir"], "trimmed/{sample}_cutadapt_report.txt"),
     threads: config.get("threads", 4)
     params:
-        trim_5p=config["cutadapt"]["trim_5p"],,
+        trim_5p=config["cutadapt"]["trim_5p"],
     log:
         "logs/trim_fastq_{sample}.log",
     conda:
