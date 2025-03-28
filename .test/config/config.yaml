@@ -6,6 +6,7 @@ sequencer: "miseq" # or nextseq
 
 # processing
 trim_5p: 0
+star_features: "GeneFull"
 star_index: "resources/index"
 
 # other params
