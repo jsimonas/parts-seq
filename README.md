@@ -29,7 +29,8 @@ Execute the workflow using Snakemake
 ```
 snakemake \
   --cores 8 \
-  --snakefile workflow/Snakefile \
+  --snakefile parts-seq/workflow/Snakefile \
+  --directory parts-seq \
   --use-conda \
   --config \
     run_dir=/path/to/sequencing_run_directory \
