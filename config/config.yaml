@@ -1,12 +1,21 @@
 # input
-run_dir: ".test/ngs/231121_M02245_0129_000000000-DMNH2"
+run_dir: "ngs/231121_M02245_0129_000000000-DMNH2"
 out_dir: "results"
-sample_sheet: ".test/ngs/231121_M02245_0129_000000000-DMNH2/231121_extended_sample_sheet.xlsx"
+sample_sheet: "ngs/231121_M02245_0129_000000000-DMNH2/231121_extended_sample_sheet.xlsx"
 sequencer: "miseq" # or nextseq
 
-# processing
-trim_5p: 0
-star_index: ".test/resources/index"
+# genome index
+star_index: "resources/index"
+
+# tool params
+cutadapt:
+    trim_5p: 0
+
+star:
+    features: "GeneFull"
+
+mirtrace:
+  species: "human"
 
 # other params
 threads: 4
