@@ -30,6 +30,10 @@ rule multiqc:
             type=["bc", "cdna"],
             suffix=["merged", "trimmed"],
         ),
+        cutadapt=expand(
+            os.path.join(config["out_dir"], "trimmed/{sample}_cutadapt_report.txt",
+            sample=get_sample_ids,
+        ),
         stats=expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,
@@ -62,6 +66,7 @@ rule multiqc:
         multiqc \
             {input.demux} \
             {input.fastqc} \
+            {input.cutadapt} \
             {input.stats} \
             {input.star_logs} \
             {input.star} \
