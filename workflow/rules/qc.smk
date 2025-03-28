@@ -31,7 +31,7 @@ rule multiqc:
             suffix=["merged", "trimmed"],
         ),
         cutadapt=expand(
-            os.path.join(config["out_dir"], "trimmed/{sample}_cutadapt_report.txt",
+            os.path.join(config["out_dir"], "trimmed/{sample}_cutadapt_report.txt"),
             sample=get_sample_ids,
         ),
         stats=expand(
