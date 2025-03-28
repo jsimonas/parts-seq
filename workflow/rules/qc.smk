@@ -21,14 +21,15 @@ rule fastqc:
 
 rule mirtrace:
     input:
-        trimmed_fastq=os.path.join(
-            config["out_dir"], "/trimmed/{sample}_cdna_trimmed.fastq.gz"
+        trimmed_fastq=expand(
+            os.path.join(config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"),
+            sample=get_sample_ids,
         ),
     output:
-        report_dir=directory(os.path.join(config["out_dir"],"/mirtrace/{sample}")),
+        report_dir=directory(os.path.join(config["out_dir"], "mirtrace/{sample}")),
     params:
-        species = config["mirtrace"]["species"],
-        outbase = os.path.join(config["out_dir"],"mirtrace/{sample}"),
+        species=config["mirtrace"]["species"],
+        outbase=os.path.join(config["out_dir"], "mirtrace/{sample}"),
     log:
         "logs/mirtrace_{sample}.log",
     conda:
