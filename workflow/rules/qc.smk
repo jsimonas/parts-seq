@@ -46,7 +46,7 @@ rule mirtrace:
 
 rule multiqc:
     input:
-        demux=os.path.join(config["out_dir"], "demultiplexed/Stats"),
+        demux=os.path.join(config["out_dir"], "demuxed/Stats"),
         fastqc=expand(
             os.path.join(
                 config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"
