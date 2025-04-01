@@ -46,4 +46,4 @@ Before running the workflow, prepare the [STAR](https://github.com/alexdobin/STA
 ### Requirements
 
 * `snakemake>≥6.3.0`
-* `linux OS`
+* `linux-x64`
