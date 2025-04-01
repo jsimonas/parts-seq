@@ -3,11 +3,11 @@ import os
 
 checkpoint parse_demux:
     input:
-        demux_dir=os.path.join(config["out_dir"], "demultiplexed"),
+        demux_dir=os.path.join(config["out_dir"], "demuxed"),
     output:
         sample_ids=os.path.join(config["out_dir"], "sample_ids.txt"),
     log:
-        "logs/parse_demux.log",
+        os.path.join(config["out_dir"], "logs/parse_demux.log"),
     conda:
         "../envs/pandas.yaml"
     script:

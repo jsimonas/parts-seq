@@ -23,7 +23,7 @@ rule starsolo:
         features=config["star"]["features"],
     threads: config.get("threads", 4)
     log:
-        "logs/starsolo_{sample}.log",
+        os.path.join(config["out_dir"], "logs/starsolo_{sample}.log"),
     conda:
         "../envs/star.yaml"
     shell:
@@ -77,7 +77,7 @@ rule format_starsolo:
             config["out_dir"], "mapped/{sample}_Solo.out/{sample}_Features.stats"
         ),
     log:
-        "logs/format_starsolo_{sample}.log",
+        os.path.join(config["out_dir"], "logs/format_starsolo_{sample}.log"),
     conda:
         "../envs/pandas.yaml"
     params:
@@ -96,6 +96,6 @@ rule samtools_stats:
     params:
         extra="",
     log:
-        "logs/samtools_stats_{sample}.log",
+        os.path.join(config["out_dir"], "logs/samtools_stats_{sample}.log"),
     wrapper:
         "v3.13.3/bio/samtools/stats"

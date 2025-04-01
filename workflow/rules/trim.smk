@@ -20,7 +20,7 @@ rule trim_reads:
     params:
         trim_5p=config["cutadapt"]["trim_5p"],
     log:
-        "logs/trim_fastq_{sample}.log",
+        os.path.join(config["out_dir"], "logs/trim_fastq_{sample}.log"),
     conda:
         "../envs/cutadapt.yaml"
     shell:

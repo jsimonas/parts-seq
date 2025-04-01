@@ -10,7 +10,7 @@ rule convert_sheet:
     output:
         out=os.path.join(config["out_dir"], "sample_sheet.csv"),
     log:
-        "logs/convert_sheet.log",
+        os.path.join(config["out_dir"], "logs/convert_sheet.log"),
     conda:
         "../envs/pandas.yaml"
     script:
@@ -25,11 +25,11 @@ rule demux:
         run_dir=config["run_dir"],
         sample_sheet=os.path.join(config["out_dir"], "sample_sheet.csv"),
     output:
-        out_dir=directory(os.path.join(config["out_dir"], "demultiplexed")),
-        sta_dir=directory(os.path.join(config["out_dir"], "demultiplexed/Stats")),
+        out_dir=directory(os.path.join(config["out_dir"], "demuxed")),
+        sta_dir=directory(os.path.join(config["out_dir"], "demuxed/Stats")),
     threads: config.get("threads", 8)
     log:
-        "logs/demultiplex.log",
+        os.path.join(config["out_dir"], "logs/demux.log"),
     conda:
         "../envs/bcl2fastq.yaml"
     shell:
@@ -65,7 +65,7 @@ rule merge_fastq:
         sequencer=config["sequencer"],
     threads: config.get("threads", 4)
     log:
-        "logs/merge_fastq_{sample}.log",
+        os.path.join(config["out_dir"], "logs/merge_fastq_{sample}.log"),
     conda:
         "../envs/seqkit.yaml"
     shell:
