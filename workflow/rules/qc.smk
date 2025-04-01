@@ -11,7 +11,7 @@ rule fastqc:
             config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"
         ),
     log:
-        "logs/fastqc_{sample}_{type}_{suffix}.log",
+        os.path.join(config["out_dir"], "logs/fastqc_{sample}_{type}_{suffix}.log"),
     threads: config.get("threads", 4)
     resources:
         mem_mb=8000,
@@ -31,7 +31,7 @@ rule mirtrace:
         species=config["mirtrace"]["species"],
         outbase=lambda wc, output: output.report_dir,
     log:
-        "logs/mirtrace_{sample}.log",
+        os.path.join(config["out_dir"], "logs/mirtrace_{sample}.log"),
     conda:
         "../envs/mirtrace.yaml"
     threads: config.get("threads", 4)
@@ -81,7 +81,7 @@ rule multiqc:
     params:
         extra="--verbose",
     log:
-        "logs/multiqc.log",
+        os.path.join(config["out_dir"], "logs/multiqc.log"),
     conda:
         "../envs/multiqc.yaml"
     shell:
