@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a31c8e002d66ce5663f62cd20fa4f0942cd4c21527bdf9c5d99b93860e662dd7
-size 633
+### /home/simonasj/miniconda3/envs/star-2711b-env/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 2   --genomeDir index   --genomeFastaFiles index/mini.fa      --genomeSAindexNbases 6   --genomeChrBinNbits 7   --genomeSAsparseD 10   --sjdbGTFfile index/mini.gtf
+### GstrandBit 32
+versionGenome	2.7.4a
+genomeType	Full
+genomeFastaFiles	index/mini.fa 
+genomeSAindexNbases	6
+genomeChrBinNbits	7
+genomeSAsparseD	10
+genomeTransformType	None
+genomeTransformVCF	-
+sjdbOverhang	100
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	index/mini.gtf
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic
+genomeFileSizes	2000128 1650003
