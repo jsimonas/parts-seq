@@ -40,6 +40,7 @@ rule starsolo:
             --runDirPerm All_RWX \
             --outReadsUnmapped Fastx \
             --outSAMtype BAM SortedByCoordinate \
+            --limitBAMsortRAM 1200000000 \
             --outSAMattributes NH HI nM AS CR UR CB UB sS sQ sM GX GN \
             --outSAMunmapped Within \
             --alignIntronMax 1 \
