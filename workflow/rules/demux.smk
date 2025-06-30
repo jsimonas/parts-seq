@@ -31,7 +31,7 @@ rule demux:
     log:
         os.path.join(config["out_dir"], "logs/demux.log"),
     params:
-        barcode_mismatches=config['demux']['barcode_mismatches'],
+        barcode_mismatches=config["demux"]["barcode_mismatches"],
     conda:
         "../envs/bcl2fastq.yaml"
     shell:
