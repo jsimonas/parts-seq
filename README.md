@@ -27,10 +27,11 @@ snakemake --cores 2 --dry-run
 
 Execute the workflow using Snakemake
 ```
+cd parts-seq
+
 snakemake \
   --cores 8 \
-  --snakefile parts-seq/workflow/Snakefile \
-  --directory parts-seq \
+  --snakefile workflow/Snakefile \
   --use-conda \
   --config \
     run_dir=/path/to/sequencing_run_directory \
