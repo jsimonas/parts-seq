@@ -19,7 +19,7 @@ star:
     features: "GeneFull"
 
 mirtrace:
-  species: "human"
+  species: "hsa"
 
 # other params
 threads: 4
