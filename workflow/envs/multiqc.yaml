@@ -3,3 +3,4 @@ channels:
   - bioconda
 dependencies:
   - multiqc = 1.28
+  - procps-ng
