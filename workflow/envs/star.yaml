@@ -3,3 +3,4 @@ channels:
   - bioconda
 dependencies:
   - star = 2.7.11b
+  - humanfriendly = 10.0

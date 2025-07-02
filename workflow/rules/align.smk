@@ -1,5 +1,5 @@
 import os
-
+from humanfriendly import parse_size 
 
 rule starsolo:
     input:
@@ -21,6 +21,7 @@ rule starsolo:
             "Aligned.sortedByCoord.out.bam", ""
         ),
         features=config["star"]["features"],
+        limit_ram=lambda wc: int(0.8 * parse_size(config["memory"])),
     threads: config.get("threads", 4)
     log:
         os.path.join(config["out_dir"], "logs/starsolo_{sample}.log"),
@@ -40,7 +41,7 @@ rule starsolo:
             --runDirPerm All_RWX \
             --outReadsUnmapped Fastx \
             --outSAMtype BAM SortedByCoordinate \
-            --limitBAMsortRAM 1200000000 \
+            --limitBAMsortRAM {params.limit_ram} \
             --outSAMattributes NH HI nM AS CR UR CB UB sS sQ sM GX GN \
             --outSAMunmapped Within \
             --alignIntronMax 1 \
