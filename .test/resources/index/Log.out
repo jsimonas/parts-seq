@@ -1,3 +1,73 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ec4c30e0e03200ed771a261654d155d97577397a4ba6c050a8e9d19c17a4dc66
-size 3943
+STAR version=2.7.11b
+STAR compilation time,server,dir=2024-12-15T08:41:36+0000 :/opt/conda/conda-bld/star_1734251957083/work/source
+##### Command Line:
+/home/simonasj/miniconda3/envs/star-2711b-env/bin/STAR-avx2 --runMode genomeGenerate --runThreadN 2 --genomeDir index --genomeFastaFiles index/mini.fa --sjdbGTFfile index/mini.gtf --genomeSAindexNbases 6 --genomeChrBinNbits 7 --genomeSAsparseD 10
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runMode                       genomeGenerate        ~RE-DEFINED
+runThreadN                    2     ~RE-DEFINED
+genomeDir                     index     ~RE-DEFINED
+genomeFastaFiles              index/mini.fa        ~RE-DEFINED
+sjdbGTFfile                   index/mini.gtf     ~RE-DEFINED
+genomeSAindexNbases           6     ~RE-DEFINED
+genomeChrBinNbits             7     ~RE-DEFINED
+genomeSAsparseD               10     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+runThreadN                        2
+genomeDir                         index
+genomeFastaFiles                  index/mini.fa   
+genomeSAindexNbases               6
+genomeChrBinNbits                 7
+genomeSAsparseD                   10
+sjdbGTFfile                       index/mini.gtf
+
+-------------------------------
+##### Final effective command line:
+/home/simonasj/miniconda3/envs/star-2711b-env/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 2   --genomeDir index   --genomeFastaFiles index/mini.fa      --genomeSAindexNbases 6   --genomeChrBinNbits 7   --genomeSAsparseD 10   --sjdbGTFfile index/mini.gtf
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory exists and will be overwritten: index/
+Jun 27 10:21:15 ... starting to generate Genome files
+index/mini.fa : chr # 0  "GRCh38_chr22_20000001-22000000" chrStart: 0
+Chromosome sequence lengths: 
+GRCh38_chr22_20000001-22000000	2000000
+Genome sequence total length = 2000000
+Genome size with padding = 2000128
+Jun 27 10:21:16 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=index/mini.gtf, found:
+		1 transcripts
+		1 exons (non-collapsed)
+		0 collapsed junctions
+Total junctions: 0
+Jun 27 10:21:16 ..... finished GTF processing
+
+Estimated genome size with padding and SJs: total=genome+SJ=203000128 = 2000128 + 201000000
+GstrandBit=32
+Number of SA indices: 400000
+Jun 27 10:21:16 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 1;   chunks size limit: 3200000 bytes
+Jun 27 10:21:16 ... sorting Suffix Array chunks and saving them to disk...
+Writing 3200000 bytes into index//SA_0 ; empty space on disk = 5023534399488 bytes ... done
+Jun 27 10:21:16 ... loading chunks from disk, packing SA...
+Jun 27 10:21:16 ... finished generating suffix array
+Jun 27 10:21:16 ... generating Suffix Array index
+Jun 27 10:21:16 ... completed Suffix Array index
+Jun 27 10:21:16   Finished preparing junctions
+Jun 27 10:21:16 ..... finished inserting junctions into genome
+Jun 27 10:21:16 ... writing Genome to disk ...
+Writing 2000128 bytes into index//Genome ; empty space on disk = 5023534333952 bytes ... done
+SA size in bytes: 1650003
+Jun 27 10:21:16 ... writing Suffix Array to disk ...
+Writing 1650003 bytes into index//SA ; empty space on disk = 5023532285952 bytes ... done
+Jun 27 10:21:16 ... writing SAindex to disk
+Writing 8 bytes into index//SAindex ; empty space on disk = 5023530221568 bytes ... done
+Writing 56 bytes into index//SAindex ; empty space on disk = 5023530221568 bytes ... done
+Writing 23891 bytes into index//SAindex ; empty space on disk = 5023530221568 bytes ... done
+Jun 27 10:21:16 ..... finished successfully
+DONE: Genome generation, EXITING

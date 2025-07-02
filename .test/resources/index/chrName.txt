@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d5a8349cb82edb31ec3992ed8cd9ff09b1c5bd0f7592344261248389a55bee04
-size 31
+GRCh38_chr22_20000001-22000000
