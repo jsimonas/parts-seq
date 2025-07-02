@@ -1,6 +1,7 @@
 import os
 from humanfriendly import parse_size 
 
+
 rule starsolo:
     input:
         cdna_read=os.path.join(
