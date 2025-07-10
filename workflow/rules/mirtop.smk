@@ -24,7 +24,7 @@ rule collapse_reads:
         
         seqcluster collapse \
             -f {input.R2_trimmed} \
-            -o {output.R2_trimmed} \
+            -o {output.R2_collapsed} \
             > {log}
 
         """
