@@ -10,9 +10,9 @@ rule collapse_reads:
             config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"
         ),
     output:
-        R2_collapsed = os.path.join(
+        R2_collapsed=os.path.join(
             config["out_dir"], "collapsed/{sample}_cdna_collapsed.fastq.gz"
-        )
+        ),
     threads: config.get("threads", 4)
     log:
         os.path.join(config["out_dir"], "logs/collapse_fastq_{sample}.log"),
@@ -28,7 +28,8 @@ rule collapse_reads:
             -o $tmpdir \
             &> {log}
 
-        gzip -c $tmpdir/*.fastq > {output.R2_collapsed}
+        gzip -c "$tmpdir/{wildcards.sample}_cdna_trimmed_trimmed.fastq" \
+            > {output.R2_collapsed}
         rm -rf "$tmpdir"
         """
 
@@ -40,9 +41,7 @@ rule star_index_hairpin:
     input:
         hairpin_fa=config["hairpin_fa"],
     output:
-        hairpin_idx=directory(
-            os.path.join(config["out_dir"], "reference", "hairpin")
-        ),
+        hairpin_idx=directory(os.path.join(config["out_dir"], "reference", "hairpin")),
     threads: config.get("threads", 4)
     log:
         os.path.join(config["out_dir"], "logs/star_index_hairpin.log"),
@@ -57,7 +56,7 @@ rule star_index_hairpin:
             --runThreadN {threads} \
             --genomeDir {output.hairpin_idx} \
             --genomeFastaFiles {input.hairpin_fa} \
-            > {log}
+            &> {log}
 
         """
 
@@ -70,9 +69,7 @@ rule star_align_hairpin:
         R2_collapsed=os.path.join(
             config["out_dir"], "collapsed/{sample}_cdna_collapsed.fastq.gz"
         ),
-        hairpin_idx=directory(
-            os.path.join(config["out_dir"], "reference", "hairpin")
-        ),
+        hairpin_idx=directory(os.path.join(config["out_dir"], "reference", "hairpin")),
     output:
         hairpin_bam=os.path.join(
             config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.bam"
