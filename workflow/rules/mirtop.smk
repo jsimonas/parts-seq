@@ -111,4 +111,3 @@ rule star_align_hairpin:
             --outFilterMatchNmin 15 &> {log}
 
         """
-
