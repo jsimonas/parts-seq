@@ -80,6 +80,12 @@ rule all:
             sample=get_sample_ids,
             param=config["out_dir"],
         ),
+        os.path.join(config["out_dir"], "reference/hairpin"),
+        expand(
+            "{param}/mirtop/{sample}_Aligned.sortedByCoord.out.bam",
+            sample=get_sample_ids,
+            param=config["out_dir"],
+        ),
         expand(
             "{param}/qc/fastqc/{sample}_{type}_{suffix}.html",
             sample=get_sample_ids,
