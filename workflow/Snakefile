@@ -87,6 +87,16 @@ rule all:
             param=config["out_dir"],
         ),
         expand(
+            "{param}/mirtop/{sample}_Aligned.sortedByCoord.out.gff",
+            sample=get_sample_ids,
+            param=config["out_dir"],
+        ),
+        expand(
+            "{param}/mirtop/{sample}_Aligned.sortedByCoord.out.stats",
+            sample=get_sample_ids,
+            param=config["out_dir"],
+        ),
+        expand(
             "{param}/qc/fastqc/{sample}_{type}_{suffix}.html",
             sample=get_sample_ids,
             type=["bc", "cdna"],

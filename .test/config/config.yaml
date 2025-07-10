@@ -11,8 +11,9 @@ demux:
 # genome index
 star_index: "resources/index"
 
-# mirna hairpin
+# mirna refs
 hairpin_fa: "resources/mirgenedb/mirgenedb_hairpin_pre.fa"
+mirna_gtf: "resources/mirgenedb/hsa.gff3"
 
 # tool params
 cutadapt:

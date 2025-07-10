@@ -111,3 +111,35 @@ rule star_align_hairpin:
             --outFilterMatchNmin 15 &> {log}
 
         """
+
+rule mirtop:
+    input:
+        hairpin_bam=os.path.join(
+            config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.bam"
+        ),
+        hairpin_fa=hairpin_fa=config["hairpin_fa"],
+        mirna_gtf=hairpin_fa=config["mirna_gtf"],
+    output:
+        gff=os.path.join(
+            config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.gff"
+        ),
+        stats=os.path.join(
+            config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.stats"
+        ),
+    conda:
+        "envs/mirtop.yaml"
+    shell:
+        """
+        mirtop gff \
+            --sps Hsa \
+            --hairpin {input.hairpin_fa} \
+            --gtf {input.mirna_gtf} \
+            --out $(dirname {output.gff}) \
+            {input.hairpin_bam}
+        
+        mirtop stats \
+            --out $(dirname {output.gff}) \
+            {output.gff}
+        
+        mv $(dirname {output.gff})/$(basename {output.gff}).stats {output.stats}
+        """
