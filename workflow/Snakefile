@@ -12,6 +12,7 @@ include: "rules/demux.smk"
 include: "rules/checkpoints.smk"
 include: "rules/trim.smk"
 include: "rules/align.smk"
+include: "rules/mirtop.smk"
 include: "rules/qc.smk"
 
 
@@ -71,6 +72,11 @@ rule all:
         ),
         expand(
             "{param}/mapped/stats/{sample}.stats",
+            sample=get_sample_ids,
+            param=config["out_dir"],
+        ),
+        expand(
+            "{param}/collapsed/{sample}_cdna_collapsed.fastq.gz",
             sample=get_sample_ids,
             param=config["out_dir"],
         ),
