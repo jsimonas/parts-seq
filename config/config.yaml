@@ -9,11 +9,11 @@ demux:
     barcode_mismatches: 1
 
 # genome index
-star_index: "resources/index"
+star_index: ".test/resources/index"
 
 # mirna refs
-hairpin_fa: "resources/mirgenedb/mirgenedb_hairpin_pre.fa"
-mirna_gtf: "resources/mirgenedb/hsa.gff3"
+hairpin_fa: ".test/resources/mirgenedb/mirgenedb_hairpin_pre.fa"
+mirna_gtf: ".test/resources/mirgenedb/hsa.gff3"
 
 # tool params
 cutadapt:
