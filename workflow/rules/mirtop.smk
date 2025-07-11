@@ -127,7 +127,7 @@ rule mirtop:
             config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.gff"
         ),
         stats=os.path.join(
-            config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.stats"
+            config["out_dir"], "mirtop/{sample}_stats.txt"
         ),
     log:
         os.path.join(config["out_dir"], "logs/mirtop_{sample}.log"),
@@ -143,8 +143,8 @@ rule mirtop:
             {input.hairpin_bam}
         
         mirtop stats \
+            --prefix {wildcards.sample} \
             --out $(dirname {output.gff}) \
             {output.gff}
         
-        mv $(dirname {output.gff})/$(basename {output.gff}).stats {output.stats}
         """
