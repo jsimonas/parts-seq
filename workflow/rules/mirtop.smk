@@ -117,8 +117,8 @@ rule mirtop:
         hairpin_bam=os.path.join(
             config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.bam"
         ),
-        hairpin_fa=hairpin_fa=config["hairpin_fa"],
-        mirna_gtf=hairpin_fa=config["mirna_gtf"],
+        hairpin_fa=config["hairpin_fa"],
+        mirna_gtf=config["mirna_gtf"],
     output:
         gff=os.path.join(
             config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.gff"
