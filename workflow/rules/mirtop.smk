@@ -132,7 +132,7 @@ rule mirtop:
     log:
         os.path.join(config["out_dir"], "logs/mirtop_{sample}.log"),
     conda:
-        "envs/mirtop.yaml"
+        "../envs/mirtop.yaml"
     shell:
         """
         mirtop gff \
