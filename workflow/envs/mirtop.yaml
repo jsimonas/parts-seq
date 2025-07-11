@@ -3,3 +3,4 @@ channels:
   - bioconda
 dependencies:
   - mirtop = 0.4.30
+  - samtools = 1.21
