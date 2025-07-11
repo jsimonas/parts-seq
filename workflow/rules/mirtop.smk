@@ -127,6 +127,8 @@ rule mirtop:
         stats=os.path.join(
             config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.stats"
         ),
+    log:
+        os.path.join(config["out_dir"], "logs/mirtop_{sample}.log"),
     conda:
         "envs/mirtop.yaml"
     shell:
