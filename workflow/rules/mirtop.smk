@@ -112,6 +112,7 @@ rule star_align_hairpin:
 
         """
 
+
 rule mirtop:
     input:
         hairpin_bam=os.path.join(
