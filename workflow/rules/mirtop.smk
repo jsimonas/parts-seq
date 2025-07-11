@@ -41,7 +41,9 @@ rule star_index_hairpin:
     input:
         hairpin_fa=config["hairpin_fa"],
     output:
-        hairpin_idx=directory(os.path.join(config["out_dir"], "reference", "hairpin")),
+        hairpin_idx=directory(
+            os.path.join(config["out_dir"], "reference", "hairpin", "index")
+        ),
     threads: config.get("threads", 4)
     log:
         os.path.join(config["out_dir"], "logs/star_index_hairpin.log"),
