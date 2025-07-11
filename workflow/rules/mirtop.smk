@@ -141,8 +141,9 @@ rule mirtop:
             {input.hairpin_bam}
         
         mirtop stats \
-            --prefix {wildcards.sample} \
             --out $(dirname {output.gff}) \
             {output.gff}
+        
+        mv $(dirname {output.gff})/mirtop_stats.txt {output.stats}
         
         """
