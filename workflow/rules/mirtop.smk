@@ -41,7 +41,7 @@ rule star_index_hairpin:
     input:
         hairpin_fa=config["hairpin_fa"],
     output:
-        hairpin_idx=os.path.join(config["out_dir"], "reference", "hairpin"),
+        hairpin_idx=directory(os.path.join(config["out_dir"], "reference", "hairpin")),
     threads: config.get("threads", 4)
     log:
         os.path.join(config["out_dir"], "logs/star_index_hairpin.log"),
@@ -69,7 +69,7 @@ rule star_align_hairpin:
         R2_collapsed=os.path.join(
             config["out_dir"], "collapsed/{sample}_cdna_collapsed.fastq.gz"
         ),
-        hairpin_idx=directory(os.path.join(config["out_dir"], "reference", "hairpin", "index")),
+        hairpin_idx=os.path.join(config["out_dir"], "reference", "hairpin", "index"),
     output:
         hairpin_bam=os.path.join(
             config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.bam"
