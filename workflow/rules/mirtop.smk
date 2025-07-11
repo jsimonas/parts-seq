@@ -126,7 +126,8 @@ rule mirtop:
         gff=os.path.join(
             config["out_dir"], "mirtop/{sample}_Aligned.sortedByCoord.out.gff"
         ),
-        stats=os.path.join(config["out_dir"], "mirtop/{sample}_stats.txt"),
+        stats_json=os.path.join(config["out_dir"], "mirtop/{sample}_stats.log"),
+        stats_text=os.path.join(config["out_dir"], "mirtop/{sample}_stats.txt"),
     log:
         os.path.join(config["out_dir"], "logs/mirtop_{sample}.log"),
     conda:
@@ -144,6 +145,7 @@ rule mirtop:
             --out $(dirname {output.gff}) \
             {output.gff}
         
-        mv $(dirname {output.gff})/mirtop_stats.txt {output.stats}
+        mv $(dirname {output.gff})/mirtop_stats.txt {output.stats_text}
+        mv $(dirname {output.gff})/mirtop_stats.log {output.stats_json}
         
         """

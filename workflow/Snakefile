@@ -92,6 +92,11 @@ rule all:
             param=config["out_dir"],
         ),
         expand(
+            "{param}/mirtop/{sample}_stats.log",
+            sample=get_sample_ids,
+            param=config["out_dir"],
+        ),
+        expand(
             "{param}/mirtop/{sample}_stats.txt",
             sample=get_sample_ids,
             param=config["out_dir"],

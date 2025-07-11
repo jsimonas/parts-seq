@@ -75,6 +75,10 @@ rule multiqc:
             os.path.join(config["out_dir"], "mapped/{sample}_Solo.out"),
             sample=get_sample_ids,
         ),
+        mirtop_stats=expand(
+            os.path.join(config["out_dir"], "mirtop/{sample}_stats.log"),
+            sample=get_sample_ids,
+        ),
         config_file="config/multiqc_config.yaml",
     output:
         html=os.path.join(config["out_dir"], "qc/multiqc_report.html"),
@@ -96,6 +100,7 @@ rule multiqc:
             {input.stats} \
             {input.star_logs} \
             {input.star} \
+            {input.mirtop_stats} \
             -c {input.config_file} \
             --outdir $(dirname {output.html}) \
             {params.extra} &> {log}
