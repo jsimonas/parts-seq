@@ -76,7 +76,7 @@ rule multiqc:
             sample=get_sample_ids,
         ),
         mirtop_stats=expand(
-            os.path.join(config["out_dir"], "mirtop/{sample}_stats.log"),
+            os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_stats.log"),
             sample=get_sample_ids,
         ),
         config_file="config/multiqc_config.yaml",
