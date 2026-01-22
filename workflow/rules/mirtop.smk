@@ -149,3 +149,63 @@ rule mirtop:
         mv $(dirname {output.gff})/mirtop_stats.log {output.stats_json}
         
         """
+
+
+rule starsolo_align_hairpin:
+    """
+    star align trimmed cDNA (R2) and barcode (R1) reads for mirtop quatification.
+    """
+    input:
+        cdna_read=os.path.join(
+            config["out_dir"], "trimmed/{sample}_cdna_trimmed.fastq.gz"
+        ),
+        bc_read=os.path.join(config["out_dir"], "trimmed/{sample}_bc_trimmed.fastq.gz"),
+        bc_1="assets/barcodes/bc1_list.txt",
+        bc_2="assets/barcodes/bc2_list.txt",
+        hairpin_idx=os.path.join(config["out_dir"], "reference", "hairpin", "index"),
+    output:
+        hairpin_bam=os.path.join(
+            config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.bam"
+        ),
+    params:
+        out_prefix=lambda wc, output: output.hairpin_bam.replace(
+            "_CB_Aligned.sortedByCoord.out.bam", ""
+        ),
+        limit_ram=lambda wc: int(0.8 * parse_size(config["memory"])),
+    threads: config.get("threads", 4)
+    log:
+        os.path.join(config["out_dir"], "logs/star_align_hairpin_{sample}.log"),
+    conda:
+        "../envs/star.yaml"
+    shell:
+        """
+        set -euo pipefail
+        
+        ulimit -n 65535
+        
+        STAR \
+            --genomeDir {input.hairpin_idx} \
+            --readFilesIn {input.cdna_read} {input.bc_read} \
+            --soloCBwhitelist {input.bc_1} {input.bc_2} \
+            --runThreadN {threads} \
+            --outFileNamePrefix {params.out_prefix}_CB_ \
+            --readFilesCommand zcat \
+            --runDirPerm All_RWX \
+            --outReadsUnmapped Fastx \
+            --outSAMtype BAM SortedByCoordinate \
+            --limitBAMsortRAM {params.limit_ram} \
+            --outSAMattributes NH HI nM AS MD CB CR \
+            --outSAMunmapped Within \
+            --alignIntronMax 1 \
+            --outFilterMultimapScoreRange 0 \
+            --outFilterMultimapNmax 10 \
+            --outFilterScoreMinOverLread 0 \
+            --outFilterMatchNminOverLread 0 \
+            --outFilterMismatchNoverLmax 0.05 \
+            --outFilterMatchNmin 15 \
+            --soloCBposition 0_0_0_7 0_8_0_15 \
+            --soloUMIposition 0_16_0_23 \
+            --soloBarcodeReadLength 1 \
+            --soloCBmatchWLtype EditDist_2 &> {log}
+        
+        """
