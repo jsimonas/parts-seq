@@ -230,9 +230,9 @@ checkpoint split_bam_by_barcode:
         n_cells=config.get("mirtop", {}).get("n_cells", 1000),
         n_reads=config.get("mirtop", {}).get("n_reads", 100),
         cell_stats=lambda wc, input: input.bam.replace(
-            "Aligned.sortedByCoord.out.bam", 
+            "Aligned.sortedByCoord.out.bam",
             f"Solo.out/{config['star']['features']}/CellReads.stats",
-        )
+        ),
     log:
         os.path.join(config["out_dir"], "logs/split_bam_{sample}.log"),
     conda:
@@ -262,4 +262,3 @@ checkpoint split_bam_by_barcode:
         | samtools split -d CB -M ${{N_CB}} -f "{output.split_dir}/%!.bam" -
 
         """
-
