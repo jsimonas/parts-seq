@@ -206,6 +206,56 @@ rule starsolo_align_hairpin:
             --soloCBposition 0_0_0_7 0_8_0_15 \
             --soloUMIposition 0_16_0_23 \
             --soloBarcodeReadLength 1 \
+            --soloUMIdedup NoDedup \
+            --soloCellReadStats Standard \
             --soloCBmatchWLtype EditDist_2 &> {log}
         
         """
+
+
+checkpoint split_bam_by_barcode:
+    """
+    split to hairpin aligned BAM file into individual BAM files per valid barcode.
+    """
+    input:
+        bam=os.path.join(config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.bam")
+    output:
+        barcode_list=os.path.join(config["out_dir"], "split/{sample}/valid_barcodes.txt"),
+        split_dir=directory(os.path.join(config["out_dir"], "split/{sample}/bams"))
+    params:
+        n_cells=config.get("mirtop", {}).get("n_cells", 1000),
+        n_reads=config.get("mirtop", {}).get("n_reads", 100),
+        cell_stats=lambda wc, input: input.bam.replace(
+            "Aligned.sortedByCoord.out.bam", 
+            f"Solo.out/{config['star']['features']}/CellReads.stats"
+        )
+    log:
+        os.path.join(config["out_dir"], "logs/split_bam_{sample}.log")
+    conda:
+        "../envs/samtools.yaml"
+    shell:
+        """
+        set -euo pipefail
+        exec > "{log}" 2>&1
+
+        tail -n +3 "{params.cell_stats}" \
+            | sort -k2,2nr \
+            | head -n {params.n_cells} \
+            | awk -v threshold={params.n_reads} '$2 > threshold {{print $1}}' \
+            > "{output.barcode_list}"
+
+        mkdir -p "{output.split_dir}"
+
+        N_CB=$(wc -l < "{output.barcode_list}")
+        
+        ulimit -n $(( N_CB > 1000 ? N_CB + 50 : 1024 ))
+
+        # Split BAM: Invalid barcodes -> -U | Valid barcodes -> Split files
+        samtools view -u \
+            -U "{output.split_dir}/invalid_barcodes.bam" \
+            -D "CB:{output.barcode_list}" \
+            "{input.bam}" \
+        | samtools split -d CB -M ${{N_CB}} -f "{output.split_dir}/%!.bam" -
+
+        """
+
