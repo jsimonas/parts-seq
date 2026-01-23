@@ -79,7 +79,7 @@ rule star_index_hairpin:
             --runThreadN {threads} \
             --genomeDir {output.hairpin_idx} \
             --genomeFastaFiles {input.hairpin_fa} \
-            --sjdbGTFfile {input.gtf} \
+            --sjdbGTFfile {input.hairpin_gtf} \
             &> {log}
 
         """
