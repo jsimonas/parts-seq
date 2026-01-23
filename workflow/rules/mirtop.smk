@@ -49,7 +49,7 @@ rule fasta_to_chrom_gtf:
     conda:
         "../envs/pandas.yaml"
     script:
-        "scripts/fasta_to_chrom_gtf_minimal.py"
+        "scripts/fasta_to_chrom_gtf.py"
 
 
 rule star_index_hairpin:
