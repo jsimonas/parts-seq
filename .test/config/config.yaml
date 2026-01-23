@@ -25,10 +25,6 @@ star:
 mirtrace:
   species: "hsa"
 
-mirtop:
-  n_cells: 1000
-  n_reads: 100
-
 # other params
 threads: 4
 memory: 36G
