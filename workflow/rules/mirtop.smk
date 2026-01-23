@@ -193,6 +193,10 @@ rule starsolo_align_hairpin:
         out_prefix=lambda wc, output: output.hairpin_bam.replace(
             "_CB_Aligned.sortedByCoord.out.bam", ""
         ),
+        cell_stats=lambda wc, input: input.bam.replace(
+            "_Aligned.sortedByCoord.out.bam",
+            f"_CB_Solo.out/{config['star']['features']}/CellReads.stats"
+        ),
         features=config["star"]["features"],
         limit_ram=lambda wc: int(0.8 * parse_size(config["memory"])),
     threads: config.get("threads", 4)
@@ -276,7 +280,7 @@ checkpoint split_bam_by_barcode:
 
         mkdir -p "{output.split_dir}"
         
-        TMP_BAM=$(mktemp -d --suffix=.bam)
+        TMP_BAM=$(mktemp "{output.split_dir}/temp.XXXXXX.bam")
 
         N_CB=$(wc -l < "{output.barcode_list}")
         
