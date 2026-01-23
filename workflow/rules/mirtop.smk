@@ -203,9 +203,7 @@ rule starsolo_align_hairpin:
             --outFilterMatchNminOverLread 0 \
             --outFilterMismatchNoverLmax 0.05 \
             --outFilterMatchNmin 15 \
-            --soloType CB_UMI_Complex \
-            --soloCBposition 0_0_0_7 0_8_0_15 \
-            --soloUMIposition 0_16_0_23 \
+            --soloType CB_samTagOut \
             --soloBarcodeReadLength 1 \
             --soloUMIdedup NoDedup \
             --soloCellReadStats Standard \
