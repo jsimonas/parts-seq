@@ -250,7 +250,7 @@ checkpoint split_bam_by_barcode:
 
         mkdir -p "{output.split_dir}"
         
-        TMP_BAM=$(mktemp -d -t bam_XXXXXX)
+        TMP_BAM=$(mktemp -d --suffix=.bam)
 
         N_CB=$(wc -l < "{output.barcode_list}")
         
