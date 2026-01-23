@@ -230,6 +230,8 @@ rule starsolo_align_hairpin:
             --soloCBposition 0_0_0_7 0_8_0_15 \
             --soloUMIposition 0_16_0_23 \
             --soloBarcodeReadLength 1 \
+            --soloUMIdedup NoDedup \
+            --soloCellReadStats Standard \
             --soloCBmatchWLtype EditDist_2 &> {log}
     
         """
