@@ -47,7 +47,7 @@ rule fasta_to_chrom_gtf:
     log:
         os.path.join(config["out_dir"], "logs/hairpin_fasta_to_gtf.log"),
     conda:
-        "../envs/star.yaml"
+        "../envs/pandas.yaml"
     script:
         "scripts/fasta_to_chrom_gtf_minimal.py"
 
