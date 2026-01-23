@@ -120,4 +120,14 @@ rule all:
             sample=get_sample_ids,
             param=config["out_dir"],
         ),
+        expand(
+            "{param}/mirtop/split/{sample}/{cb}_mirtop.tsv",
+            param=config["out_dir"],
+            sample=get_sample_ids,
+            cb=lambda w: [
+                line.strip()
+                for line in open(f"{config['out_dir']}/mirtop/split/{w.sample}/valid_barcodes.txt")
+                if line.strip()
+            ],
+        ),
         os.path.join(config["out_dir"], "qc/multiqc_report.html"),

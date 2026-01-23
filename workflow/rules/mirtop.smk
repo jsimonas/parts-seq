@@ -249,16 +249,24 @@ checkpoint split_bam_by_barcode:
             > "{output.barcode_list}"
 
         mkdir -p "{output.split_dir}"
+        
+        TMP_BAM=$(mktemp -d -t bam_XXXXXX)
 
         N_CB=$(wc -l < "{output.barcode_list}")
         
         ulimit -n $(( N_CB > 1000 ? N_CB + 50 : 1024 ))
+        
+        samtools view -h "{input.bam}" \
+            | awk 'BEGIN{{OFS="\\t"}} /^@/ {{print; next}} {{$1 = $1 "_x1"; print}}' \
+            | samtools view -Sb - > "$TMP_BAM"
 
         samtools view -u \
             -U /dev/null \
             -D "CB:{output.barcode_list}" \
-            "{input.bam}" \
+            "$TMP_BAM" \
         | samtools split -d CB -M ${{N_CB}} -f "{output.split_dir}/%!.bam" -
+
+        rm "$TMP_BAM"
 
         """
 
