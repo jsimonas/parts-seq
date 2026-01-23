@@ -218,19 +218,23 @@ checkpoint split_bam_by_barcode:
     split to hairpin aligned BAM file into individual BAM files per valid barcode.
     """
     input:
-        bam=os.path.join(config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.bam")
+        bam=os.path.join(
+            config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.bam"
+        ),
     output:
-        barcode_list=os.path.join(config["out_dir"], "split/{sample}/valid_barcodes.txt"),
-        split_dir=directory(os.path.join(config["out_dir"], "split/{sample}/bams"))
+        barcode_list=os.path.join(
+            config["out_dir"], "split/{sample}/valid_barcodes.txt"
+        ),
+        split_dir=directory(os.path.join(config["out_dir"], "split/{sample}/bams")),
     params:
         n_cells=config.get("mirtop", {}).get("n_cells", 1000),
         n_reads=config.get("mirtop", {}).get("n_reads", 100),
         cell_stats=lambda wc, input: input.bam.replace(
             "Aligned.sortedByCoord.out.bam", 
-            f"Solo.out/{config['star']['features']}/CellReads.stats"
+            f"Solo.out/{config['star']['features']}/CellReads.stats",
         )
     log:
-        os.path.join(config["out_dir"], "logs/split_bam_{sample}.log")
+        os.path.join(config["out_dir"], "logs/split_bam_{sample}.log"),
     conda:
         "../envs/samtools.yaml"
     shell:
