@@ -33,6 +33,21 @@ rule collapse_reads:
         rm -rf "$tmpdir"
         """
 
+rule fasta_to_chrom_gtf:
+    """
+    convert fasta to gtf
+    """
+    input:
+        hairpin_fa=config["hairpin_fa"],  
+    output:
+        hairpin_gtf=os.path.join(
+            config["out_dir"], "reference", "hairpin", "hairpin.gtf"
+        ),
+    conda:
+        "../envs/star.yaml"
+    script:
+        "scripts/fasta_to_chrom_gtf_minimal.py"
+
 
 rule star_index_hairpin:
     """
@@ -40,6 +55,9 @@ rule star_index_hairpin:
     """
     input:
         hairpin_fa=config["hairpin_fa"],
+        hairpin_gtf = os.path.join(
+            config["out_dir"], "reference", "hairpin", "hairpin.gtf"
+        ),
     output:
         hairpin_idx=directory(
             os.path.join(config["out_dir"], "reference", "hairpin", "index")
@@ -58,6 +76,7 @@ rule star_index_hairpin:
             --runThreadN {threads} \
             --genomeDir {output.hairpin_idx} \
             --genomeFastaFiles {input.hairpin_fa} \
+            --sjdbGTFfile {input.gtf} \
             &> {log}
 
         """
@@ -203,12 +222,14 @@ rule starsolo_align_hairpin:
             --outFilterMatchNminOverLread 0 \
             --outFilterMismatchNoverLmax 0.05 \
             --outFilterMatchNmin 15 \
-            --soloType CB_samTagOut \
+            --soloType CB_UMI_Complex \
+            --soloFeatures {params.features} \
+            --soloUMIdedup Exact \
+            --soloCBposition 0_0_0_7 0_8_0_15 \
+            --soloUMIposition 0_16_0_23 \
             --soloBarcodeReadLength 1 \
-            --soloUMIdedup NoDedup \
-            --soloCellReadStats Standard \
-            --soloCBmatchWLtype 1MM &> {log}
-        
+            --soloCBmatchWLtype EditDist_2 &> {log}
+    
         """
 
 
