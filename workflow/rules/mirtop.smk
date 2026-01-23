@@ -193,6 +193,7 @@ rule starsolo_align_hairpin:
         out_prefix=lambda wc, output: output.hairpin_bam.replace(
             "_CB_Aligned.sortedByCoord.out.bam", ""
         ),
+        features=config["star"]["features"],
         limit_ram=lambda wc: int(0.8 * parse_size(config["memory"])),
     threads: config.get("threads", 4)
     log:
@@ -226,6 +227,7 @@ rule starsolo_align_hairpin:
             --outFilterMismatchNoverLmax 0.05 \
             --outFilterMatchNmin 15 \
             --soloType CB_UMI_Complex \
+            --soloFeatures {params.features} \
             --soloUMIdedup Exact \
             --soloCBposition 0_0_0_7 0_8_0_15 \
             --soloUMIposition 0_16_0_23 \
