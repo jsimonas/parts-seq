@@ -207,7 +207,7 @@ rule starsolo_align_hairpin:
             --soloBarcodeReadLength 1 \
             --soloUMIdedup NoDedup \
             --soloCellReadStats Standard \
-            --soloCBmatchWLtype EditDist_2 &> {log}
+            --soloCBmatchWLtype 1MM &> {log}
         
         """
 
