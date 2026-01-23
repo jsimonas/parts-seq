@@ -54,7 +54,6 @@ rule starsolo:
             --outFilterMatchNmin 15 \
             --soloType CB_UMI_Complex \
             --soloMultiMappers PropUnique \
-            --soloFeatures {params.features} \
             --soloUMIdedup Exact \
             --soloCBposition 0_0_0_7 0_8_0_15 \
             --soloUMIposition 0_16_0_23 \
