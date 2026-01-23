@@ -262,3 +262,91 @@ checkpoint split_bam_by_barcode:
         | samtools split -d CB -M ${{N_CB}} -f "{output.split_dir}/%!.bam" -
 
         """
+
+        
+checkpoint split_bam_by_barcode:
+    """
+    split to hairpin aligned BAM file into individual BAM files per valid barcode.
+    """
+    input:
+        bam=os.path.join(
+            config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.bam"
+        ),
+    output:
+        split_dir=directory(os.path.join(config["out_dir"], "mirtop/split/{sample}")),
+        barcode_list=os.path.join(
+            config["out_dir"], "mirtop/split/{sample}/valid_barcodes.txt"
+        ),
+    params:
+        n_cells=config.get("mirtop", {}).get("n_cells", 1000),
+        n_reads=config.get("mirtop", {}).get("n_reads", 100),
+        cell_stats=lambda wc, input: input.bam.replace(
+            "Aligned.sortedByCoord.out.bam",
+            f"Solo.out/{config['star']['features']}/CellReads.stats",
+        ),
+    log:
+        os.path.join(config["out_dir"], "logs/split_bam_{sample}.log"),
+    conda:
+        "../envs/samtools.yaml"
+    shell:
+        """
+        set -euo pipefail
+        exec > "{log}" 2>&1
+
+        tail -n +3 "{params.cell_stats}" \
+            | sort -k2,2nr \
+            | head -n {params.n_cells} \
+            | awk -v threshold={params.n_reads} '$2 > threshold {{print $1}}' \
+            > "{output.barcode_list}"
+
+        mkdir -p "{output.split_dir}"
+
+        N_CB=$(wc -l < "{output.barcode_list}")
+        
+        ulimit -n $(( N_CB > 1000 ? N_CB + 50 : 1024 ))
+
+        # Split BAM directly to {split_dir}/{cb}.bam
+        # %! is replaced by the barcode (CB tag)
+        samtools view -u \
+            -U /dev/null \
+            -D "CB:{output.barcode_list}" \
+            "{input.bam}" \
+        | samtools split -d CB -M ${{N_CB}} -f "{output.split_dir}/%!.bam" -
+
+        """
+
+
+rule mirtop_counts_per_barcode:
+    """
+    run mirtop gff and counts for a single barcode.
+    """
+    input:
+        bam=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}.bam"),
+        hairpin=config.get("hairpin_fa", "assets/hairpin.fa"),
+        gtf=config.get("gtf", "assets/mirna.gtf"),
+    output:
+        tsv=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}_mirtop.tsv"),
+        gff=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}.gff"),
+    log:
+        os.path.join(config["out_dir"], "logs/mirtop_counts/{sample}_{cb}.log"),
+    conda:
+        "../envs/mirtop.yaml"
+    shell:
+        """
+        set -e
+        
+        mirtop gff --hairpin {input.hairpin} \
+                   --gtf {input.gtf} \
+                   --sps {wildcards.cb} \
+                   --out {output.gff} \
+                   {input.bam} > {log} 2>&1
+
+        TMP_DIR=$(mktemp -d -t mirtop_XXXXXX)
+        
+        mirtop counts --gff {output.gff} --out "$TMP_DIR" >> {log} 2>&1
+        
+        mv "$TMP_DIR/mirtop.tsv" "{output.tsv}"
+        rm -rf "$TMP_DIR"
+        
+        """
+

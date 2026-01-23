@@ -37,3 +37,13 @@ def get_fastqs_for_sample(wildcards):
         )
 
     return {"r1": R1, "r2": R2, "r3": R3}
+
+
+def get_mirtop_counts(wildcards):
+    """
+    finds the reorganized BAM files and expects a matching mirtop.tsv
+    """
+    checkpoint_output = checkpoints.split_bam_by_barcode.get(**wildcards).output.split_dir
+    bam_files = glob.glob(os.path.join(checkpoint_output, "*.bam"))
+    
+    return [f.replace(".bam", "_mirtop.tsv") for f in bam_files]
