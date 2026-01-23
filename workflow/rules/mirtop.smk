@@ -33,16 +33,19 @@ rule collapse_reads:
         rm -rf "$tmpdir"
         """
 
+
 rule fasta_to_chrom_gtf:
     """
     convert fasta to gtf
     """
     input:
-        hairpin_fa=config["hairpin_fa"],  
+        hairpin_fa=config["hairpin_fa"],
     output:
         hairpin_gtf=os.path.join(
             config["out_dir"], "reference", "hairpin", "hairpin.gtf"
         ),
+    log:
+        os.path.join(config["out_dir"], "logs/hairpin_fasta_to_gtf.log"),
     conda:
         "../envs/star.yaml"
     script:
@@ -55,7 +58,7 @@ rule star_index_hairpin:
     """
     input:
         hairpin_fa=config["hairpin_fa"],
-        hairpin_gtf = os.path.join(
+        hairpin_gtf=os.path.join(
             config["out_dir"], "reference", "hairpin", "hairpin.gtf"
         ),
     output:
