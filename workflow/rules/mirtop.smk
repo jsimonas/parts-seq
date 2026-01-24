@@ -191,8 +191,8 @@ rule starsolo_align_hairpin:
         ),
         cell_stats=os.path.join(
             config["out_dir"],
-            "mirtop/{sample}_CB_Solo.out/{features}/CellReads.stats",
-        )
+            f"mirtop/{wc.sample}_CB_Solo.out/{config['star']['features']}/CellReads.stats",
+        ),
     params:
         out_prefix=lambda wc, output: output.hairpin_bam.replace(
             "_CB_Aligned.sortedByCoord.out.bam", "_CB_"
