@@ -249,9 +249,9 @@ checkpoint split_bam_by_barcode:
         bam=os.path.join(
             config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.bam"
         ),
-        cell_stats=lambda wc, input: input.bam.replace(
-            "_CB_Aligned.sortedByCoord.out.bam",
-            f"_CB_Solo.out/{config['star']['features']}/CellReads.stats",
+        cell_stats=lambda wc: os.path.join(
+            config["out_dir"],
+            f"mirtop/{wc.sample}_CB_Solo.out/{config['star']['features']}/CellReads.stats"
         ),
     output:
         split_dir=directory(os.path.join(config["out_dir"], "mirtop/split/{sample}")),
