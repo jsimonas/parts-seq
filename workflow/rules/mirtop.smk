@@ -348,3 +348,20 @@ rule mirtop_counts_per_barcode:
         rm -rf "$TMP_DIR"
         
         """
+
+
+rule aggregate_mirtop_counts:
+    """
+    aggregate all per-barcode mirtop counts for a sample.
+    """
+    input:
+        get_mirtop_counts
+    output:
+        touch(os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_counts_done.txt"))
+    log:
+        os.path.join(config["out_dir"], "logs/aggregate_mirtop_{sample}.log"),
+    shell:
+    """
+    echo "processed $(ls {input} | wc -l) barcodes" > {log}
+    """
+
