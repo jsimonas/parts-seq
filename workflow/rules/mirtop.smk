@@ -360,7 +360,10 @@ rule aggregate_mirtop_counts:
         touch(os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_counts_done.txt"))
     log:
         os.path.join(config["out_dir"], "logs/aggregate_mirtop_{sample}.log"),
+    conda:
+        "../envs/samtools.yaml"
     shell:
         """
         echo "processed $(ls {input} | wc -l) barcodes" > {log}
         """
+
