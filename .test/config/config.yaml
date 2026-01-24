@@ -26,8 +26,8 @@ mirtrace:
   species: "hsa"
 
 mirtop:
-  n_cells: 1000
-  n_reads: 100
+  n_cells: 100
+  n_reads: 10
 
 # other params
 threads: 4
