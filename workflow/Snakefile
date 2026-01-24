@@ -131,5 +131,7 @@ rule all:
             sample=get_sample_ids,
             param=config["out_dir"],
         ),
-        lambda wildcards: [get_mirtop_counts({"sample": s}) for s in get_sample_ids(wildcards)],
+        lambda wildcards: [
+            get_mirtop_counts({"sample": s}) for s in get_sample_ids(wildcards)
+        ],
         os.path.join(config["out_dir"], "qc/multiqc_report.html"),
