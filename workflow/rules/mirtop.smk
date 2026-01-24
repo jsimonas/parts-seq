@@ -275,7 +275,7 @@ checkpoint split_bam_by_barcode:
         tail -n +3 "{input.cell_stats}" \
           | sort -k2,2nr \
           | head -n {params.n_cells} \
-          | awk -F '\\t' -v tR={params.n_reads} '$2 > tR {print $1}' \
+          | awk -F '\\t' -v tR={params.n_reads} '$2 > tR {{print $1}}' \
           > "{output.barcode_list}"
 
         N_CB=$(wc -l < "{output.barcode_list}")
@@ -283,7 +283,7 @@ checkpoint split_bam_by_barcode:
         ulimit -n $(( N_CB > 1000 ? N_CB + 50 : 1024 ))
 
         samtools view -h "{input.bam}" \
-          | awk 'BEGIN{OFS="\\t"} /^@/ {print; next} {$1 = $1 "_x1"; print}' \
+          | awk 'BEGIN{{OFS="\\t"}} /^@/ {{print; next}} {{$1 = $1 "_x1"; print}}' \
           | samtools view -Sb - \
           | samtools view -u -U "{output.split_dir}/invalid_barcodes.bam" -D "CB:{output.barcode_list}" - \
           | samtools split -d CB -f "{output.split_dir}/%!.bam" -
