@@ -244,13 +244,59 @@ rule starsolo_align_hairpin:
         """
 
 
-checkpoint split_bam_by_barcode:
+rule deduplicate_reads:
     """
-    split to hairpin aligned BAM file into individual BAM files per valid barcode.
+    deduplicate hairpin aligned bam file using umi-tools and add _x1 suffix to read names for mirtop.
     """
     input:
         bam=os.path.join(
             config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.bam"
+        ),
+    output:
+        dedup_bam=os.path.join(
+            config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.dedup.bam"
+        ),
+        dedup_bai=os.path.join(
+            config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.dedup.bam.bai"
+        ),
+    threads: config.get("threads", 4)
+    log:
+        os.path.join(config["out_dir"], "logs/deduplicate_{sample}.log"),
+    conda:
+        "../envs/umi_tools.yaml"
+    shell:
+        """
+        set -euo pipefail
+        exec > "{log}" 2>&1
+
+        # index input bam
+        samtools index "{input.bam}"
+
+        # deduplicate using umi-tools with CB and UB tags
+        umi_tools dedup \
+            --stdin="{input.bam}" \
+            --stdout=- \
+            --method unique \
+            --cell-tag=CB \
+            --umi-tag=UB \
+            --per-cell \
+            --log="{log}.umi_tools" \
+        | samtools view -h - \
+        | awk 'BEGIN{{OFS="\\t"}} /^@/ {{print; next}} {{$1 = $1 "_x1"; print}}' \
+        | samtools view -b - > "{output.dedup_bam}"
+
+        # index output bam
+        samtools index "{output.dedup_bam}"
+        """
+
+
+checkpoint split_bam_by_barcode:
+    """
+    split hairpin aligned bam file into individual bam files per valid barcode.
+    """
+    input:
+        bam=os.path.join(
+            config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.dedup.bam"
         ),
         cell_stats=lambda wc: os.path.join(
             config["out_dir"],
@@ -284,10 +330,7 @@ checkpoint split_bam_by_barcode:
 
         ulimit -n $(( N_CB > 1000 ? N_CB + 50 : 1024 ))
 
-        samtools view -h "{input.bam}" \
-          | awk 'BEGIN{{OFS="\\t"}} /^@/ {{print; next}} {{$1 = $1 "_x1"; print}}' \
-          | samtools view -Sb - \
-          | samtools view -u -U "{output.split_dir}/invalid_barcodes.bam" -D "CB:{output.barcode_list}" - \
+        samtools view -u -U "{output.split_dir}/invalid_barcodes.bam" -D "CB:{output.barcode_list}" "{input.bam}" \
           | samtools split -d CB -f "{output.split_dir}/%!.bam" -
 
         """
