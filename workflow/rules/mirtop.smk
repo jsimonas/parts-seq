@@ -361,7 +361,6 @@ rule aggregate_mirtop_counts:
     log:
         os.path.join(config["out_dir"], "logs/aggregate_mirtop_{sample}.log"),
     shell:
-    """
-    echo "processed $(ls {input} | wc -l) barcodes" > {log}
-    """
-
+        """
+        echo "processed $(ls {input} | wc -l) barcodes" > {log}
+        """
