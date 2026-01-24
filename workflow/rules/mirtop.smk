@@ -249,6 +249,10 @@ checkpoint split_bam_by_barcode:
         bam=os.path.join(
             config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.bam"
         ),
+        cell_stats=lambda wc, input: input.bam.replace(
+            "_CB_Aligned.sortedByCoord.out.bam",
+            f"_CB_Solo.out/{config['star']['features']}/CellReads.stats",
+        ),
     output:
         split_dir=directory(os.path.join(config["out_dir"], "mirtop/split/{sample}")),
         barcode_list=os.path.join(
@@ -257,10 +261,6 @@ checkpoint split_bam_by_barcode:
     params:
         n_cells=config.get("mirtop", {}).get("n_cells", 1000),
         n_reads=config.get("mirtop", {}).get("n_reads", 100),
-        cell_stats=lambda wc, input: input.bam.replace(
-            "_CB_Aligned.sortedByCoord.out.bam",
-            f"_CB_Solo.out/{config['star']['features']}/CellReads.stats",
-        ),
     log:
         os.path.join(config["out_dir"], "logs/split_bam_{sample}.log"),
     conda:
@@ -270,31 +270,23 @@ checkpoint split_bam_by_barcode:
         set -euo pipefail
         exec > "{log}" 2>&1
 
-        tail -n +3 "{params.cell_stats}" \
-            | sort -k2,2nr \
-            | head -n {params.n_cells} \
-            | awk -v threshold={params.n_reads} '$2 > threshold {{print $1}}' \
-            > "{output.barcode_list}"
-
         mkdir -p "{output.split_dir}"
-        
-        TMP_BAM=$(mktemp "{output.split_dir}/temp.XXXXXX.bam")
+
+        tail -n +3 "{input.cell_stats}" \
+          | sort -k2,2nr \
+          | head -n {params.n_cells} \
+          | awk -F '\\t' -v tR={params.n_reads} '$2 > tR {print $1}' \
+          > "{output.barcode_list}"
 
         N_CB=$(wc -l < "{output.barcode_list}")
-        
+
         ulimit -n $(( N_CB > 1000 ? N_CB + 50 : 1024 ))
-        
+
         samtools view -h "{input.bam}" \
-            | awk 'BEGIN{{OFS="\\t"}} /^@/ {{print; next}} {{$1 = $1 "_x1"; print}}' \
-            | samtools view -Sb - > "$TMP_BAM"
-
-        samtools view -u \
-            -U /dev/null \
-            -D "CB:{output.barcode_list}" \
-            "$TMP_BAM" \
-        | samtools split -d CB -M ${{N_CB}} -f "{output.split_dir}/%!.bam" -
-
-        rm "$TMP_BAM"
+          | awk 'BEGIN{OFS="\\t"} /^@/ {print; next} {$1 = $1 "_x1"; print}' \
+          | samtools view -Sb - \
+          | samtools view -u -U "{output.split_dir}/invalid_barcodes.bam" -D "CB:{output.barcode_list}" - \
+          | samtools split -d CB -f "{output.split_dir}/%!.bam" -
 
         """
 
