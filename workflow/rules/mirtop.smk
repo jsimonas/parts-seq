@@ -254,8 +254,7 @@ rule deduplicate_reads:
         ),
     output:
         dedup_bam=os.path.join(
-            config["out_dir"],
-            "mirtop/{sample}_CB_Aligned.sortedByCoord.out.dedup.bam",
+            config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.dedup.bam"
         ),
         dedup_bai=os.path.join(
             config["out_dir"],
@@ -274,19 +273,21 @@ rule deduplicate_reads:
         samtools index "{input.bam}"
 
         umi_tools dedup \
-            --stdin="{input.bam}" \
-            --stdout=- \
+            -I "{input.bam}" \
             --extract-umi-method=tag \
             --umi-tag=UB \
             --cell-tag=CB \
             --per-cell \
             --method=unique \
+            --output-stats="{log}.stats" \
             --log="{log}.umi_tools" \
-        | samtools view -h - \
+            --stdout /dev/stdout \
+        | samtools view -h \
         | awk 'BEGIN{{OFS="\\t"}} /^@/ {{print; next}} {{$1 = $1 "_x1"; print}}' \
-        | samtools view -b - > "{output.dedup_bam}"
+        | samtools view -b -o "{output.dedup_bam}"
 
         samtools index "{output.dedup_bam}"
+        
         """
 
 
