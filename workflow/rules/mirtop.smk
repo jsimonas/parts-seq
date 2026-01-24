@@ -251,7 +251,7 @@ checkpoint split_bam_by_barcode:
         ),
         cell_stats=lambda wc: os.path.join(
             config["out_dir"],
-            f"mirtop/{wc.sample}_CB_Solo.out/{config['star']['features']}/CellReads.stats"
+            f"mirtop/{wc.sample}_CB_Solo.out/{config['star']['features']}/CellReads.stats",
         ),
     output:
         split_dir=directory(os.path.join(config["out_dir"], "mirtop/split/{sample}")),
