@@ -197,7 +197,7 @@ rule starsolo_align_hairpin:
         limit_ram=lambda wc: int(0.8 * parse_size(config["memory"])),
     threads: config.get("threads", 4)
     log:
-        os.path.join(config["out_dir"], "logs/star_align_hairpin_{sample}.log"),
+        os.path.join(config["out_dir"], "logs/star_align_hairpin_cb_{sample}.log"),
     conda:
         "../envs/star.yaml"
     shell:
