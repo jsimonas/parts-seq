@@ -121,6 +121,12 @@ rule all:
             param=config["out_dir"],
         ),
         expand(
+            "{param}/mirtop/{sample}_CB_Solo.out/{features}/CellReads.stats",
+            sample=get_sample_ids,
+            param=config["out_dir"],
+            features=config["star"]["features"],
+        ),
+        expand(
             "{param}/mirtop/split/{sample}",
             sample=get_sample_ids,
             param=config["out_dir"],
