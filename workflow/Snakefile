@@ -132,6 +132,8 @@ rule all:
             param=config["out_dir"],
         ),
         lambda wildcards: [
-            tsv for sample in get_sample_ids(wildcards) for tsv in get_mirtop_counts({"sample": sample})
+            tsv 
+            for sample in get_sample_ids(wildcards) 
+            for tsv in get_mirtop_counts({"sample": sample})
         ],
         os.path.join(config["out_dir"], "qc/multiqc_report.html"),
