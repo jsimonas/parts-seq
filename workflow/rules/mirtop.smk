@@ -214,7 +214,7 @@ rule starsolo_align_hairpin:
             --readFilesIn {input.cdna_read} {input.bc_read} \
             --soloCBwhitelist {input.bc_1} {input.bc_2} \
             --runThreadN {threads} \
-            --outFileNamePrefix {params.out_prefix}_CB_ \
+            --outFileNamePrefix {params.out_prefix} \
             --readFilesCommand zcat \
             --runDirPerm All_RWX \
             --outReadsUnmapped Fastx \
