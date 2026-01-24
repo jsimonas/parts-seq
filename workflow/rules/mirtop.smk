@@ -257,7 +257,8 @@ rule deduplicate_reads:
             config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.dedup.bam"
         ),
         dedup_bai=os.path.join(
-            config["out_dir"], "mirtop/{sample}_CB_Aligned.sortedByCoord.out.dedup.bam.bai"
+            config["out_dir"],
+            "mirtop/{sample}_CB_Aligned.sortedByCoord.out.dedup.bam.bai",
         ),
     threads: config.get("threads", 4)
     log:
@@ -269,10 +270,8 @@ rule deduplicate_reads:
         set -euo pipefail
         exec > "{log}" 2>&1
 
-        # index input bam
         samtools index "{input.bam}"
 
-        # deduplicate using umi-tools with CB and UB tags
         umi_tools dedup \
             --stdin="{input.bam}" \
             --stdout=- \
@@ -285,7 +284,6 @@ rule deduplicate_reads:
         | awk 'BEGIN{{OFS="\\t"}} /^@/ {{print; next}} {{$1 = $1 "_x1"; print}}' \
         | samtools view -b - > "{output.dedup_bam}"
 
-        # index output bam
         samtools index "{output.dedup_bam}"
         """
 
