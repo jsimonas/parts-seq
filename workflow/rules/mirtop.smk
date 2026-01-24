@@ -194,7 +194,7 @@ rule starsolo_align_hairpin:
         ),
     params:
         out_prefix=lambda wc, output: output.hairpin_bam.replace(
-            "_CB_Aligned.sortedByCoord.out.bam", ""
+            "_CB_Aligned.sortedByCoord.out.bam", "_CB_"
         ),
         features=config["star"]["features"],
         limit_ram=lambda wc: int(0.8 * parse_size(config["memory"])),
@@ -258,7 +258,7 @@ checkpoint split_bam_by_barcode:
         n_cells=config.get("mirtop", {}).get("n_cells", 1000),
         n_reads=config.get("mirtop", {}).get("n_reads", 100),
         cell_stats=lambda wc, input: input.bam.replace(
-            "_Aligned.sortedByCoord.out.bam",
+            "_CB_Aligned.sortedByCoord.out.bam",
             f"_CB_Solo.out/{config['star']['features']}/CellReads.stats",
         ),
     log:
