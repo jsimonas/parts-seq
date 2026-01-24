@@ -264,53 +264,9 @@ rule deduplicate_reads:
     log:
         os.path.join(config["out_dir"], "logs/deduplicate_{sample}.log"),
     conda:
-        "../envs/umi_tools.yaml"
-    shell:
-        """
-        set -euo pipefail
-        exec > "{log}" 2>&1
-
-        samtools index "{input.bam}"
-
-        TEMP_FIXED=$(mktemp).bam
-        
-        samtools view -h "{input.bam}" \
-        | awk 'BEGIN{{OFS="\\t"}} 
-               /^@/ {{print; next}}
-               {{
-                   $1 = $1 "_x1"
-                   
-                   for(i=12; i<=NF; i++) {{
-                       if($i ~ /^CB:Z:/) {{
-                           cb_value = substr($i, 6)
-                           gsub(/_/, "", cb_value)
-                           cx_tag = "CX:Z:" cb_value
-                           $(NF+1) = cx_tag
-                           break
-                       }}
-                   }}
-                   print
-               }}' \
-        | samtools view -b -o "$TEMP_FIXED"
-        
-        samtools index "$TEMP_FIXED"
-
-        umi_tools dedup \
-            -I "$TEMP_FIXED" \
-            -S "{output.dedup_bam}" \
-            --extract-umi-method=tag \
-            --umi-tag=UB \
-            --cell-tag=CX \
-            --per-cell \
-            --method=unique \
-            --output-stats="{log}.stats" \
-            --log="{log}.umi_tools"
-
-        rm -f "$TEMP_FIXED" "$TEMP_FIXED.bai"
-
-        samtools index "{output.dedup_bam}"
-        
-        """
+        "../envs/pysam.yaml"
+    script:
+        "../scripts/deduplicate_and_rename.py"
 
 
 checkpoint split_bam_by_barcode:
