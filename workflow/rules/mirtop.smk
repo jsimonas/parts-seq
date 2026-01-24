@@ -308,9 +308,9 @@ checkpoint split_bam_by_barcode:
         N_CB=$(wc -l < "{output.barcode_list}")
 
         ulimit -n $(( N_CB > 1000 ? N_CB + 50 : 1024 ))
-
+        
         samtools view -u -U "{output.split_dir}/invalid_barcodes.bam" -D "CB:{output.barcode_list}" "{input.bam}" \
-          | samtools split -d CB -f "{output.split_dir}/%!.bam" -
+        | samtools split -d CB -M $N_CB -f "{output.split_dir}/%!.bam" -
 
         """
 

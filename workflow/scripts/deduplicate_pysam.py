@@ -10,7 +10,6 @@ def main(input_bam, output_bam, log_file):
     """
 
     with open(log_file, 'w') as log:
-        log.write("Starting deduplication...\n")
         
         # track unique reads per cell
         seen = defaultdict(set)
