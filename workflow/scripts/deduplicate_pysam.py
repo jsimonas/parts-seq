@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import pysam
-import sys
 from collections import defaultdict
 
 # pylint: disable=undefined-variable
@@ -8,7 +7,6 @@ from collections import defaultdict
 def main(input_bam, output_bam, log_file):
     """
     deduplicate BAM by cell barcode (CB) and UMI (UB), and add _x1 to read names.
-    creates CX tag (CB without underscore) for compatibility.
     """
 
     with open(log_file, 'w') as log:
@@ -58,5 +56,10 @@ def main(input_bam, output_bam, log_file):
         
         pysam.index(output_bam)
 
+
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2], sys.argv[3])
+    main(
+        snakemake.input.bam,
+        snakemake.output.dedup_bam,
+        snakemake.log[0]
+    )
