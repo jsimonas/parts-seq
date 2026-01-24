@@ -266,7 +266,7 @@ rule deduplicate_reads:
     conda:
         "../envs/pysam.yaml"
     script:
-        "../scripts/deduplicate_and_rename.py"
+        "../scripts/deduplicate_pysam.py"
 
 
 checkpoint split_bam_by_barcode:
