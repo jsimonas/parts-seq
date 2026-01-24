@@ -277,8 +277,7 @@ checkpoint split_bam_by_barcode:
 
         tail -n +3 "{input.cell_stats}" \
           | sort -k2,2nr \
-          | head -n {params.n_cells} \
-          | awk -F '\\t' -v tR={params.n_reads} '$2 > tR {{print $1}}' \
+          | awk -F '\\t' -v N={params.n_cells} -v tR={params.n_reads} 'NR<=N && $2 > tR {{print $1}}' \
           > "{output.barcode_list}"
 
         N_CB=$(wc -l < "{output.barcode_list}")
