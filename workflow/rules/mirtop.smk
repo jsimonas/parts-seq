@@ -223,7 +223,7 @@ rule starsolo_align_hairpin:
             --outReadsUnmapped Fastx \
             --outSAMtype BAM SortedByCoordinate \
             --limitBAMsortRAM {params.limit_ram} \
-            --outSAMattributes NH HI nM AS MD CB CR \
+            --outSAMattributes NH HI nM AS MD CB CR UB UR \
             --outSAMunmapped Within \
             --alignIntronMax 1 \
             --outFilterMultimapScoreRange 0 \
