@@ -321,8 +321,8 @@ rule mirtop_counts_per_barcode:
     """
     input:
         bam=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}.bam"),
-        hairpin=config.get("hairpin_fa", "assets/hairpin.fa"),
-        gtf=config.get("gtf", "assets/mirna.gtf"),
+        hairpin_fa=config["hairpin_fa"],
+        mirna_gtf=config["mirna_gtf"],
     output:
         tsv=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}_mirtop.tsv"),
         gff=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}.gff"),
@@ -334,8 +334,8 @@ rule mirtop_counts_per_barcode:
         """
         set -e
         
-        mirtop gff --hairpin {input.hairpin} \
-                   --gtf {input.gtf} \
+        mirtop gff --hairpin {input.hairpin_fa} \
+                   --gtf {input.mirna_gtf} \
                    --sps {wildcards.cb} \
                    --out {output.gff} \
                    {input.bam} > {log} 2>&1
