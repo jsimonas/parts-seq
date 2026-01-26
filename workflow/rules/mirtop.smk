@@ -150,6 +150,8 @@ rule mirtop:
         ),
         stats_json=os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_stats.log"),
         stats_text=os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_stats.txt"),
+    params:
+        species=config["mirtop"]["species"],
     log:
         os.path.join(config["out_dir"], "logs/mirtop_{sample}.log"),
     conda:
@@ -157,7 +159,7 @@ rule mirtop:
     shell:
         """
         mirtop gff \
-            --sps Hsa \
+            --sps {params.species} \
             --hairpin {input.hairpin_fa} \
             --gtf {input.mirna_gtf} \
             --out $(dirname {output.gff}) \
@@ -326,6 +328,8 @@ rule mirtop_counts_per_barcode:
     output:
         tsv=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}_mirtop.tsv"),
         gff=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}.gff"),
+    params:
+        species=config["mirtop"]["species"],
     log:
         os.path.join(config["out_dir"], "logs/mirtop_counts/{sample}_{cb}.log"),
     conda:
@@ -336,20 +340,18 @@ rule mirtop_counts_per_barcode:
         
         mirtop gff --hairpin {input.hairpin_fa} \
                    --gtf {input.mirna_gtf} \
-                   --sps {wildcards.cb} \
-                   --out {output.gff} \
+                   --sps {params.species} \
+                   --out $(dirname {input.bam}) \
                    {input.bam} > {log} 2>&1
 
         TMP_DIR=$(mktemp -d -t mirtop_XXXXXX)
-        
         
         mirtop counts --gtf {input.mirna_gtf} \
                       --gff {output.gff} \
                       --out "$TMP_DIR" >> {log} 2>&1
         
-        mv "$TMP_DIR/mirtop.tsv" "{output.tsv}"
+        mv "$TMP_DIR/mirtop.tsv" {output.tsv}
         rm -rf "$TMP_DIR"
-        
         """
 
 

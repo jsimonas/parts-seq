@@ -23,11 +23,12 @@ star:
     features: "GeneFull"
 
 mirtrace:
-  species: "hsa"
+    species: "hsa"
 
 mirtop:
-  n_cells: 100
-  n_reads: 10
+    species: "Hsa"
+    n_cells: 1000
+    n_reads: 100
 
 # other params
 threads: 4
