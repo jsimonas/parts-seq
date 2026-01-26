@@ -362,7 +362,9 @@ rule aggregate_mirtop_counts:
     input:
         get_mirtop_counts,
     output:
-        matrix=os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_counts_matrix.tsv"),
+        matrix=os.path.join(
+            config["out_dir"], "mirtop/{sample}_mirtop_counts_matrix.tsv"
+        ),
     log:
         os.path.join(config["out_dir"], "logs/aggregate_mirtop_{sample}.log"),
     conda:
