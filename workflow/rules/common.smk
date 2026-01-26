@@ -47,5 +47,6 @@ def get_mirtop_counts(wildcards):
         **wildcards
     ).output.split_dir
     bam_files = glob.glob(os.path.join(checkpoint_output, "*.bam"))
-
+    bam_files = [f for f in bam_files if "invalid_barcodes" not in f]
+    
     return [f.replace(".bam", "_mirtop.tsv") for f in bam_files]
