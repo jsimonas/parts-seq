@@ -357,17 +357,15 @@ rule mirtop_counts_per_barcode:
 
 rule aggregate_mirtop_counts:
     """
-    aggregate all per-barcode mirtop counts for a sample.
+    aggregate all per-barcode mirtop counts into a single count matrix.
     """
     input:
         get_mirtop_counts,
     output:
-        touch(os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_counts_done.txt")),
+        matrix=os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_counts_matrix.tsv"),
     log:
         os.path.join(config["out_dir"], "logs/aggregate_mirtop_{sample}.log"),
     conda:
-        "../envs/samtools.yaml"
-    shell:
-        """
-        echo "processed $(ls {input} | wc -l) barcodes" > {log}
-        """
+        "../envs/pandas.yaml"
+    script:
+        "../scripts/aggregate_mirtop.py"

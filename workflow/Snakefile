@@ -132,7 +132,7 @@ rule all:
             param=config["out_dir"],
         ),
         expand(
-            "{param}/mirtop/{sample}_mirtop_counts_done.txt",
+            "{param}/mirtop/{sample}_mirtop_counts_matrix.tsv",
             sample=get_sample_ids,
             param=config["out_dir"],
         ),
