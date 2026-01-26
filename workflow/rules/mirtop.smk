@@ -350,7 +350,7 @@ rule mirtop_counts_per_barcode:
                       --gff {output.gff} \
                       --out "$TMP_DIR" >> {log} 2>&1
         
-        mv "$TMP_DIR/mirtop.tsv" {output.tsv}
+        mv "$TMP_DIR/{wildcards.cb}.tsv" {output.tsv}
         rm -rf "$TMP_DIR"
         """
 
