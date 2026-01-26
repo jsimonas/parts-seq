@@ -342,7 +342,10 @@ rule mirtop_counts_per_barcode:
 
         TMP_DIR=$(mktemp -d -t mirtop_XXXXXX)
         
-        mirtop counts --gff {output.gff} --out "$TMP_DIR" >> {log} 2>&1
+        
+        mirtop counts --gtf {input.mirna_gtf} \
+                      --gff {output.gff} \
+                      --out "$TMP_DIR" >> {log} 2>&1
         
         mv "$TMP_DIR/mirtop.tsv" "{output.tsv}"
         rm -rf "$TMP_DIR"
