@@ -158,6 +158,11 @@ rule mirtop:
         "../envs/mirtop.yaml"
     shell:
         """
+        
+        set -euo pipefail
+        
+        mkdir -p $(dirname {output.gff})/log
+        
         mirtop gff \
             --sps {params.species} \
             --hairpin {input.hairpin_fa} \
