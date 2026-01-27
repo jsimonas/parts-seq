@@ -362,17 +362,23 @@ rule mirtop_counts_per_barcode:
 
 rule aggregate_mirtop_counts:
     """
-    aggregate all per-barcode mirtop counts into a single count matrix.
+    aggregate all per-barcode mirtop counts into a matrix market format.
     """
     input:
         get_mirtop_counts,
     output:
         matrix=os.path.join(
-            config["out_dir"], "mirtop/{sample}_mirtop_counts_matrix.tsv"
+            config["out_dir"], "mirtop/{sample}_mirtop_counts/matrix.mtx.gz"
+        ),
+        features=os.path.join(
+            config["out_dir"], "mirtop/{sample}_mirtop_counts/features.tsv.gz"
+        ),
+        barcodes=os.path.join(
+            config["out_dir"], "mirtop/{sample}_mirtop_counts/barcodes.tsv.gz"
         ),
     log:
         os.path.join(config["out_dir"], "logs/aggregate_mirtop_{sample}.log"),
     conda:
-        "../envs/pandas.yaml"
+        "../envs/scipy.yaml"
     script:
         "../scripts/aggregate_mirtop.py"

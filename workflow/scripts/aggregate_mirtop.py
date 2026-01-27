@@ -1,18 +1,64 @@
 #!/usr/bin/env python3
 import pandas as pd
+import scipy.sparse as sp
+import scipy.io as io
+import gzip
+import os
 
 # pylint: disable=undefined-variable
 
-dfs = []
-for tsv_file in snakemake.input:
-    if "invalid_barcodes" not in tsv_file:
-        barcode = tsv_file.split("/")[-1].replace("_mirtop.tsv", "")
-        df = pd.read_csv(tsv_file, sep="\t", index_col=0)
-        df.columns = [barcode]
-        dfs.append(df)
+try:
+    dfs = []
+    barcodes = []
+    
+    for tsv_file in snakemake.input:
+        if "invalid_barcodes" not in tsv_file:
+            barcode = os.path.basename(tsv_file).replace("_mirtop.tsv", "")
+            barcodes.append(barcode)
+            
+            df = pd.read_csv(tsv_file, sep="\t")
+            
+            if 'miRNA' not in df.columns or 'expression' not in df.columns:
+                raise ValueError(
+                    f"Unexpected format in {tsv_file}. "
+                    f"Expected columns 'miRNA' and 'expression', got: {df.columns.tolist()}"
+                )
+            
+            counts = df.groupby('miRNA')['expression'].sum()
+            counts.name = barcode
+            dfs.append(counts.to_frame())
 
-matrix = pd.concat(dfs, axis=1, join="outer").fillna(0)
-matrix.to_csv(snakemake.output.matrix, sep="\t")
+    if not dfs:
+        raise ValueError("No valid TSV files found")
 
-with open(snakemake.log[0], "w") as f:
-    f.write(f"aggregated {len(dfs)} barcodes\n")
+    matrix = pd.concat(dfs, axis=1, join="outer").fillna(0).astype(int)
+    sparse_matrix = sp.csr_matrix(matrix.values)
+
+    # write matrix.mtx.gz
+    with gzip.open(snakemake.output.matrix, 'wb') as f:
+        io.mmwrite(f, sparse_matrix, comment='', field='integer')
+
+    # write features.tsv.gz
+    features_df = pd.DataFrame({
+        'gene_id': matrix.index,
+        'gene_name': matrix.index,
+        'feature_type': 'miRNA'
+    })
+    features_df.to_csv(snakemake.output.features, sep='\t', header=False, index=False, compression='gzip')
+
+    # write barcodes.tsv.gz
+    barcodes_df = pd.DataFrame(matrix.columns)
+    barcodes_df.to_csv(snakemake.output.barcodes, sep='\t', header=False, index=False, compression='gzip')
+    
+    with open(snakemake.log[0], "w") as f:
+        f.write(f"Successfully aggregated {len(dfs)} barcodes\n")
+        f.write(f"Matrix dimensions: {matrix.shape[0]} miRNAs x {matrix.shape[1]} barcodes\n")
+        f.write(f"Total counts: {matrix.values.sum()}\n")
+        f.write(f"Sparsity: {1 - sparse_matrix.nnz / (matrix.shape[0] * matrix.shape[1]):.2%}\n")
+
+except Exception as e:
+    with open(snakemake.log[0], "w") as f:
+        f.write(f"ERROR: {str(e)}\n")
+        import traceback
+        f.write(traceback.format_exc())
+    raise
