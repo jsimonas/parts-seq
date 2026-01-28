@@ -10,7 +10,7 @@ import os
 try:
     dfs = []
     
-    for tsv_file in snakemake.input:
+    for tsv_file in snakemake.input.tsv_files:
         if "invalid_barcodes" not in tsv_file:
             barcode = os.path.basename(tsv_file).replace("_mirtop.tsv", "")
             

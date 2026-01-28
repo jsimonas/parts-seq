@@ -365,7 +365,8 @@ rule aggregate_mirtop_counts:
     aggregate all per-barcode mirtop counts into a matrix market format.
     """
     input:
-        get_mirtop_counts,
+        tsv_files=get_mirtop_counts,
+        split_dir=lambda wc: checkpoints.split_bam_by_barcode.get(**wc).output.split_dir,
     output:
         matrix=os.path.join(
             config["out_dir"], "mirtop/{sample}_mirtop_counts/matrix.mtx.gz"
