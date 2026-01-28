@@ -343,6 +343,8 @@ rule mirtop_counts_per_barcode:
         """
         set -e
         
+        mkdir -p $(dirname {input.bam})/log
+        
         mirtop gff --hairpin {input.hairpin_fa} \
                    --gtf {input.mirna_gtf} \
                    --sps {params.species} \
