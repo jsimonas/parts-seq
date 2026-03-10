@@ -53,6 +53,50 @@ rule demux:
         """
 
 
+#rule merge_fastq:
+#    """
+#    merge R1 and R2 into something and copies R3, depending on sequencer
+#    """
+#    input:
+#        r1=lambda w: get_fastqs_for_sample(w)["r1"],
+#        r2=lambda w: get_fastqs_for_sample(w)["r2"],
+#        r3=lambda w: get_fastqs_for_sample(w)["r3"],
+#    output:
+#        bc=os.path.join(config["out_dir"], "merged/{sample}_bc_merged.fastq.gz"),
+#        cdna=os.path.join(config["out_dir"], "merged/{sample}_cdna_merged.fastq.gz"),
+#    params:
+#        sequencer=config["sequencer"],
+#    threads: config.get("threads", 4)
+#    log:
+#        os.path.join(config["out_dir"], "logs/merge_fastq_{sample}.log"),
+#    conda:
+#        "../envs/seqkit.yaml"
+#    shell:
+#        """
+#        set -euo pipefail
+#        
+#        R1={input.r1}
+#        R2={input.r2}
+#        R3={input.r3}
+#        
+#        echo "R1 files: $R1"
+#        echo "R2 files: $R2"
+#        echo "R3 files: $R3"
+#
+#        if [ "{params.sequencer}" = "miseq" ]; then
+#            seqkit concat $R2 $R1 --out-file {output.bc} --line-width 0 --threads {threads}
+#            cp $R3 {output.cdna}
+#        elif [ "{params.sequencer}" = "nextseq" ]; then
+#            seqkit concat <(seqkit seq --reverse --complement --seq-type dna $R2) $R1 \
+#                          --out-file {output.bc} --line-width 0 --threads {threads}
+#            cp $R3 {output.cdna}
+#        else
+#            echo "ERROR: 'sequencer' must be 'miseq' or 'nextseq'. Found: {params.sequencer}"
+#            exit 1
+#        fi
+#        """
+
+
 rule merge_fastq:
     """
     merge R1 and R2 into something and copies R3, depending on sequencer
@@ -70,28 +114,6 @@ rule merge_fastq:
     log:
         os.path.join(config["out_dir"], "logs/merge_fastq_{sample}.log"),
     conda:
-        "../envs/seqkit.yaml"
-    shell:
-        """
-        set -euo pipefail
-        
-        R1={input.r1}
-        R2={input.r2}
-        R3={input.r3}
-        
-        echo "R1 files: $R1"
-        echo "R2 files: $R2"
-        echo "R3 files: $R3"
-
-        if [ "{params.sequencer}" = "miseq" ]; then
-            seqkit concat $R2 $R1 --out-file {output.bc} --line-width 0 --threads {threads}
-            cp $R3 {output.cdna}
-        elif [ "{params.sequencer}" = "nextseq" ]; then
-            seqkit concat <(seqkit seq --reverse --complement --seq-type dna $R2) $R1 \
-                          --out-file {output.bc} --line-width 0 --threads {threads}
-            cp $R3 {output.cdna}
-        else
-            echo "ERROR: 'sequencer' must be 'miseq' or 'nextseq'. Found: {params.sequencer}"
-            exit 1
-        fi
-        """
+        "../envs/pysam.yaml"
+    script:
+        "scripts/merge_fastq.py"
