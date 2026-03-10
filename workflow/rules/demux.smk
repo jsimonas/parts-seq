@@ -74,15 +74,15 @@ rule demux:
 #     shell:
 #         """
 #         set -euo pipefail
-#         
+#
 #         R1={input.r1}
 #         R2={input.r2}
 #         R3={input.r3}
-#         
+#
 #         echo "R1 files: $R1"
 #         echo "R2 files: $R2"
 #         echo "R3 files: $R3"
-# 
+#
 #         if [ "{params.sequencer}" = "miseq" ]; then
 #             seqkit concat $R2 $R1 --out-file {output.bc} --line-width 0 --threads {threads}
 #             cp $R3 {output.cdna}
