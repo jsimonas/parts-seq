@@ -116,4 +116,4 @@ rule merge_fastq:
     conda:
         "../envs/pysam.yaml"
     script:
-        "scripts/merge_fastq.py"
+        "../scripts/combine_fastq.py"
