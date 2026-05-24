@@ -350,6 +350,17 @@ rule mirtop_counts_per_barcode:
                    --sps {params.species} \
                    --out $(dirname {input.bam}) \
                    {input.bam} > {log} 2>&1
+        
+        GFF_TMP=$(mktemp -d -t mirtop_gff_XXXXXX)
+        
+        mirtop gff --hairpin {input.hairpin_fa} \
+            --gtf {input.mirna_gtf} \
+            --sps {params.species} \
+            --out "$GFF_TMP" \
+            {input.bam} > {log} 2>&1
+            
+        mv "$GFF_TMP"/$(basename {input.bam} .bam).gff {output.gff}
+        rm -rf "$GFF_TMP"
 
         TMP_DIR=$(mktemp -d -t mirtop_XXXXXX)
         
