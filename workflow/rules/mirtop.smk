@@ -157,26 +157,27 @@ rule mirtop:
     conda:
         "../envs/mirtop.yaml"
     shell:
-    """
-    set -e
+        """
+        set -euo pipefail
     
-    mkdir -p $(dirname {output.gff})/log
+        mkdir -p $(dirname {output.gff})/log
     
-    mirtop gff \
-        --sps {params.species} \
-        --hairpin {input.hairpin_fa} \
-        --gtf {input.mirna_gtf} \
-        --out $(dirname {output.gff}) \
-        {input.hairpin_bam} > {log} 2>&1
+        mirtop gff \
+            --sps {params.species} \
+            --hairpin {input.hairpin_fa} \
+            --gtf {input.mirna_gtf} \
+            --out $(dirname {output.gff}) \
+            {input.hairpin_bam} > {log} 2>&1
 
-    TMP_DIR=$(mktemp -d -t mirtop_XXXXXX)
+        TMP_DIR=$(mktemp -d -t mirtop_XXXXXX)
     
-    mirtop stats --out "$TMP_DIR" \
-        {output.gff} >> {log} 2>&1
-    mv "$TMP_DIR/mirtop_stats.txt" {output.stats_text}
-    mv "$TMP_DIR/mirtop_stats.log" {output.stats_json}
-    rm -rf "$TMP_DIR"
-    """
+        mirtop stats --out "$TMP_DIR" \
+            {output.gff} >> {log} 2>&1
+    
+        mv "$TMP_DIR/mirtop_stats.txt" {output.stats_text}
+        mv "$TMP_DIR/mirtop_stats.log" {output.stats_json}
+        rm -rf "$TMP_DIR"
+        """
 
 
 rule starsolo_align_hairpin:
