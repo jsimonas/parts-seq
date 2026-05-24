@@ -158,25 +158,25 @@ rule mirtop:
         "../envs/mirtop.yaml"
     shell:
         """
-        
-        set -euo pipefail
-        
+        set -e
+
         mkdir -p $(dirname {output.gff})/log
-        
+
         mirtop gff \
             --sps {params.species} \
             --hairpin {input.hairpin_fa} \
             --gtf {input.mirna_gtf} \
             --out $(dirname {output.gff}) \
-            {input.hairpin_bam}
-        
-        mirtop stats \
-            --out $(dirname {output.gff}) \
-            {output.gff}
-        
-        mv $(dirname {output.gff})/mirtop_stats.txt {output.stats_text}
-        mv $(dirname {output.gff})/mirtop_stats.log {output.stats_json}
-        
+            {input.bam} > {log} 2>&1
+            
+        TMP_DIR=$(mktemp -d -t mirtop_XXXXXX)
+
+        mirtop stats --out "$TMP_DIR" \
+            {output.gff} >> {log} 2>&1
+
+        mv "$TMP_DIR/mirtop_stats.txt" {output.stats_txt}
+        mv "$TMP_DIR/mirtop_stats.log" {output.stats_log}
+        rm -rf "$TMP_DIR"
         """
 
 
