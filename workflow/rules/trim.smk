@@ -19,7 +19,7 @@ rule trim_reads:
     threads: config.get("threads", 4)
     params:
         trim_5p=config["cutadapt"]["trim_5p"],
-        min_len=config["cutadapt"]["trim_5p"],
+        min_len=config["cutadapt"]["min_len"],
     log:
         os.path.join(config["out_dir"], "logs/trim_fastq_{sample}.log"),
     conda:
