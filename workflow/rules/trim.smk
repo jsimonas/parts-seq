@@ -19,6 +19,7 @@ rule trim_reads:
     threads: config.get("threads", 4)
     params:
         trim_5p=config["cutadapt"]["trim_5p"],
+        min_len=config["cutadapt"]["trim_5p"],
     log:
         os.path.join(config["out_dir"], "logs/trim_fastq_{sample}.log"),
     conda:
@@ -27,7 +28,11 @@ rule trim_reads:
         """
         set -euo pipefail
         
-        cutadapt -u {params.trim_5p} -a A{{8}} -m 15 -j {threads} \
+        cutadapt \
+            -u {params.trim_5p} \
+            -a A{{8}} \
+            -m {params.min_len} \
+            -j {threads} \
             -o {output.R2_trimmed} \
             -p {output.R1_trimmed} \
             {input.R2} {input.R1} \

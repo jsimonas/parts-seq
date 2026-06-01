@@ -18,6 +18,7 @@ mirna_gtf: "resources/mirgenedb/hsa.gff3"
 # tool params
 cutadapt:
     trim_5p: 0
+    min_len: 18
 
 star:
     features: "GeneFull"
