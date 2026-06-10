@@ -6,10 +6,7 @@ if RUN_MODE == "fastq":
 
     rule stage_fastqs:
         """
-        Stage user-provided per-sample bc/cdna FASTQs into {out_dir}/merged/.
-        Expects {fastq_dir}/{sample}_bc.fastq.gz and {fastq_dir}/{sample}_cdna.fastq.gz.
-        Uses absolute symlinks (falls back to copy) so downstream rules see the
-        same filenames they would produce in BCL mode.
+        stages user-provided per-sample bc/cdna FASTQs into {out_dir}/merged/.
         """
         input:
             fastq_dir=config["fastq_dir"],
@@ -40,7 +37,6 @@ elif RUN_MODE == "bcl":
             "../envs/pandas.yaml"
         script:
             "../scripts/convert_to_samplesheet.py"
-
 
     rule demux:
         """
@@ -121,23 +117,23 @@ elif RUN_MODE == "bcl":
 #         """
 
 
-    rule merge_fastq:
-        """
-        merge R1 and R2 into something and copies R3, depending on sequencer
-        """
-        input:
-            r1=lambda w: get_fastqs_for_sample(w)["r1"],
-            r2=lambda w: get_fastqs_for_sample(w)["r2"],
-            r3=lambda w: get_fastqs_for_sample(w)["r3"],
-        output:
-            bc=os.path.join(config["out_dir"], "merged/{sample}_bc_merged.fastq.gz"),
-            cdna=os.path.join(config["out_dir"], "merged/{sample}_cdna_merged.fastq.gz"),
-        params:
-            sequencer=config["sequencer"],
-        threads: config.get("threads", 4)
-        log:
-            os.path.join(config["out_dir"], "logs/merge_fastq_{sample}.log"),
-        conda:
-            "../envs/pysam.yaml"
-        script:
-            "../scripts/combine_fastq.py"
+rule merge_fastq:
+    """
+    merge R1 and R2 into something and copies R3, depending on sequencer
+    """
+    input:
+        r1=lambda w: get_fastqs_for_sample(w)["r1"],
+        r2=lambda w: get_fastqs_for_sample(w)["r2"],
+        r3=lambda w: get_fastqs_for_sample(w)["r3"],
+    output:
+        bc=os.path.join(config["out_dir"], "merged/{sample}_bc_merged.fastq.gz"),
+        cdna=os.path.join(config["out_dir"], "merged/{sample}_cdna_merged.fastq.gz"),
+    params:
+        sequencer=config["sequencer"],
+    threads: config.get("threads", 4)
+    log:
+        os.path.join(config["out_dir"], "logs/merge_fastq_{sample}.log"),
+    conda:
+        "../envs/pysam.yaml"
+    script:
+        "../scripts/combine_fastq.py"
