@@ -73,6 +73,7 @@ elif RUN_MODE == "bcl":
                 &> {log}
             """
 
+
 # rule merge_fastq:
 #     """
 #     merge R1 and R2 into something and copies R3, depending on sequencer

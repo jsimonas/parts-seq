@@ -2,6 +2,8 @@ import os
 
 
 configfile: "config/config.yaml"
+
+
 RUN_MODE = config.get("run_mode", "bcl")
 if RUN_MODE not in ["bcl", "fastq"]:
     raise ValueError("run_mode must be 'bcl' or 'fastq'. Found: {}".format(RUN_MODE))
