@@ -17,6 +17,7 @@ def get_sample_ids(wildcards):
 def get_fastqs_for_sample(wildcards):
     """
     detects the demultiplexed FASTQ files for a given sample and returns a dictionary
+    only used by merge_fastq in bcl mode
     """
     pattern = os.path.join(
         config["out_dir"], "demuxed", "**", f"{wildcards.sample}_S*_R*_001.fastq.gz"

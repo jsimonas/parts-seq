@@ -41,6 +41,39 @@ snakemake \
     star_features="GeneFull"
 ```
 
+### Starting from pre-demultiplexed FASTQs (`run_mode: fastq`)
+
+If you already have per-sample merged barcode (`bc`) and cDNA (`cdna`) FASTQ
+files, you can skip `bcl2fastq` and the internal merge step entirely.
+
+Place your files in a directory using this naming convention:
+
+```
+my_fastqs/
+├── sampleA_bc.fastq.gz
+├── sampleA_cdna.fastq.gz
+├── sampleB_bc.fastq.gz
+└── sampleB_cdna.fastq.gz
+```
+
+Then run:
+
+```
+snakemake \
+  --cores 8 \
+  --snakefile parts-seq/workflow/Snakefile \
+  --directory parts-seq \
+  --use-conda \
+  --config \
+    run_mode=fastq \
+    fastq_dir=/path/to/my_fastqs \
+    out_dir=/path/to/your_output_directory \
+    star_index=/path/to/genome_index/ \
+    star_features="GeneFull"
+```
+
+In this mode, `run_dir`, `sample_sheet`, and `sequencer` are not required.
+
 Before running the workflow, prepare the [STAR](https://github.com/alexdobin/STAR) index using the genomes and their corresponding annotations of interest.
 
 ### Requirements

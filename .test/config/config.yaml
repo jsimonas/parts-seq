@@ -1,3 +1,10 @@
+# pipeline entry mode: "bcl" (default, run bcl2fastq) or "fastq" (start from per-sample bc/cdna FASTQs)
+run_mode: "bcl"
+
+# only used when run_mode: "fastq"
+# directory containing {sample}_bc.fastq.gz and {sample}_cdna.fastq.gz files
+fastq_dir: ""
+
 # input
 run_dir: "ngs/231121_M02245_0129_000000000-DMNH2"
 out_dir: "results"

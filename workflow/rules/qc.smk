@@ -1,3 +1,6 @@
+RUN_MODE = config.get("run_mode", "bcl")
+
+
 rule fastqc:
     input:
         lambda wc: os.path.join(
@@ -46,7 +49,11 @@ rule mirtrace:
 
 rule multiqc:
     input:
-        demux=os.path.join(config["out_dir"], "demuxed/Stats"),
+        demux=(
+            os.path.join(config["out_dir"], "demuxed/Stats")
+            if RUN_MODE == "bcl"
+            else []
+        ),
         fastqc=expand(
             os.path.join(
                 config["out_dir"], "qc/fastqc/{sample}_{type}_{suffix}_fastqc.zip"
