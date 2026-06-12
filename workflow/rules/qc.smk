@@ -70,6 +70,14 @@ rule multiqc:
             os.path.join(config["out_dir"], "mirtrace/{sample}"),
             sample=get_sample_ids,
         ),
+        mirtrace=(
+            expand(
+                os.path.join(config["out_dir"], "mirtrace/{sample}"),
+                sample=get_sample_ids,
+            )
+            if config["mirtrace"].get("enabled", True)
+            else []
+        ),
         stats=expand(
             os.path.join(config["out_dir"], "mapped/stats/{sample}.stats"),
             sample=get_sample_ids,

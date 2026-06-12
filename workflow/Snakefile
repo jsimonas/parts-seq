@@ -124,10 +124,14 @@ rule all:
             suffix=["merged", "trimmed"],
             param=config["out_dir"],
         ),
-        expand(
-            "{param}/mirtrace/{sample}",
-            sample=get_sample_ids,
-            param=config["out_dir"],
+        *(
+            expand(
+                "{param}/mirtrace/{sample}",
+                sample=get_sample_ids,
+                param=config["out_dir"],
+            )
+            if config["mirtrace"].get("enabled", True)
+            else []
         ),
         expand(
             "{param}/mirtop/{sample}_CB_Solo.out/{features}/CellReads.stats",
