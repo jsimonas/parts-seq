@@ -66,10 +66,6 @@ rule multiqc:
             os.path.join(config["out_dir"], "trimmed/{sample}_cutadapt_report.txt"),
             sample=get_sample_ids,
         ),
-        mirtrace=expand(
-            os.path.join(config["out_dir"], "mirtrace/{sample}"),
-            sample=get_sample_ids,
-        ),
         mirtrace=(
             expand(
                 os.path.join(config["out_dir"], "mirtrace/{sample}"),
