@@ -153,7 +153,8 @@ rule mirtop:
     params:
         sps_flag=lambda wc: (
             f"--sps {config['mirtop']['species']}"
-            if str(config["mirtop"].get("species", "")).strip() else ""
+            if str(config["mirtop"].get("species", "")).strip()
+            else ""
         ),
     log:
         os.path.join(config["out_dir"], "logs/mirtop_{sample}.log"),
@@ -166,7 +167,7 @@ rule mirtop:
         mkdir -p $(dirname {output.gff})/log
     
         mirtop gff \
-            --sps {params.sps_flag} \
+            {params.sps_flag} \
             --hairpin {input.hairpin_fa} \
             --gtf {input.mirna_gtf} \
             --out $(dirname {output.gff}) \
@@ -339,7 +340,8 @@ rule mirtop_counts_per_barcode:
     params:
         sps_flag=lambda wc: (
             f"--sps {config['mirtop']['species']}"
-            if str(config["mirtop"].get("species", "")).strip() else ""
+            if str(config["mirtop"].get("species", "")).strip()
+            else ""
         ),
     log:
         os.path.join(config["out_dir"], "logs/mirtop_counts/{sample}_{cb}.log"),
@@ -353,7 +355,7 @@ rule mirtop_counts_per_barcode:
         
         mirtop gff --hairpin {input.hairpin_fa} \
                    --gtf {input.mirna_gtf} \
-                   --sps {params.sps_flag} \
+                   {params.sps_flag} \
                    --out $(dirname {input.bam}) \
                    {input.bam} > {log} 2>&1
         
@@ -361,7 +363,7 @@ rule mirtop_counts_per_barcode:
         
         mirtop gff --hairpin {input.hairpin_fa} \
             --gtf {input.mirna_gtf} \
-            --sps {params.sps_flag} \
+            {params.sps_flag} \
             --out "$GFF_TMP" \
             {input.bam} > {log} 2>&1
             
