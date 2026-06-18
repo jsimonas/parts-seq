@@ -69,9 +69,9 @@ rule multiqc:
         mirtrace=(
             expand(
                 os.path.join(config["out_dir"], "mirtrace/{sample}"),
-                sample=get_sample_ids,
-            )
-            if str(config.get("mirtrace", {}).get("enabled", True)).lower() == "true"
+                    sample=get_sample_ids,
+                )
+                if str(config.get("mirtrace", {}).get("enabled", True)).lower() == "true"
             else []
         ),
         stats=expand(

@@ -126,11 +126,11 @@ rule all:
         ),
         (
             expand(
-                "{param}/mirtrace/{sample}",
-                sample=get_sample_ids,
-                param=config["out_dir"],
-            )
-            if str(config.get("mirtrace", {}).get("enabled", True)).lower() == "true"
+                    "{param}/mirtrace/{sample}",
+                    sample=get_sample_ids,
+                    param=config["out_dir"],
+                )
+                if str(config.get("mirtrace", {}).get("enabled", True)).lower() == "true"
             else []
         ),
         expand(
