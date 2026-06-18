@@ -152,8 +152,8 @@ rule mirtop:
         stats_text=os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_stats.txt"),
     params:
         sps_flag=lambda wc: (
-            f"--sps {config['mirtop']['species']}"
-            if str(config["mirtop"].get("species", "")).strip()
+            f"--sps {config.get('mirtop', {}).get('species', '').strip()}"
+            if str(config.get("mirtop", {}).get("species", "")).strip()
             else ""
         ),
     log:
@@ -339,8 +339,8 @@ rule mirtop_counts_per_barcode:
         gff=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}.gff"),
     params:
         sps_flag=lambda wc: (
-            f"--sps {config['mirtop']['species']}"
-            if str(config["mirtop"].get("species", "")).strip()
+            f"--sps {config.get('mirtop', {}).get('species', '').strip()}"
+            if str(config.get("mirtop", {}).get("species", "")).strip()
             else ""
         ),
     log:
