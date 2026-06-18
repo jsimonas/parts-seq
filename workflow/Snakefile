@@ -126,7 +126,7 @@ rule all:
         ),
         (
             expand(
-                    "{param}/mirtrace/{sample}",
+                "{param}/mirtrace/{sample}",
                     sample=get_sample_ids,
                     param=config["out_dir"],
                 )
