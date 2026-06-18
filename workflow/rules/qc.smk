@@ -71,7 +71,7 @@ rule multiqc:
                 os.path.join(config["out_dir"], "mirtrace/{sample}"),
                 sample=get_sample_ids,
             )
-            if config["mirtrace"].get("enabled", True)
+            if str(config.get("mirtrace", {}).get("enabled", True)).lower() == "true"
             else []
         ),
         stats=expand(

@@ -130,7 +130,7 @@ rule all:
                 sample=get_sample_ids,
                 param=config["out_dir"],
             )
-            if config["mirtrace"].get("enabled", True)
+            if str(config.get("mirtrace", {}).get("enabled", True)).lower() == "true"
             else []
         ),
         expand(
