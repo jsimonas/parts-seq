@@ -151,7 +151,10 @@ rule mirtop:
         stats_json=os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_stats.log"),
         stats_text=os.path.join(config["out_dir"], "mirtop/{sample}_mirtop_stats.txt"),
     params:
-        species=config["mirtop"]["species"],
+        sps_flag=lambda wc: (
+            f"--sps {config['mirtop']['species']}"
+            if str(config["mirtop"].get("species", "")).strip() else ""
+        ),
     log:
         os.path.join(config["out_dir"], "logs/mirtop_{sample}.log"),
     conda:
@@ -163,7 +166,7 @@ rule mirtop:
         mkdir -p $(dirname {output.gff})/log
     
         mirtop gff \
-            --sps {params.species} \
+            --sps {params.sps_flag} \
             --hairpin {input.hairpin_fa} \
             --gtf {input.mirna_gtf} \
             --out $(dirname {output.gff}) \
@@ -334,7 +337,10 @@ rule mirtop_counts_per_barcode:
         tsv=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}_mirtop.tsv"),
         gff=os.path.join(config["out_dir"], "mirtop/split/{sample}/{cb}.gff"),
     params:
-        species=config["mirtop"]["species"],
+        sps_flag=lambda wc: (
+            f"--sps {config['mirtop']['species']}"
+            if str(config["mirtop"].get("species", "")).strip() else ""
+        ),
     log:
         os.path.join(config["out_dir"], "logs/mirtop_counts/{sample}_{cb}.log"),
     conda:
@@ -347,7 +353,7 @@ rule mirtop_counts_per_barcode:
         
         mirtop gff --hairpin {input.hairpin_fa} \
                    --gtf {input.mirna_gtf} \
-                   --sps {params.species} \
+                   --sps {params.sps_flag} \
                    --out $(dirname {input.bam}) \
                    {input.bam} > {log} 2>&1
         
@@ -355,7 +361,7 @@ rule mirtop_counts_per_barcode:
         
         mirtop gff --hairpin {input.hairpin_fa} \
             --gtf {input.mirna_gtf} \
-            --sps {params.species} \
+            --sps {params.sps_flag} \
             --out "$GFF_TMP" \
             {input.bam} > {log} 2>&1
             
