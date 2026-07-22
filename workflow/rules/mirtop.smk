@@ -350,15 +350,7 @@ rule mirtop_counts_per_barcode:
     shell:
         """
         set -e
-        
-        mkdir -p $(dirname {input.bam})/log
-        
-        mirtop gff --hairpin {input.hairpin_fa} \
-                   --gtf {input.mirna_gtf} \
-                   {params.sps_flag} \
-                   --out $(dirname {input.bam}) \
-                   {input.bam} > {log} 2>&1
-        
+                
         GFF_TMP=$(mktemp -d -t mirtop_gff_XXXXXX)
         
         mirtop gff --hairpin {input.hairpin_fa} \
