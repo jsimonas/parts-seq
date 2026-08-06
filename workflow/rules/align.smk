@@ -53,7 +53,7 @@ rule starsolo:
             --outFilterMismatchNoverLmax 0.05 \
             --outFilterMatchNmin 15 \
             --soloType CB_UMI_Complex \
-            --soloMultiMappers PropUnique \
+            --soloMultiMappers PropUnique EM \
             --soloFeatures {params.features} \
             --soloUMIdedup Exact \
             --soloCBposition 0_0_0_7 0_8_0_15 \
