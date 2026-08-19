@@ -5,6 +5,12 @@ import pandas as pd
 from snakemake.utils import validate
 
 
+# reference a single feature subdir if multiple
+PRIMARY_STAR_FEATURE = (
+    str(config.get("star", {}).get("features", "GeneFull")).split() or ["GeneFull"]
+)[0]
+
+
 def get_sample_ids(wildcards):
     ckpt = checkpoints.parse_demux.get()
     sample_file = ckpt.output.sample_ids

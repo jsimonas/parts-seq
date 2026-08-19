@@ -203,7 +203,7 @@ rule starsolo_align_hairpin:
         cell_stats=os.path.join(
             config["out_dir"],
             "mirtop/{sample}_CB_Solo.out",
-            config["star"]["features"],
+            PRIMARY_STAR_FEATURE,
             "CellReads.stats",
         ),
     params:
@@ -290,7 +290,7 @@ checkpoint split_bam_by_barcode:
         ),
         cell_stats=lambda wc: os.path.join(
             config["out_dir"],
-            f"mirtop/{wc.sample}_CB_Solo.out/{config['star']['features']}/CellReads.stats",
+            f"mirtop/{wc.sample}_CB_Solo.out/{PRIMARY_STAR_FEATURE}/CellReads.stats",
         ),
     output:
         split_dir=directory(os.path.join(config["out_dir"], "mirtop/split/{sample}")),
