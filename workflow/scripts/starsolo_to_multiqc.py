@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import os
-import glob
 import re
 import pandas as pd
 from io import StringIO
@@ -8,7 +7,7 @@ from io import StringIO
 # pylint: disable=undefined-variable
 
 sample = snakemake.params.sample
-demux_dir = snakemake.input.solo_dir
+solo_dir = snakemake.input.solo_dir
 feature = snakemake.params.feature
 output_files = snakemake.output
 
@@ -38,27 +37,16 @@ def modify_stats(content):
     return "\n".join(processed) + "\n"
 
 
+feature_dir = os.path.join(solo_dir, feature)
 file_map = {
-    "Summary.csv": (modify_summary, output_files.summary),
-    "UMIperCellSorted.txt": (modify_umi, output_files.umi),
-    "Barcodes.stats": (modify_stats, output_files.barcodes),
-    "Features.stats": (modify_stats, output_files.features),
+    os.path.join(feature_dir, "Summary.csv"): (modify_summary, output_files.summary),
+    os.path.join(feature_dir, "UMIperCellSorted.txt"): (modify_umi, output_files.umi),
+    os.path.join(solo_dir, "Barcodes.stats"): (modify_stats, output_files.barcodes),
+    os.path.join(feature_dir, "Features.stats"): (modify_stats, output_files.features),
 }
 
-
-for suffix, (modifier, outpath) in file_map.items():
-    pattern = os.path.join(demux_dir, feature, f"**/*{suffix}")
-    matches = glob.glob(pattern, recursive=True)
-    if not matches:
-        raise FileNotFoundError(f"No file matching {pattern}")
-    if len(matches) > 1:
-        raise RuntimeError(f"Multiple matches for {pattern}: {matches}")
-    
-    inpath = matches[0]
+for inpath, (modifier, outpath) in file_map.items():
     with open(inpath, "r") as infile:
         content = infile.read()
-
-    modified = modifier(content)
-
     with open(outpath, "w") as outfile:
-        outfile.write(modified)
+        outfile.write(modifier(content))
