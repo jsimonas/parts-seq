@@ -9,6 +9,7 @@ from io import StringIO
 
 sample = snakemake.params.sample
 demux_dir = snakemake.input.solo_dir
+feature = snakemake.params.feature
 output_files = snakemake.output
 
 def modify_summary(content):
@@ -46,7 +47,7 @@ file_map = {
 
 
 for suffix, (modifier, outpath) in file_map.items():
-    pattern = os.path.join(demux_dir, f"**/*{suffix}")
+    pattern = os.path.join(demux_dir, feature, f"**/*{suffix}")
     matches = glob.glob(pattern, recursive=True)
     if not matches:
         raise FileNotFoundError(f"No file matching {pattern}")

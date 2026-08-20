@@ -85,6 +85,7 @@ rule format_starsolo:
         "../envs/pandas.yaml"
     params:
         sample="{sample}",
+        feature=config["star"]["features"].split()[0],
     script:
         "../scripts/starsolo_to_multiqc.py"
 
