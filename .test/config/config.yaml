@@ -39,6 +39,17 @@ mirtop:
     n_cells: 1000
     n_reads: 100
 
+# per-feature metagene coverage QC
+coverage:
+    enabled: true
+    genome_gtf: "resources/index/mini.gtf"
+    nbins: 30
+    flank: 10
+    flank_bins: 1
+    biotypes: ["protein_coding"]
+    exclude_name_patterns: []
+    zscore_by: "feature"
+
 # other params
 threads: 4
 memory: 36G
