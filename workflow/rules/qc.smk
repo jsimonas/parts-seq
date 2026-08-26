@@ -139,9 +139,7 @@ rule feature_coverage:
         gtf=config.get("coverage", {}).get("genome_gtf", ""),
     output:
         cov=os.path.join(config["out_dir"], "qc/coverage/{sample}_cov.csv.gz"),
-        features=os.path.join(
-            config["out_dir"], "qc/coverage/{sample}_features.csv"
-        ),
+        features=os.path.join(config["out_dir"], "qc/coverage/{sample}_features.csv"),
     params:
         flank=config.get("coverage", {}).get("flank", 0),
     log:
@@ -169,9 +167,7 @@ rule metagene_coverage:
         ),
     output:
         mqc_dir=directory(os.path.join(config["out_dir"], "qc/coverage/multiqc")),
-        binned=os.path.join(
-            config["out_dir"], "qc/coverage/metagene_binned.csv.gz"
-        ),
+        binned=os.path.join(config["out_dir"], "qc/coverage/metagene_binned.csv.gz"),
     params:
         nbins=config.get("coverage", {}).get("nbins", 30),
         flank=config.get("coverage", {}).get("flank", 0),

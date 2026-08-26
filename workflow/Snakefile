@@ -151,13 +151,10 @@ rule all:
         ),
         *(
             [
-                os.path.join(
-                    config["out_dir"], "qc/coverage/metagene_binned.csv.gz"
-                ),
+                os.path.join(config["out_dir"], "qc/coverage/metagene_binned.csv.gz"),
                 os.path.join(config["out_dir"], "qc/coverage/multiqc"),
             ]
-            if str(config.get("coverage", {}).get("enabled", False)).lower()
-            == "true"
+            if str(config.get("coverage", {}).get("enabled", False)).lower() == "true"
             else []
         ),
         os.path.join(config["out_dir"], "qc/multiqc_report.html"),
