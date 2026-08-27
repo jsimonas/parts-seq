@@ -118,9 +118,8 @@ def slugify(s):
 def write_mqc_linegraph(
     path, biotype, wide, nbins, flank_bins, zscore_by, n_features
 ):
-    """MultiQC custom-content linegraph TSV: rows=samples, cols=bins."""
+    """MultiQC custom-content linegraph as YAML (numeric x-keys preserved)."""
     plot_id = f"metagene_coverage_{slugify(biotype)}"
-    title = f"{biotype}"
     desc = (
         f"Mean z-scored per-bin coverage across {n_features} {biotype} features "
         f"(5' -> 3'), z-score computed within each {zscore_by}. "
@@ -128,41 +127,46 @@ def write_mqc_linegraph(
     )
     xmin = -flank_bins if flank_bins > 0 else 0
     xmax = nbins + flank_bins - 1 if flank_bins > 0 else nbins - 1
-    header = [
-        f"# id: {plot_id}",
-        f"# section_name: '{title}'",
-        "# parent_id: 'metagene_coverage'",
-        "# parent_name: 'Metagene coverage'",
-        "# parent_description: >",
-        "#     Mean z-scored per-bin coverage along gene bodies for the",
-        "#     selected biotypes, one line per sample. Dashed vertical lines",
-        "#     mark the 5' and 3' body boundaries when flanks are included.",
-        f"# description: \"{desc}\"",
-        "# plot_type: 'linegraph'",
-        "# pconfig:",
-        f"#     id: '{plot_id}'",
-        f"#     title: 'Metagene coverage: {biotype}'",
-        "#     xlab: \"bin (5' -> 3')\"",
-        "#     ylab: 'mean z-score'",
-        f"#     xmin: {xmin}",
-        f"#     xmax: {xmax}",
+
+    lines = [
+        f"id: '{plot_id}'",
+        f"section_name: '{biotype}'",
+        "parent_id: 'metagene_coverage'",
+        "parent_name: 'Metagene coverage'",
+        "parent_description: >",
+        "    Mean z-scored per-bin coverage along gene bodies for the",
+        "    selected biotypes, one line per sample. Dashed vertical lines",
+        "    mark the 5' and 3' body boundaries when flanks are included.",
+        f'description: "{desc}"',
+        "plot_type: 'linegraph'",
+        "pconfig:",
+        f"    id: '{plot_id}'",
+        f"    title: 'Metagene coverage: {biotype}'",
+        '    xlab: "bin (5\' -> 3\')"',
+        "    ylab: 'mean z-score'",
+        f"    xmin: {int(xmin)}",
+        f"    xmax: {int(xmax)}",
     ]
     if flank_bins > 0:
-        header += [
-            "#     x_lines:",
-            "#         - value: 0",
-            "#           color: '#888888'",
-            "#           dash: 'Dash'",
-            f"#         - value: {nbins}",
-            "#           color: '#888888'",
-            "#           dash: 'Dash'",
+        lines += [
+            "    x_lines:",
+            "        - value: 0",
+            "          color: '#888888'",
+            "          dash: 'dash'",
+            f"        - value: {int(nbins)}",
+            "          color: '#888888'",
+            "          dash: 'dash'",
         ]
-    header.append("")
+    lines.append("data:")
+    for sample, row in wide.iterrows():
+        lines.append(f"    '{sample}':")
+        for x, y in row.items():
+            if pd.isna(y):
+                continue
+            lines.append(f"        {int(x)}: {float(y):.6g}")
+
     with open(path, "w") as fh:
-        fh.write("\n".join(header))
-        # empty top-left cell so MultiQC treats the header row as x-axis values,
-        # not as a series named "Sample" with the bin numbers as y-values.
-        wide.to_csv(fh, sep="\t", index=True, index_label="")
+        fh.write("\n".join(lines) + "\n")
 
 
 def main(
@@ -221,7 +225,7 @@ def main(
                 else np.arange(nbins)
             )
             wide = wide.reindex(columns=axis)
-            out = os.path.join(mqc_dir, f"metagene_coverage_{slugify(biotype)}_mqc.tsv")
+            out = os.path.join(mqc_dir, f"metagene_coverage_{slugify(biotype)}_mqc.yaml")
             write_mqc_linegraph(
                 out,
                 biotype=biotype,
