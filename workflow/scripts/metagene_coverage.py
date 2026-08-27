@@ -160,7 +160,9 @@ def write_mqc_linegraph(
     header.append("")
     with open(path, "w") as fh:
         fh.write("\n".join(header))
-        wide.to_csv(fh, sep="\t", index=True, index_label="Sample")
+        # empty top-left cell so MultiQC treats the header row as x-axis values,
+        # not as a series named "Sample" with the bin numbers as y-values.
+        wide.to_csv(fh, sep="\t", index=True, index_label="")
 
 
 def main(

@@ -4,7 +4,7 @@ report_section_order:
   parts-seq-summary:
     order: -1001
   metagene_coverage:
-    order: 900
+    before: 'mirtrace'
 
 export_plots: true
 

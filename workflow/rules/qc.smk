@@ -112,6 +112,7 @@ rule multiqc:
         set -euo pipefail
 
         multiqc \
+            --force \
             {input.demux} \
             {input.fastqc} \
             {input.cutadapt} \
